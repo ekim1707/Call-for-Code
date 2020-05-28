@@ -1,21 +1,28 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
+import Button from "../../common/Button";
 import Icon from "../../common/Icon";
 
-const StartPageComponent = () => {
+const StartPageComponent = ({
+    isOpen,
+    setIsOpen
+}) => {
     return (
         <div className="startPageComponent">
-            <div className="startPageSidebar">
-                <h3>
-                    {content.EXPLORE}
-                </h3>
+            <div className="startPageSidebarContainer">
+                <Button className="startPageSidebarButton" onClick={() => {setIsOpen(!isOpen)}} buttonText={content.EXPLORE} />
+                <ul className="sidebarNavContainer" style={isOpen ? { right: "-350px" } : { right: "0" }}>
+                    {content.SIDEBAR_NAV_ARRAY.map((index, i) => {
+                        return <li className="sidebarNavLinks" key={i}>{index}</li>
+                    })}
+                </ul>
             </div>
             <div className="startPageContentContainer">
                 <div className="startPageNavContainer">
                     <div className="iconContainer"><Icon className="logoIcon" iconName="temp" /></div>
                     <ul className="startPageNavLinks">
-                        {content.NAV_ARRAY.map((index, i) => {
+                        {content.START_NAV_ARRAY.map((index, i) => {
                             return <li className="startPageNavLinks" key={i}>{index}</li>;
                         })}
                     </ul>
