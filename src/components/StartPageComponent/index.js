@@ -1,23 +1,14 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import Button from "../../common/Button";
+import SidebarContainer from "../../containers/SidebarContainer";
 import Icon from "../../common/Icon";
+import { Link } from "react-router-dom";
 
-const StartPageComponent = ({
-    isOpen,
-    setIsOpen
-}) => {
+const StartPageComponent = () => {
     return (
         <div className="startPageComponent">
-            <div className="startPageSidebarContainer">
-                <Button className="startPageSidebarButton" onClick={() => {setIsOpen(!isOpen)}} buttonText={content.EXPLORE} />
-                <ul className="sidebarNavContainer" style={isOpen ? { right: "-350px" } : { right: "0" }}>
-                    {content.SIDEBAR_NAV_ARRAY.map((index, i) => {
-                        return <li className="sidebarNavLinks" key={i}>{index}</li>
-                    })}
-                </ul>
-            </div>
+            <SidebarContainer />
             <div className="startPageContentContainer">
                 <div className="startPageNavContainer">
                     <div className="iconContainer"><Icon className="logoIcon" iconName="temp" /></div>

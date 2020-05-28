@@ -1,13 +1,4 @@
 export default {
-    EXPLORE: "Explore",
-    SIDEBAR_NAV_ARRAY: [
-        "Home",
-        "Decompress",
-        "News",
-        "Diary",
-        "Self Care",
-        "Courses"
-    ],
     START_NAV_ARRAY: [
         "Home",
         "Log In",
