@@ -5,20 +5,20 @@ import SidebarContainer from "../../containers/SidebarContainer";
 import Icon from "../../common/Icon";
 import { Link } from "react-router-dom";
 
-const StartPageComponent = () => {
+const LandingPageComponent = () => {
     return (
-        <div className="startPageComponent">
+        <div className="landingPageComponent">
             <SidebarContainer />
-            <div className="startPageContentContainer">
-                <div className="startPageNavContainer">
+            <div className="landingPageContentContainer">
+                <div className="landingPageNavContainer">
                     <div className="iconContainer"><Icon className="logoIcon" iconName="temp" /></div>
-                    <ul className="startPageNavLinks">
-                        {content.START_NAV_ARRAY.map((index, i) => {
-                            return <li className="startPageNavLinks" key={i}>{index}</li>;
+                    <ul className="landingPageNavLinks">
+                        {content.LANDING_NAV_ARRAY.map((index, i) => {
+                            return <Link to={index.toLowerCase()} className="landingPageNavLinks" key={i}>{index}</Link>;
                         })}
                     </ul>
                 </div>
-                <div className="startPageContent">
+                <div className="landingPageContent">
                     <h1 className="contentHeader">
                         {content.HEADER}
                     </h1>
@@ -31,4 +31,4 @@ const StartPageComponent = () => {
     )
 };
 
-export default StartPageComponent;
+export default LandingPageComponent;

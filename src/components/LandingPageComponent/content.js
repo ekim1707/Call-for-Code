@@ -1,5 +1,5 @@
 export default {
-    START_NAV_ARRAY: [
+    LANDING_NAV_ARRAY: [
         "Home",
         "Log In",
         "Sign Up",
