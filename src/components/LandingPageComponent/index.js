@@ -4,6 +4,9 @@ import content from "./content";
 import SidebarContainer from "../../containers/SidebarContainer";
 import Icon from "../../common/Icon";
 import { Link } from "react-router-dom";
+import FirstPage from "./FirstPage";
+import SecondPage from "./SecondPage";
+import ThirdPage from "./ThirdPage";
 
 const LandingPageComponent = () => {
     return (
@@ -18,14 +21,9 @@ const LandingPageComponent = () => {
                         })}
                     </ul>
                 </div>
-                <div className="landingPageContent">
-                    <h1 className="contentHeader">
-                        {content.HEADER}
-                    </h1>
-                    <p className="contentBody">
-                        {content.BODY}
-                    </p>
-                </div>
+                <FirstPage />
+                <SecondPage />
+                <ThirdPage />
             </div>
         </div>
     )

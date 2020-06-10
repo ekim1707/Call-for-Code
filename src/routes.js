@@ -11,7 +11,6 @@ export default (props) => {
             <Switch>
                 <Route path="/" component={LandingPageContainer} exact />
                 <Route path="/home" component={HomeContainer} exact />
-                <Route path="/about" component={AboutContainer} exact />
             </Switch>
         </Router>
     )

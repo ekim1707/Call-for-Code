@@ -1,8 +1,10 @@
 @import "../../scss/common.styles.scss";
 
 .sidebarComponent {
-    position: relative;
-    margin-right: 100px;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
     .sidebarButton {
         position: absolute;
         display: flex;

@@ -1,0 +1,13 @@
+@import "../../../scss/common.styles.scss";
+
+.firstPageContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .firstPageBody {
+        width: 50%;
+        line-height: 1.5;
+    }
+}
