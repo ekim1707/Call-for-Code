@@ -2,28 +2,38 @@ import React from 'react';
 import "./styles.scss";
 import content from "./content";
 import SidebarContainer from "../../containers/SidebarContainer";
-import Icon from "../../common/Icon";
-import { Link } from "react-router-dom";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
+import Button from "../../common/Button";
 
-const LandingPageComponent = () => {
+const LandingPageComponent = ({
+    clickCount,
+    handlePageUpDownClick
+}) => {
     return (
         <div className="landingPageComponent">
             <SidebarContainer />
-            <div className="landingPageContentContainer">
-                <div className="landingPageNavContainer">
-                    <div className="iconContainer"><Icon className="logoIcon" iconName="temp" /></div>
-                    <ul className="landingPageNavLinks">
-                        {content.LANDING_NAV_ARRAY.map((index, i) => {
-                            return <Link to={index.toLowerCase()} className="landingPageNavLinks" key={i}>{index}</Link>;
-                        })}
-                    </ul>
-                </div>
+            <div className="landingPageContentContainer" style={{ transform: `translateY(calc(-100vh * ${clickCount}))` }}>
                 <FirstPage />
                 <SecondPage />
                 <ThirdPage />
+            </div>
+            <div className="contentButtonsContainer">
+                <div className="buttonContainer">
+                    <Button 
+                        onClick={() => handlePageUpDownClick("up")}
+                        className="contentButton"
+                        buttonText="^"
+                        disabled={clickCount === 0 ? true : false}
+                    />
+                    <Button 
+                        onClick={() => handlePageUpDownClick("down")}
+                        className="contentButton"
+                        buttonText="v"
+                        disabled={clickCount === 2 ? true : false}
+                    />
+                </div>
             </div>
         </div>
     )

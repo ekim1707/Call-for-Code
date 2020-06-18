@@ -1,11 +1,37 @@
 @import "../../../scss/common.styles.scss";
 
 .firstPageContainer {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    background: $lighter-purple;
+    .firstPageNavContainer {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        top: 20px;
+        padding: 20px 20px 10px 20px;
+        border-bottom: 1px solid $main-1;
+        .logoIcon {
+            width: 40px;
+            height: 40px;
+        }
+        ul {
+            display: flex;
+            align-items: flex-end;
+            list-style: none;
+            a {
+                padding: 0 10px;
+                color: $main-1;
+                font-size: $font-size-l;
+                font-weight: 700;
+            }
+        }
+    }
     .firstPageBody {
         width: 50%;
         line-height: 1.5;
