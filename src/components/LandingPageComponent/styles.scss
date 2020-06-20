@@ -14,23 +14,21 @@
     }
     .contentButtonsContainer {
         position: fixed;
-        display: flex;
         width: calc(100% - 100px);
         left: 100px;
         bottom: 0;
         .buttonContainer {
-            margin: auto;
-            .contentButton {
+            display: flex;
+            .contentButtonContainer {
                 margin: 30px 15px;
-                padding: 20px;
-                background: $lighter-purple;
-                color: $main-1;
-                border: 1px solid $main-1;
+                padding: 5px;
+                background: $main-1;
+                border: 2px solid $main-2;
                 border-radius: 50%;
-            }
-            .contentButton:disabled {
-                cursor: not-allowed;
-                opacity: .55;
+                .contentButton {
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
     }

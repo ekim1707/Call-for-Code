@@ -23,14 +23,18 @@ const LandingPageComponent = ({
                 <div className="buttonContainer">
                     <Button 
                         onClick={() => handlePageUpDownClick("up")}
+                        containerClassName="contentButtonContainer"
                         className="contentButton"
-                        buttonText="^"
+                        isIcon
+                        iconName="arrow_up"
                         disabled={clickCount === 0 ? true : false}
                     />
                     <Button 
                         onClick={() => handlePageUpDownClick("down")}
+                        containerClassName="contentButtonContainer"
                         className="contentButton"
-                        buttonText="v"
+                        isIcon
+                        iconName="arrow_down"
                         disabled={clickCount === 2 ? true : false}
                     />
                 </div>

@@ -4,6 +4,7 @@ import Icon from "../Icon";
 
 const Button = ({ 
   onClick, 
+  containerClassName,
   className, 
   buttonText, 
   isIcon, 
@@ -13,7 +14,11 @@ const Button = ({
   return !isIcon ? (
     <button onClick={onClick} className={className} disabled={disabled}><div>{buttonText}</div></button>
   ) : (
-    <div onClick={onClick} role="button"><Icon className={className} iconName={iconName} /></div>
+    <button onClick={onClick} disabled={disabled} style={disabled ? { opacity: .55 } : {}}>
+      <div className={containerClassName}>
+        <Icon className={className} iconName={iconName} />
+      </div>
+    </button>
   );
 };
 
