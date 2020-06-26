@@ -7,20 +7,22 @@ import { Link } from "react-router-dom";
 const FirstPage = () => {
     return (
         <div className="firstPageContainer">
-            <div className="firstPageNavContainer">
-                <div className="iconContainer"><Icon className="logoIcon" iconName="temp" /></div>
-                <ul className="firstPageNavLinks">
+            <div className="headerContainer">
+                <div className="titleContainer">
+                    <div className="iconContainer"><Icon className="logoIcon" iconName="decompress_white" /></div>
+                    <h2 className="title">{content.TITLE}</h2>
+                </div>
+                <ul className="navLinkContainer">
                     {content.NAV_ARRAY.map((index, i) => {
-                        return <Link to={index.toLowerCase()} className="firstPageNavLinks" key={i}>{index}</Link>;
+                        return <Link to={index.toLowerCase()} className="navLinks" style={
+                            i + 1 === content.NAV_ARRAY.length ? { border: "1px solid white" } : {}
+                        } key={i}>{index}</Link>;
                     })}
                 </ul>
             </div>
-            <h1 className="firstPageHeader">
-                {content.HEADER}
-            </h1>
-            <p className="firstPageBody">
+            <h1 className="bodyContainer">
                 {content.BODY}
-            </p>
+            </h1>
         </div>
     );
 };

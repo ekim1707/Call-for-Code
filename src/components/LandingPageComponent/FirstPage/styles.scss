@@ -8,31 +8,42 @@
     align-items: center;
     height: 100vh;
     background: $lighter-purple;
-    .firstPageNavContainer {
+    .headerContainer {
         position: absolute;
-        display: flex;
-        justify-content: space-between;
         width: 95%;
-        top: 20px;
-        padding: 20px 20px 10px 20px;
-        border-bottom: 1px solid $main-1;
-        .logoIcon {
-            width: 40px;
-            height: 40px;
+        top: 0;
+        .titleContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 20px;
+            border-bottom: 1px solid $main-1;
+            .logoIcon {
+                width: 40px;
+                height: 40px;
+                margin-right: 5px;
+            }
+            .title {
+                margin-left: 5px;
+            }
         }
         ul {
             display: flex;
-            align-items: flex-end;
+            justify-content: flex-end;
+            align-items: center;
             list-style: none;
+            padding: 20px 0;
             a {
-                padding: 0 10px;
+                margin-left: 40px;
+                padding: 10px;
                 color: $main-1;
-                font-size: $font-size-l;
+                font-size: $font-size-medium;
                 font-weight: 700;
             }
         }
     }
-    .firstPageBody {
+    .bodyContainer {
         width: 50%;
         line-height: 1.5;
     }

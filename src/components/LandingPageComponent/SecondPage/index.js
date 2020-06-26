@@ -8,7 +8,6 @@ const SecondPage = () => {
     return (
         <div className="secondPageContainer">
             <div className="headerContainer">
-                <Icon className="headerIcon" iconName="temp" />
                 <h2 className="header">{content.HEADER}</h2>
                 <div className="titleContainer">
                     <h2 className="title">{content.TITLE}</h2>
@@ -21,16 +20,26 @@ const SecondPage = () => {
                 <div className="bodyContentContainer">
                     {content.BODY_DIVS_ARRAY.map((DIV, i) => 
                         <div className="bodyContentSubContainer" key={i}>
-                            <Icon className="bodyContentIcon" iconName="temp"  />
                             <h4>{DIV.TITLE}</h4>
+                            <div className="iconContainer"><Icon className="bodyContentIcon" iconName={DIV.TITLE.toLowerCase()} /></div>
                             <p>{DIV.DESCRIPTION}</p>
                         </div>
                     )}
                 </div>
-                <Button 
-                    className="footerNavButton"
-                    disabled
-                />
+                <div className="footerNavButtonContainer">
+                    <Button 
+                        className="footerNavButton"
+                        disabled
+                    />
+                    <Button 
+                        className="footerNavButton"
+                        disabled
+                    />
+                    <Button 
+                        className="footerNavButton"
+                        disabled
+                    />
+                </div>
             </div>
         </div>
     );

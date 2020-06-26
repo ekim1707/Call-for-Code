@@ -37,6 +37,7 @@ const LandingPageComponent = ({
                         iconName="arrow_down"
                         disabled={clickCount === 2 ? true : false}
                     />
+                    {clickCount === 0 && <label className="learnMoreLabel">Learn More</label>}
                 </div>
             </div>
         </div>

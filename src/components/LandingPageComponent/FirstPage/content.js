@@ -1,10 +1,8 @@
 export default {
+    TITLE: "DecomPress",
     NAV_ARRAY: [
-        "Home",
         "Log In",
-        "Sign Up",
-        "Start for Free"
+        "Sign up for free"
     ],
-    HEADER: `"More Positivity into your Life"`,
-    BODY: `Lorem ipsum dolor sit amet,jsagdjkhasjhfjh- jkahfjhdsjfhjkdshjfhdsjhfjkhsdjkfhjdsh- fjjhjfjhdshfjdshjfdsjsdhfshdjmcznx dhsjfdshjfhsdjhfjshdfhsdfhdf`
+    BODY: `"More Positivity in Your Life"`
 };

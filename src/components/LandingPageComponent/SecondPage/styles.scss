@@ -7,14 +7,9 @@
         flex-flow: column nowrap;
         justify-content: space-evenly;
         align-items: center;
-        height: 50%;
+        height: 40%;
         background: $sky-blue;
         color: $main-1;
-        .headerIcon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 20px;
-        }
         .header {
             color: $gray;
         }
@@ -30,7 +25,7 @@
         }
         .description {
             padding-top: 20px;
-            width: 50%;
+            width: 60%;
             color: $gray;
         }
     }
@@ -53,27 +48,41 @@
                 flex-flow: column nowrap;
                 align-items: center;
                 width: 25%;
-                .bodyContentIcon {
-                    width: 40px;
-                    height: 40px;
-                }
+                padding: 20px;
+                background: $lighter-purple;
+                color: $main-2;
+                border: 1px solid $darker-purple;
+                border-radius: 15px;
                 h4 {
-                    padding-top: 10px;
-                    color: $darker-purple;
+                    margin: 0;
+                }
+                .iconContainer {
+                    width: 100%;
+                    margin: 15px 0;
+                    padding: 20px;
+                    background: $main-1;
+                    border: 1px solid $darker-purple;
+                    .bodyContentIcon {
+                        width: 40px;
+                        height: 40px;
+                        margin: auto;
+                    }
                 }
                 p {
                     margin: 0;
-                    color: $main-2;
                     text-align: center;
                 }
             }
         }
-        .footerNavButton {
-            width: 15px;
-            height: 15px;
-            margin-top: 20px;
-            border: 1px solid $main-2;
-            border-radius: 50%;
+        .footerNavButtonContainer {
+            display: flex;
+            .footerNavButton {
+                width: 15px;
+                height: 15px;
+                margin: 20px 5px 0 10px;
+                border: 1px solid $main-2;
+                border-radius: 50%;
+            }
         }
     }
 }

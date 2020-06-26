@@ -1,9 +1,22 @@
 @import "../../../scss/common.styles.scss";
 
 .thirdPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    padding: 20px;
     background: $main-1;
     color: $main-2;
-    text-align: center;
+    .mainIcon {
+        width: 200px;
+        height: 200px;
+        margin-right: 100px;
+    }
+    .bodyContainer {
+        text-align: center;
+        .downloadButton {
+            padding: 10px;
+            border: 1px solid $main-2;
+        }
+    }
 }

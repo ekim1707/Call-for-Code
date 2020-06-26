@@ -18,7 +18,9 @@
         left: 100px;
         bottom: 0;
         .buttonContainer {
+            position: relative;
             display: flex;
+            align-items: center;
             .contentButtonContainer {
                 margin: 30px 15px;
                 padding: 5px;
@@ -29,6 +31,10 @@
                     width: 35px;
                     height: 35px;
                 }
+            }
+            .learnMoreLabel {
+                position: absolute;
+                right: -70px;
             }
         }
     }
