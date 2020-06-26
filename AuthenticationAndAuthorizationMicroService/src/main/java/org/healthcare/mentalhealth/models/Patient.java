@@ -1,4 +1,4 @@
-package models;
+package org.healthcare.mentalhealth.models;
 import javax.persistence.*;
 import java.util.Set;
 
@@ -7,7 +7,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name="authentication_user")
-public class User {
+public class Patient {
     public Long getId() {
         return id;
     }
@@ -40,6 +40,14 @@ public class User {
         this.roles = roles;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "authentication_user_id")
@@ -47,6 +55,9 @@ public class User {
 
     @Column(name = "user_name")
     private String userName;
+
+    @Column(name = "user_name")
+    private String email;
 
     @Column(name = "password")
     private String password;
