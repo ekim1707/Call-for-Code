@@ -11,7 +11,7 @@ const FirstPage = () => {
                 <Header />
                 <ul className="navLinkContainer">
                     {content.NAV_ARRAY.map((index, i) => {
-                        return <Link to={index.toLowerCase()} className="navLinks" style={
+                        return <Link to="/news" className="navLinks" style={
                             i + 1 === content.NAV_ARRAY.length ? { border: "1px solid white" } : {}
                         } key={i}>{index}</Link>;
                     })}
