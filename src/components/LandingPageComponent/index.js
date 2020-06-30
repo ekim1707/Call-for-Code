@@ -1,7 +1,6 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import SidebarContainer from "../../containers/SidebarContainer";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
@@ -13,7 +12,6 @@ const LandingPageComponent = ({
 }) => {
     return (
         <div className="landingPageComponent">
-            <SidebarContainer />
             <div className="landingPageContentContainer" style={{ transform: `translateY(calc(-100vh * ${clickCount}))` }}>
                 <FirstPage />
                 <SecondPage />

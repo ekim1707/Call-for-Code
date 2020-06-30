@@ -12,28 +12,13 @@
         position: absolute;
         width: 95%;
         top: 0;
-        .titleContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            padding: 20px;
-            border-bottom: 1px solid $main-1;
-            .logoIcon {
-                width: 40px;
-                height: 40px;
-                margin-right: 5px;
-            }
-            .title {
-                margin-left: 5px;
-            }
-        }
         ul {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             list-style: none;
             padding: 20px 0;
+            border-top: 1px solid $main-1;
             a {
                 margin-left: 40px;
                 padding: 10px;

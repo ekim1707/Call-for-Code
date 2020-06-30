@@ -1,17 +1,14 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import Icon from "../../../common/Icon";
+import Header from "../../HeaderComponent";
 import { Link } from "react-router-dom";
 
 const FirstPage = () => {
     return (
         <div className="firstPageContainer">
             <div className="headerContainer">
-                <div className="titleContainer">
-                    <div className="iconContainer"><Icon className="logoIcon" iconName="decompress_white" /></div>
-                    <h2 className="title">{content.TITLE}</h2>
-                </div>
+                <Header />
                 <ul className="navLinkContainer">
                     {content.NAV_ARRAY.map((index, i) => {
                         return <Link to={index.toLowerCase()} className="navLinks" style={

@@ -16,7 +16,7 @@
         left: 0;
         top: 0;
         background: $darker-purple;
-        color: $manila;
+        color: $main_1;
         font-size: $font-size-l;
         z-index: 1000;
         div {
@@ -39,14 +39,21 @@
         .logoIcon {
             width: 40px;
             height: 40px;
-            margin: auto;
+            margin: 10px auto 20px auto;
         }
         a {
+            display: flex;
+            align-items: center;
             margin: 10px;
-            color: $bright-orange;
+            color: $main_1;
+            .sidebarNavLinkIcons {
+                width: 25px;
+                height: 25px;
+                margin: 0 10px 0 0;
+            }
         }
         a.active {
-            color: $cricket-green;
+            color: $manila;
         }
     }
 }
