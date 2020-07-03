@@ -1,7 +1,7 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import Icon from "../../../common/Icon";
+import Header from "../../HeaderComponent";
 import { Link } from "react-router-dom";
 
 const FirstPage = () => {
