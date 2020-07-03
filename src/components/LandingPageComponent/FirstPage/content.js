@@ -1,8 +1,8 @@
 export default {
-    TITLE: "DecomPress",
+    TITLE: "Decompress",
     NAV_ARRAY: [
-        "Log In",
-        "Sign up for free"
+        {name: "Log In", url: "login"},
+        {name: "Sign Up for free", url: "signup"}
     ],
-    BODY: `"More Positivity in Your Life"`
+    BODY: `More Positivity In Your Life`
 };

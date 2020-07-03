@@ -1,41 +1,29 @@
 @import "../../../scss/common.styles.scss";
 
 .firstPageContainer {
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    background: $lighter-purple;
+    background: $strong-blue;
+    margin-bottom: 2em;
+
     .headerContainer {
-        position: absolute;
-        width: 95%;
-        top: 0;
         .titleContainer {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            padding: 20px;
-            border-bottom: 1px solid $main-1;
-            .logoIcon {
-                width: 40px;
-                height: 40px;
-                margin-right: 5px;
-            }
-            .title {
-                margin-left: 5px;
-            }
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
+
+        .topMarginContainers {
+           margin-top: 4vh;
+        }
+
         ul {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            align-self: center;
             list-style: none;
+            justify-content: center;
             padding: 20px 0;
+
             a {
-                margin-left: 40px;
+                margin-right: 40px;
                 padding: 10px;
                 color: $main-1;
                 font-size: $font-size-medium;
@@ -43,7 +31,10 @@
             }
         }
     }
+
     .bodyContainer {
-        text-align: center;
+        color: white;
+        margin-left: 1em;
+        margin-top: 10%;
     }
 }

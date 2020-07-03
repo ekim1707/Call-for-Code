@@ -13,7 +13,6 @@ const LandingPageComponent = ({
 }) => {
     return (
         <div className="landingPageComponent">
-            <SidebarContainer />
             <div className="landingPageContentContainer" style={{ transform: `translateY(calc(-100vh * ${clickCount}))` }}>
                 <FirstPage />
                 <SecondPage />
@@ -37,7 +36,6 @@ const LandingPageComponent = ({
                         iconName="arrow_down"
                         disabled={clickCount === 2 ? true : false}
                     />
-                    {clickCount === 0 && <label className="learnMoreLabel">Learn More</label>}
                 </div>
             </div>
         </div>
