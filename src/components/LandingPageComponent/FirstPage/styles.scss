@@ -15,6 +15,11 @@
         .topMarginContainers {
            margin-top: 4vh;
         }
+
+        .leftMargin {
+            margin-left: 1em;
+        }
+
         ul {
             align-self: center;
             list-style: none;
@@ -34,5 +39,10 @@
         color: white;
         margin-left: 1em;
         margin-top: 10%;
+    }
+
+    .messageContainer {
+        color: white;
+        margin-left: 2em;
     }
 }
