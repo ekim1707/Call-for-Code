@@ -1,34 +1,27 @@
 @import "../../scss/common.styles.scss";
 
 .landingPageComponent {
+    height: 100vh;
+    overflow: hidden;
     .landingPageContentContainer {
         width: 100%;
         transform-style: preserve-3d;
         transition: all 1s;
     }
-    .contentButtonsContainer {
-        display: none;
+    .navArrowsButtonContainer {
         position: fixed;
-        width: 100%;
-        bottom: 0;
-        .buttonContainer {
-            position: relative;
-            display: flex;
-            align-items: center;
-            .contentButtonContainer {
-                margin: 30px 15px;
-                padding: 5px;
-                background: $main-1;
-                border: 2px solid $main-2;
-                border-radius: 50%;
-                .contentButton {
-                    width: 35px;
-                    height: 35px;
-                }
-            }
-            .learnMoreLabel {
-                position: absolute;
-                right: -70px;
+        display: flex;
+        align-items: flex-start;
+        right: 65px;
+        bottom: 65px;
+        .navArrowButtonContainer {
+            padding: 5px;
+            background: $main-1;
+            border: 2px solid $main-2;
+            border-radius: 50%;
+            .navArrowButton {
+                width: 20px;
+                height: 20px;
             }
         }
     }
