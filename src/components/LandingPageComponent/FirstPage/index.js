@@ -22,12 +22,18 @@ const FirstPage = () => {
 			<h1 className="bodyContainer leftMargin" style={{ 'fontFamily': 'Fredoka One', 'fontSize': '7vh' }}>
 				{content.BODY}
 			</h1>
-			<h2 className="messageContainer" >
-				{content.MESSAGE}
-			</h2>
-			<button>
-				
-			</button>
+			<h2 className="messageContainer" >{content.MESSAGE}</h2>
+			<div className="footerContainer">				
+				<h1 className="footerHeader">
+					<span className="lightYellowBox">{content.SPACEHOLDER}</span>
+					<span className="darkYellowBox">{content.SPACEHOLDER}</span>
+					{content.FOOTER_HEADER}
+				</h1>
+				<p className="footerMessage">
+					{content.FOOTER_MESSAGE}
+					<div className="shorterWidthTextUnderline"></div>
+				</p>
+			</div>
 		</div>
 	);
 };
