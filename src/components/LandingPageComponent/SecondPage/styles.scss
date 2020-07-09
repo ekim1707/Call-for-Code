@@ -16,49 +16,59 @@
                 color: $basically-black;
             }
         }
-        .contentContainer {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 20px;
-            .contentSubContainer {
-                width: 400px;
-                height: 250px;
-                padding: 20px;
-                background: $basically-white;
-                color: $darkest-gray;
-                border-radius: 15px;
-                .iconContainer {
-                    width: 100%;
-                    padding: 60px 0;
+        .carousel-container {
+            background: transparent;
+            box-shadow: none;
+            .carouselSubContainer {
+                display: flex;
+                justify-content: space-evenly;
+                .carouselIndexContainer {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    padding: 20px 10px 0 10px;
                     background: $main-1;
-                    border: 1px solid $darker-purple;
-                    .bodyContentIcon {
-                        width: 40px;
-                        height: 40px;
+                    border-radius: 15px;
+                    .carouselIndexIcon {
+                        width: 25vw;
+                        height: 25vh;
                         margin: auto;
                     }
-                }
-                h4 {
-                    margin: 10px 0 5px 0;
-                }
-                p {
-                    margin: 0;
-                    color: $basically-black;
-                    font-size: $font-size-small;
-                    font-weight: 700;
+                    h4 {
+                        margin: 10px 0 5px 0;
+                        color: $darker-gray;
+                    }
+                    p {
+                        margin: 0 0 20px 0;
+                        color: $almost-black;
+                        font-size: $font-size-small;
+                        font-weight: 700;
+                    }
                 }
             }
-        }
-        .carouselButtonContainer {
-            width: fit-content;
-            margin: auto;
-            .carouselButton {
-                width: 10px;
-                height: 10px;
-                margin: 5px;
-                padding: 5px;
-                background: $darkest-gray;
-                border-radius: 50%;
+            .carousel-indicators {
+                margin-top: 9px;
+                text-align: center;
+                .ui.black.label {
+                    margin: 0 3px;
+                    background-color: $darkest-gray !important;
+                    border-color: $darkest-gray !important;
+                }
+                .ui.grey.label {
+                    margin: 0 3px;
+                    background-color: $main-1 !important;
+                    border-color: $main-1 !important;
+                }
+            }
+            .prev {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                box-shadow: $shadow-light;
+            }
+            .next {
+                @extend .prev;
+                left: initial;
+                right: 10px;
             }
         }
     }
@@ -76,6 +86,7 @@
                 flex-flow: column nowrap;
                 justify-content: space-between;
                 align-items: center;
+                width: 115px;
                 height: 40%;
                 .columnTitle {
                     color: $almost-black;
@@ -90,7 +101,7 @@
                 }
                 .buttonContainer {
                     .columnButton {
-                        width: 50px;
+                        width: 13px;
                         height: 50px;
                     }
                 }

@@ -1,16 +1,28 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
+import Carousel from "semantic-ui-carousel-react";
+import { Image } from "semantic-ui-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
 import { Link } from "react-router-dom";
 
 const SecondPage = () => {
-
-    let carouselButtonArray = [];
-    for (let x = 0; x < Math.ceil(content.BODY_DIVS_ARRAY.length/3); x++) {
-        carouselButtonArray.push(<Button className="carouselButton" key={x} />)
-    };
+    let elements = content.BODY_DIVS_ARRAYS.map((ARRAY, i) => {
+        return {
+            render: () => 
+            <div className="carouselSubContainer" key={i}>
+                {ARRAY.map((INDEX, i) => 
+                    <div className="carouselIndexContainer" key={i}>
+                        <Icon className="carouselIndexIcon" iconName={INDEX.toLowerCase()} cover />
+                        <h4>{INDEX}</h4>
+                        <p>{content.READ_MORE}</p>
+                        {/* where does this link go? */}
+                    </div>
+                )}
+            </div>
+        }
+    });
 
     return (
         <div className="secondPageContainer">
@@ -19,20 +31,12 @@ const SecondPage = () => {
                     <h3 className="header">{content.HEADER}</h3>
                     <h2 className="subHeader">{content.SUB_HEADER}</h2>
                 </div>
-                {/* functional carousel to come */}
-                <div className="contentContainer">
-                    {content.BODY_DIVS_ARRAY.map((DIV, i) => 
-                        <div className="contentSubContainer" key={i}>
-                            <div className="iconContainer"><Icon className="bodyContentIcon" iconName={DIV.toLowerCase()} /></div>
-                            <h4>{DIV}</h4>
-                            <p>{content.READ_MORE}</p>
-                            {/* where does this "Read more" link lead to? */}
-                        </div>
-                    )}
-                </div>
-                <div className="carouselButtonContainer">
-                    {carouselButtonArray.map(button => button)}
-                </div>
+                    <Carousel 
+                        elements={elements} 
+                        animation="pulse"
+                        showNextPrev={true}
+                        showIndicators={true}
+                    />
             </div>
             <div className="footerContainer">
                 <div className="footerColumnsContainer">
@@ -47,6 +51,7 @@ const SecondPage = () => {
                                         className="columnButton"
                                         iconName={BUTTON.ICON}
                                         isIcon
+                                        cover
                                     />
                                 </div>
                             )}

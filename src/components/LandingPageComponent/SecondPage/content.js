@@ -1,10 +1,20 @@
 export default {
     HEADER: "Explore",
     SUB_HEADER: "Features",
-    BODY_DIVS_ARRAY: [
-        "Journaling",
-        "Self-Care",
-        "News"
+    BODY_DIVS_ARRAYS: [
+        [
+            "Journaling",
+            "Self-Care",
+            "News"
+        ],
+        [
+            "Diary",
+            "Destress",
+            "Share"
+        ],
+        [
+            "Courses"
+        ]
     ],
     READ_MORE: "Read more >",
     FOOTER_LINKS_ARRAY: [
@@ -40,7 +50,7 @@ export default {
             TITLE: "Get the App",
             BUTTON_ARRAY: [
                 {
-                    ICON: "decompress"
+                    ICON: "decompress_transparent"
                 }
             ]
         }
