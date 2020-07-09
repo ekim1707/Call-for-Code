@@ -2,7 +2,6 @@ import React from 'react';
 import "./styles.scss";
 import content from "./content";
 import Carousel from "semantic-ui-carousel-react";
-import { Image } from "semantic-ui-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
 import { Link } from "react-router-dom";
@@ -43,10 +42,12 @@ const SecondPage = () => {
                     {content.FOOTER_LINKS_ARRAY.map((INDEX, i) => 
                         <div className="footerColumn" key={i}>
                             <div className="columnTitle">{INDEX.TITLE}</div>
-                            {INDEX.BUTTON_ARRAY.map(BUTTON => 
+                            {INDEX.BUTTON_ARRAY.map((BUTTON, i) => 
                                 BUTTON.TEXT ? 
-                                <Link to={BUTTON.TEXT.toLowerCase()} className="columnLink">{BUTTON.TEXT}</Link> :
-                                <div className="buttonContainer">
+                                <Link to={BUTTON.TEXT.toLowerCase()} className="columnLink" key={i}>
+                                    {BUTTON.TEXT}
+                                </Link> :
+                                <div className="buttonContainer" key={i}>
                                     <Button 
                                         className="columnButton"
                                         iconName={BUTTON.ICON}

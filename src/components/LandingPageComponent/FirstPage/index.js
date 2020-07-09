@@ -1,7 +1,6 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import Header from "../../HeaderComponent";
 import { Link } from "react-router-dom";
 
 const FirstPage = () => {
@@ -27,10 +26,10 @@ const FirstPage = () => {
 					<span className="darkYellowBox">{content.SPACEHOLDER}</span>
 					{content.FOOTER_HEADER}
 				</h1>
-				<p className="footerMessage">
+				<div className="footerMessage">
 					{content.FOOTER_MESSAGE}
 					<div className="shorterWidthTextUnderline"></div>
-				</p>
+				</div>
 			</div>
 		</div>
 	);

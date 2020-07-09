@@ -34,7 +34,7 @@ const LandingPageComponent = ({
                         iconName="arrow_up"
                     />
                 }
-                <label className="seeMoreLabel">{content.SEE_MORE_LABEL}</label>
+                <div className="seeMoreLabel">{clickCount === 0 ? content.SEE_MORE_LABEL : content.SIGN_UP_NOW}</div>
             </div>
         </div>
     )
