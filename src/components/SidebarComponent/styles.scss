@@ -1,1 +1,27 @@
 @import "../../scss/common.styles.scss";
+
+.linksSideBar {
+	align-self: center;
+	margin-top: 10%;
+	color: white;
+
+	div {
+		margin-top: 2vh;
+	}
+}
+
+.sidebarNavLinks {
+	color: white;
+	font-size: 2vh;
+	font-family: Helvetica, sans-serif;
+}
+
+.logoImageOnUserSideBar {
+	width: auto;
+}
+
+.userSideBar {
+	display: flex !important;
+	align-content: center;
+	position: relative !important;
+}

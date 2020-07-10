@@ -12,7 +12,7 @@ export const authenticationService = {
         const response = await fetch(resources.microserviceUrl + resourceUrl, requestOptions);
         const data = await response.json();
         sessionStorage.setItem("sessionToken", data.jwt);
-        window.location.replace(window.location.origin + resources.routes.userHomePage);
+        window.location.replace(window.location.origin + resources.routes.userProfilePage);
     },
     signUp: async (resourceUrl, body) => {
         const requestOptions = {

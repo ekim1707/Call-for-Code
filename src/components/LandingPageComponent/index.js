@@ -1,6 +1,5 @@
 import React from 'react';
 import "./styles.scss";
-import content from "./content";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";

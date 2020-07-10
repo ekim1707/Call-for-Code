@@ -7,20 +7,20 @@ import {
 } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
-const SidebarComponent = () => {
+const SidebarComponent = ({linkClicked}) => {
 	return (
-		<div className="ui sidebar inverted vertical menu visible userSideBar">
+		< div className = "ui sidebar inverted vertical menu visible userSideBar userSideBarColor fullHeight" >
 			< Image src={
-				process.env.PUBLIC_URL + '/img/logo192.png'
+				process.env.PUBLIC_URL + '/img/logo.reshape.svg'
 			} className="logoImageOnUserSideBar"
 			/>
+			<br/>
 			<div className="linksSideBar" >
 				{content.SIDEBAR_NAV_ARRAY.map((index, i) => {
 					return <div>
 						<Link to={index.url} className="sidebarNavLinks" key={i}>
 							<Icon disabled name={index.icon} /> {index.name}
 						</Link>
-						<br/>
 					</div>
 				})}
 			</div>

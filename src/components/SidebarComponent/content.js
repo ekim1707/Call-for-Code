@@ -26,7 +26,6 @@ export default {
             icon: "plus",
             url: "/selfcare"
         },
-
         {
             name: "Courses",
             icon: "object ungroup outline",
