@@ -5,7 +5,13 @@ export const resources = {
         homePath: "/home",
         signUpPath: "/signup",
         logInPath: "/login",
-        userHomePage: "/user"
+        userHomePage: "/user",
+        userDestressPage: "/destress",
+        userSelfCarePage: "/selfcare",
+        userCoursesPage: "/courses",
+        userDiaryPage: "/diary",
+        userNewsPage: "/news",
+        userProfilePage: "/profile"
     },
     authenticationResources: {
         authenticateResource: "/authenticate",

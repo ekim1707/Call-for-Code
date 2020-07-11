@@ -24,11 +24,70 @@ textarea::placeholder {
     opacity: 30%;
 }
 
+.fullHeight {
+    height: 100vh;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.userContentPageColor {
+    background-color: $user-page-color;
+}
+
+.userSideBarColor {
+    background-color: $side-bar-color !important;
+}
+
+.logoImageOnUserSideBar {
+    align-self: center;
+    margin-top: 8vh;
+    width: 3vh;
+}
+
+.userContentPageColor {
+    background-color: $user-page-color;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.transparentBackground {
+    opacity: 0;
+}
+
+.columnFlexDirection {
+    flex-direction: column;
+}
+
+.startContent {
+    justify-content: flex-start;
+}
+
+.centeredJustifiedContent {
+    justify-content: center;
+}
+
+.centerAlignedText {
+    text-align: center;
+}
+
 .buttonContainer {
     width: fit-content;
     height: fit-content;
     margin: auto;
 }
+
+.appNameFontFamily {
+    font-family: 'Kaushan Script';
+}
+
+.appNameFontSize {
+    font-size: 8vh;
+}
+
 .submitButton {
     width: 280px;
     height: 40px;

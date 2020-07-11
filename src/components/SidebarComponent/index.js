@@ -1,28 +1,30 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import Button from "../../common/Button";
-import Icon from "../../common/Icon";
-import { NavLink } from "react-router-dom";
+import {
+	Image,
+	Icon
+} from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 
-const SidebarComponent = ({
-    isOpen,
-    setIsOpen
-}) => {
-    return (
-        <div className="sidebarComponent">
-            <Button className="sidebarButton" onClick={() => {setIsOpen(!isOpen)}} buttonText={content.EXPLORE} />
-            <ul className="sidebarNavContainer" style={isOpen ? { right: "-350px" } : { right: "0" }}>
-                <div className="iconContainer"><Icon className="logoIcon" iconName="decompress_transparent" /></div>
-                {content.SIDEBAR_NAV_ARRAY.map((index, i) => {
-                    return <NavLink to={index.toLowerCase()} className="sidebarNavLinks" key={i}>
-                                <Icon className="sidebarNavLinkIcons" iconName={`${index.toLowerCase()}_white`} />
-                                {index}
-                            </NavLink>
-                })}
-            </ul>
-        </div>
-    )
+const SidebarComponent = ({linkClicked}) => {
+	return (
+		< div className = "ui sidebar inverted vertical menu visible userSideBar userSideBarColor fullHeight" >
+			< Image src={
+				process.env.PUBLIC_URL + '/img/logo.reshape.svg'
+			} className="logoImageOnUserSideBar"
+			/>
+			<br/>
+			<div className="linksSideBar" >
+				{content.SIDEBAR_NAV_ARRAY.map((index, i) => {
+					return <div>
+						<Link to={index.url} className="sidebarNavLinks" key={i}>
+							<Icon disabled name={index.icon} /> {index.name}
+						</Link>
+					</div>
+				})}
+			</div>
+		</div>);
 };
 
 export default SidebarComponent;

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./styles.scss";
-import content from "./content";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
 import Button from "../../common/Button";
+import content from "./content";
 
 const LandingPageComponent = ({
     clickCount,
