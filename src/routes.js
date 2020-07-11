@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Switch, Router, Route} from "react-router-dom"
+import React from 'react';
+import { Switch, Router, Route } from "react-router-dom"
 import history from "./history";
 import {Redirect} from 'react-router';
 import LandingPageContainer from "./containers/LandingPageContainer";

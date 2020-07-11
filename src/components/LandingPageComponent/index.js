@@ -2,8 +2,8 @@ import React from 'react';
 import "./styles.scss";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
-import ThirdPage from "./ThirdPage";
 import Button from "../../common/Button";
+import content from "./content";
 
 const LandingPageComponent = ({
     clickCount,
@@ -14,27 +14,27 @@ const LandingPageComponent = ({
             <div className="landingPageContentContainer" style={{ transform: `translateY(calc(-100vh * ${clickCount}))` }}>
                 <FirstPage />
                 <SecondPage />
-                <ThirdPage />
             </div>
-            <div className="contentButtonsContainer">
-                <div className="buttonContainer">
-                    <Button 
-                        onClick={() => handlePageUpDownClick("up")}
-                        containerClassName="contentButtonContainer"
-                        className="contentButton"
-                        isIcon
-                        iconName="arrow_up"
-                        disabled={clickCount === 0 ? true : false}
-                    />
+            <div className="navArrowsButtonContainer">
+                {clickCount === 0 &&
                     <Button 
                         onClick={() => handlePageUpDownClick("down")}
-                        containerClassName="contentButtonContainer"
-                        className="contentButton"
+                        containerClassName="navArrowButtonContainer"
+                        className="navArrowButton"
                         isIcon
                         iconName="arrow_down"
-                        disabled={clickCount === 2 ? true : false}
                     />
-                </div>
+                }
+                {clickCount !== 0 &&
+                    <Button 
+                        onClick={() => handlePageUpDownClick("up")}
+                        containerClassName="navArrowButtonContainer"
+                        className="navArrowButton"
+                        isIcon
+                        iconName="arrow_up"
+                    />
+                }
+                <div className="seeMoreLabel">{clickCount === 0 ? content.SEE_MORE_LABEL : content.SIGN_UP_NOW}</div>
             </div>
         </div>
     )

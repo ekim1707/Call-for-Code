@@ -1,16 +1,14 @@
 @import "../../../scss/common.styles.scss";
 
 .firstPageContainer {
+    position: relative;
     height: 100vh;
     background: $strong-blue;
-    margin-bottom: 2em;
 
     .headerContainer {
-        .titleContainer {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         .topMarginContainers {
            margin-top: 4vh;
@@ -36,13 +34,48 @@
     }
 
     .bodyContainer {
-        color: white;
+        color: $main-1;
         margin-left: 1em;
         margin-top: 10%;
     }
 
     .messageContainer {
-        color: white;
+        color: $main-1;
         margin-left: 2em;
+    }
+
+    .footerContainer {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 50px;
+        background: $main-1;
+        text-align: center;
+        .footerHeader {
+            color: $almost-black;
+            font-family: Helvetica, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            .lightYellowBox {
+                color: transparent;
+                background: $light-yellow;
+            }
+            .darkYellowBox {
+                @extend .lightYellowBox;
+                background: $dark-yellow;
+                margin-right: 20px;
+            }
+        }
+        .footerMessage {
+            width: 25%;
+            margin: auto;
+            color: $dark-gray;
+            font-family: Helvetica 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            .shorterWidthTextUnderline {
+                width: 10%;
+                margin: 5px auto 0 auto;
+                border: 1px solid $darker-gray;
+            }
+        }
     }
 }
