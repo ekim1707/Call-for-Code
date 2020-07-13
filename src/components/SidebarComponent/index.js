@@ -5,7 +5,7 @@ import {
 	Image,
 	Icon
 } from 'semantic-ui-react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SidebarComponent = ({linkClicked}) => {
 	return (
@@ -18,9 +18,9 @@ const SidebarComponent = ({linkClicked}) => {
 			<div className="linksSideBar" >
 				{content.SIDEBAR_NAV_ARRAY.map((index, i) => {
 					return <div>
-						<Link to={index.url} className="sidebarNavLinks" key={i}>
+						<NavLink to={index.url} className="sidebarNavLinks" key={i}>
 							<Icon disabled name={index.icon} /> {index.name}
-						</Link>
+						</NavLink>
 					</div>
 				})}
 			</div>

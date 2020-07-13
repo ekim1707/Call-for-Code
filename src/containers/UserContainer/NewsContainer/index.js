@@ -1,21 +1,6 @@
 import React from 'react';
-import UserHomePage from "../../../components/User/HomePage";
-import TitleComponent from "../../../components/User/Title";
-import SidebarComponent from "../../../components/SidebarComponent"
+import NewsComponent from "../../../components/NewsComponent";
 
-const NewsContainer = () => {
-    return (
-      <div className = "displayFlex fullHeight userContentPageColor" >
-        <div >
-        <SidebarComponent / >
-        </ div>
-        <div className = "centeredJustifiedContent columnFlexDirection fullWidth startContent" >
-          <TitleComponent titleName = "Decompress" / >
-          <div >
-            < h1 > News are coming soon </ h1>
-          </div>
-        </div >
-      </ div> );
-    };
+const UserNewsContainer = () => <NewsComponent />;
 
-export default NewsContainer;
+export default UserNewsContainer;

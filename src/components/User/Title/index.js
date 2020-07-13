@@ -1,10 +1,10 @@
 import React from 'react';
 
-const title= (props) => {
+const title= ({titleName}) => {
   return ( 
     <div>
       < h1 className = "appNameFontFamily appNameFontSize centerAlignedText" >
-        {props.titleName} 
+        {titleName} 
       </h1>
       <hr/>
     </div>

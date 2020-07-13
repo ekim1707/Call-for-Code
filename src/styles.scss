@@ -23,8 +23,7 @@ ul {
   padding: 0;
 }
 
-.mainContainer {
-  .userRoutesContainer {
-    padding-left: 100px;
-  }
+.userComponentsContainer {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

@@ -1,14 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SidebarComponent from "../../components/SidebarComponent";
 
-const SidebarContainer = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <SidebarComponent 
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-        />
-    )
-};
+const SidebarContainer = () => <SidebarComponent />;
 
 export default SidebarContainer;

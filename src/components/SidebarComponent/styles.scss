@@ -1,27 +1,23 @@
 @import "../../scss/common.styles.scss";
 
-.linksSideBar {
-	align-self: center;
-	margin-top: 10%;
-	color: white;
-
-	div {
-		margin-top: 2vh;
-	}
-}
-
-.sidebarNavLinks {
-	color: white;
-	font-size: 3vh;
-	font-family: Helvetica, sans-serif;
-}
-
-.logoImageOnUserSideBar {
-	width: auto;
-}
-
 .userSideBar {
 	display: flex !important;
 	align-content: center;
 	position: relative !important;
+	.logoImageOnUserSideBar {
+		width: auto;
+	}
+	.linksSideBar {
+		align-self: center;
+		margin-top: 10%;
+		div {
+			margin-top: 2vh;
+		}
+		.sidebarNavLinks {
+			color: $main-1;
+		}
+		.sidebarNavLinks.active {
+			color: $active-link-blue;
+		}
+	}
 }
