@@ -7,7 +7,6 @@ import Icon from "../../common/Icon";
 const NewsComponent = () => {
     return (
         <div className="newsComponent">
-            <SidebarContainer />
             <ul className="newsLinksList">
                 {content.NEWS_LINKS_ARRAY.map(LINK => 
                     <li className="newsLinkContainer">

@@ -1,6 +1,5 @@
 import React from 'react';
 import "./styles.scss";
-import content from "./content";
 
 const SelfCareComponent = () => {
     return (
