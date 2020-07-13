@@ -10,7 +10,7 @@ const LandingPageComponent = ({
     handlePageUpDownClick
 }) => {
     return (
-        <div className="landingPageComponent">
+        <div className="landingPageContainer">
             <div className="landingPageContentContainer" style={{ transform: `translateY(calc(-100vh * ${clickCount}))` }}>
                 <FirstPage />
                 <SecondPage />

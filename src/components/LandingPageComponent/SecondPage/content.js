@@ -33,13 +33,16 @@ export default {
             TITLE: "Company",
             BUTTON_ARRAY: [
                 {
-                    TEXT: "Terms of Service"
+                    TEXT: "Terms of Service",
+                    LINK: "terms"
                 },
                 {
-                    TEXT: "Privacy Policy"
+                    TEXT: "Privacy Policy",
+                    LINK: "privacy"
                 },
                 {
-                    TEXT: "Community"
+                    TEXT: "Community",
+                    LINK: "community"
                 }
             ]
         },
@@ -47,13 +50,16 @@ export default {
             TITLE: "Resources",
             BUTTON_ARRAY: [
                 {
-                    TEXT: "Contact Us"
+                    TEXT: "Contact Us",
+                    LINK: "contact"
                 },
                 {
-                    TEXT: "FAQ"
+                    TEXT: "FAQ",
+                    LINK: "faq"
                 },
                 {
-                    TEXT: "Privacy"
+                    TEXT: "Privacy",
+                    LINK: "privacy"
                 }
             ]
         },
@@ -61,12 +67,13 @@ export default {
             TITLE: "Get the App",
             BUTTON_ARRAY: [
                 {
-                    ICON: "decompress_transparent"
+                    ICON: "decompress_transparent",
+                    LINK: "appstore"
                 }
             ]
         }
     ],
-    SOCIAL_MEDIA_BUTTONS_ARRAY: [
+    SOCIAL_MEDIA_LINKS_ARRAY: [
         "facebook",
         "twitter",
         "instagram"

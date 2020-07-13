@@ -4,7 +4,7 @@ import content from "./content";
 import Carousel from "semantic-ui-carousel-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SecondPage = () => {
     let elements = content.BODY_DIVS_ARRAYS.map((ARRAY, i) => {
@@ -45,34 +45,43 @@ const SecondPage = () => {
             </div>
             <div className="footerContainer">
                 <div className="footerColumnsContainer">
-                    {content.FOOTER_LINKS_ARRAY.map((INDEX, i) => 
+                    {content.FOOTER_LINKS_ARRAY.map(({
+                        TITLE,
+                        BUTTON_ARRAY
+                    }, i) => 
                         <div className="footerColumn" key={i}>
-                            <div className="columnTitle">{INDEX.TITLE}</div>
-                            {INDEX.BUTTON_ARRAY.map((BUTTON, i) => 
-                                BUTTON.TEXT ? 
-                                <Link to={BUTTON.TEXT.toLowerCase()} className="columnLink" key={i}>
-                                    {BUTTON.TEXT}
-                                </Link> :
+                            <div className="columnTitle">{TITLE}</div>
+                            {BUTTON_ARRAY.map(({
+                                TEXT,
+                                ICON,
+                                LINK
+                            }, i) => 
+                                TEXT ? 
+                                <NavLink to={LINK} className="columnLink" key={i}>
+                                    {TEXT}
+                                </NavLink> :
                                 <div className="buttonContainer" key={i}>
                                     <Button 
                                         className="columnButton"
-                                        iconName={BUTTON.ICON}
+                                        iconName={ICON}
                                         isIcon
                                         cover
+                                        disabled
                                     />
                                 </div>
                             )}
                         </div>
                     )}
-                    <div className="socialMediaButtonRow">
-                        <div className="buttonContainer">
-                            {content.SOCIAL_MEDIA_BUTTONS_ARRAY.map((button, i) => 
-                                <Button 
-                                    className="socialMediaButton"
-                                    iconName={button}
-                                    isIcon
-                                    key={i}
-                                />
+                    <div className="socialMediaLinksRow">
+                        <div className="socialMediaLinksContainer">
+                            {content.SOCIAL_MEDIA_LINKS_ARRAY.map((LINK, i) => 
+                                <a className="linkContainer">
+                                    <Icon 
+                                        className="socialMediaIcon"
+                                        iconName={LINK}
+                                        key={i}
+                                    />
+                                </a>
                             )}
                         </div>
                     </div>

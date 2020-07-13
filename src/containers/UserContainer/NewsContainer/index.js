@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsComponent from "../../../components/NewsComponent";
+import NewsComponent from "../../../components/User/NewsComponent";
 
 const UserNewsContainer = () => <NewsComponent />;
 
