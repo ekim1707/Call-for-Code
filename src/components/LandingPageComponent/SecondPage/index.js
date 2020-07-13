@@ -11,12 +11,18 @@ const SecondPage = () => {
         return {
             render: () => 
             <div className="carouselSubContainer" key={i}>
-                {ARRAY.map((INDEX, i) => 
+                {ARRAY.map(({
+                    TITLE,
+                    ICON_NAME
+                }, i) => 
                     <div className="carouselIndexContainer" key={i}>
-                        <Icon className="carouselIndexIcon" iconName={INDEX.toLowerCase()} cover />
-                        <h4>{INDEX}</h4>
+                        <Icon 
+                            className={ICON_NAME === "courses" ? "carouselIndexIcon coverCentered" : "carouselIndexIcon"} 
+                            iconName={ICON_NAME} 
+                            cover 
+                        />
+                        <h4>{TITLE}</h4>
                         <p>{content.READ_MORE}</p>
-                        {/* where does this link go? */}
                     </div>
                 )}
             </div>

@@ -3,7 +3,7 @@
 .firstPageContainer {
     position: relative;
     height: 100vh;
-    background: $strong-blue;
+    background: linear-gradient($strong-blue 50vh, $main-1 80vh);
 
     .headerContainer {
         display: flex;
@@ -50,7 +50,6 @@
         left: 0;
         bottom: 0;
         padding: 50px;
-        background: $main-1;
         text-align: center;
         .footerHeader {
             color: $almost-black;

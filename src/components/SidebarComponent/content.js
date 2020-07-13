@@ -12,17 +12,17 @@ export default {
             url: "/news"
         },
         {
-            name: "Diary",
+            name: "Journal",
             icon: "book",
-            url: "/diary"
+            url: "/journal"
         },
         {
-            name: "Destress",
+            name: "De-stress",
             icon: "hand peace outline",
             url: "/destress"
         },
         {
-            name: "Self care",
+            name: "Self-care",
             icon: "plus",
             url: "/selfcare"
         },

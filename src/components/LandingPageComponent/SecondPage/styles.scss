@@ -2,9 +2,9 @@
 
 .secondPageContainer {
     height: 100vh;
+    background: linear-gradient($light-blue 50vh, $main-1 70vh);
     .mainContainer {
         height: 60vh;
-        background: $light-blue;
         .headerContainer {
             padding: 40px 0 0 30px;
             .header {
@@ -30,8 +30,11 @@
                     border-radius: 15px;
                     .carouselIndexIcon {
                         width: 25vw;
-                        height: 25vh;
+                        height: 30vh;
                         margin: auto;
+                    }
+                    .carouselIndexIcon.coverCentered {
+                        background-position-y: center !important;
                     }
                     h4 {
                         margin: 10px 0 5px 0;

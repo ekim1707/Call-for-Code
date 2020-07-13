@@ -3,17 +3,28 @@ export default {
     SUB_HEADER: "Features",
     BODY_DIVS_ARRAYS: [
         [
-            "Journaling",
-            "Self-Care",
-            "News"
+            {
+                TITLE: "Articles & Positive News",
+                ICON_NAME: "news"
+            },
+            {
+                TITLE: "Journaling",
+                ICON_NAME: "journaling"
+            },
+            {
+                TITLE: "De-stress",
+                ICON_NAME: "destress"
+            }
         ],
         [
-            "Diary",
-            "Destress",
-            "Share"
-        ],
-        [
-            "Courses"
+            {
+                TITLE: "Self-care",
+                ICON_NAME: "selfcare_icon"
+            },
+            {
+                TITLE: "Courses",
+                ICON_NAME: "courses"
+            }
         ]
     ],
     READ_MORE: "Read more >",
