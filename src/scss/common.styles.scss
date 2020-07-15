@@ -81,11 +81,18 @@ textarea::placeholder {
 }
 
 .appNameFontFamily {
-    font-family: 'Kaushan Script';
+    font-family: 'Playball';
 }
 
 .appNameFontSize {
     font-size: 8vh;
+}
+
+.contentPadding {
+    padding: 1%;
+}
+.sidebarWidth {
+    width: 20vh !important;
 }
 
 .submitButton {

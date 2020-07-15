@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const SidebarComponent = ({linkClicked}) => {
 	return (
-		< div className = "ui sidebar inverted vertical menu visible userSideBar userSideBarColor fullHeight" >
+		< div className = "ui sidebar inverted vertical menu visible userSideBar userSideBarColor fullHeight sidebarWidth" >
 			< Image src={
 				process.env.PUBLIC_URL + '/img/logo.reshape.svg'
 			} className="logoImageOnUserSideBar"

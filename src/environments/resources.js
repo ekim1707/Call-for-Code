@@ -9,7 +9,7 @@ export const resources = {
         userDestressPage: "/destress",
         userSelfCarePage: "/selfcare",
         userCoursesPage: "/courses",
-        userDiaryPage: "/diary",
+        userDiaryPage: "/journal",
         userNewsPage: "/news",
         userProfilePage: "/profile"
     },
