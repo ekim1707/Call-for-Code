@@ -1,5 +1,4 @@
 import React, {useState, useRef} from 'react';
-import "./styles.scss";
 import JoditEditor from "jodit-react";
 import {
     Button,
