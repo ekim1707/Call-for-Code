@@ -1,6 +1,6 @@
 export default {
     TITLE: "Courses",
-    COURSES_CARD_GROUP_ITEMS: [
+    COURSES_CARD_GROUP_ITEMS_ARRAY: [
         {
             image: `${process.env.PUBLIC_URL}/img/stress_management.png`,
             header: "STRESS MANAGEMENT",

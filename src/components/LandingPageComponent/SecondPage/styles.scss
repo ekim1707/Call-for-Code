@@ -17,39 +17,14 @@
             }
         }
         .carousel-container {
+            margin: 0;
             background: transparent;
             box-shadow: none;
-            .carouselSubContainer {
-                display: flex;
-                justify-content: space-evenly;
-                .carouselIndexContainer {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    padding: 20px 10px 0 10px;
-                    background: $main-1;
-                    border-radius: 15px;
-                    .carouselIndexIcon {
-                        width: 25vw;
-                        height: 35vh;
-                        margin: auto;
-                    }
-                    .carouselIndexIcon.coverCentered {
-                        background-position-y: center !important;
-                    }
-                    h4 {
-                        margin: 10px 0 5px 0;
-                        color: $darker-gray;
-                    }
-                    p {
-                        margin: 0 0 20px 0;
-                        color: $almost-black;
-                        font-size: $font-size-small;
-                        font-weight: 700;
-                    }
-                }
+            .ui.card:after, .ui.cards:after {
+                content: none;
             }
             .carousel-indicators {
-                margin-top: 9px;
+                margin-top: 25px;
                 text-align: center;
                 .ui.black.label {
                     margin: 0 3px;
@@ -64,14 +39,15 @@
             }
             .prev {
                 position: absolute;
-                left: 10px;
-                top: 50%;
+                left: 45%;
+                bottom: 5px;
+                margin: 0;
                 box-shadow: $shadow-light;
             }
             .next {
                 @extend .prev;
                 left: initial;
-                right: 10px;
+                right: 45%;
             }
         }
     }

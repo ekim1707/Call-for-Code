@@ -18,7 +18,7 @@ const CoursesComponent = () => {
             }}>{content.TITLE}</Header>
             <Grid.Column width={15}>
                 <Card.Group 
-                    items={content.COURSES_CARD_GROUP_ITEMS} 
+                    items={content.COURSES_CARD_GROUP_ITEMS_ARRAY} 
                     itemsPerRow={3} 
                 />
             </Grid.Column>

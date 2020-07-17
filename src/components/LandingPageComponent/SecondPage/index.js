@@ -1,31 +1,35 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
+import { 
+    Grid, 
+    Card, 
+    Image 
+} from "semantic-ui-react";
 import Carousel from "semantic-ui-carousel-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
 import { NavLink } from "react-router-dom";
 
 const SecondPage = () => {
-    let elements = content.BODY_DIVS_ARRAYS.map((ARRAY, i) => {
+    let elements = content.FEATURES_CARD_GROUP_ITEMS_ARRAY.map((SUB_ARRAY, i) => {
         return {
             render: () => 
-            <div className="carouselSubContainer" key={i}>
-                {ARRAY.map(({
-                    TITLE,
-                    ICON_NAME
-                }, i) => 
-                    <div className="carouselIndexContainer" key={i}>
-                        <Icon 
-                            className={ICON_NAME === "courses" ? "carouselIndexIcon coverCentered" : "carouselIndexIcon"} 
-                            iconName={ICON_NAME} 
-                            cover 
-                        />
-                        <h4>{TITLE}</h4>
-                        <p>{content.READ_MORE}</p>
-                    </div>
-                )}
-            </div>
+                <Card.Group style={{ justifyContent: "space-evenly" }} key={i}>{                
+                    SUB_ARRAY.map(({
+                        image,
+                        header,
+                        description
+                    }, i) =>             
+                        <Card key={i}>
+                            <Image src={`${process.env.PUBLIC_URL}/img/${image}.png`} wrapped ui={false} />
+                            <Card.Content>
+                                <Card.Header>{header}</Card.Header>
+                                <Card.Description>{description}</Card.Description>
+                            </Card.Content>
+                        </Card>
+                    )
+                }</Card.Group>
         }
     });
 
@@ -36,12 +40,12 @@ const SecondPage = () => {
                     <h3 className="header">{content.HEADER}</h3>
                     <h2 className="subHeader">{content.SUB_HEADER}</h2>
                 </div>
-                    <Carousel 
-                        elements={elements} 
-                        animation="pulse"
-                        showNextPrev={true}
-                        showIndicators={true}
-                    />
+                <Carousel 
+                    elements={elements} 
+                    animation="bounce"
+                    showNextPrev={true}
+                    showIndicators={true}
+                />
             </div>
             <div className="footerContainer">
                 <div className="footerColumnsContainer">
@@ -75,11 +79,10 @@ const SecondPage = () => {
                     <div className="socialMediaLinksRow">
                         <div className="socialMediaLinksContainer">
                             {content.SOCIAL_MEDIA_LINKS_ARRAY.map((LINK, i) => 
-                                <a className="linkContainer">
+                                <a className="linkContainer" key={i}>
                                     <Icon 
                                         className="socialMediaIcon"
                                         iconName={LINK}
-                                        key={i}
                                     />
                                 </a>
                             )}
