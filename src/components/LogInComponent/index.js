@@ -48,8 +48,7 @@ class LoginComponent extends React.Component {
                 }
             }
             verticalAlign = 'middle' >
-            <
-            Grid.Column style = {
+            < Grid.Column style = {
                 {
                     maxWidth: 450
                 }

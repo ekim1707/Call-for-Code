@@ -10,6 +10,7 @@ import {
 import {
     DateInput,
 } from 'semantic-ui-calendar-react';
+import journalService from '../../../services/journalService'
 import SelectBoxInputs from "./content";
 
 let journalText = '';
@@ -27,7 +28,8 @@ const DiaryComponent = () => {
   }
 
   const handleSubmit = (event) => {
-    console.log(event);
+    event.preventDefault();
+    journalService.save();
   }
 
   return ( 
@@ -39,7 +41,6 @@ const DiaryComponent = () => {
                 <Form.Input value={title} onChange={
                     newValue => setTitle(newValue.target.value)
                 } />
-                {/* <input placeholder = 'Title' value={title} / > */}
             </ Form.Field>
             < Form.Field >
             < label > Ideas </ label>
