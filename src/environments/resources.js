@@ -9,13 +9,16 @@ export const resources = {
         userDestressPage: "/destress",
         userSelfCarePage: "/selfcare",
         userCoursesPage: "/courses",
-        userDiaryPage: "/diary",
+        userJournalPage: "/journal",
         userNewsPage: "/news",
         userProfilePage: "/profile"
     },
     authenticationResources: {
         authenticateResource: "/authenticate",
         registerResource: "/register"
+    },
+    journalResources: {
+        url: "/journal"
     }
 }
 

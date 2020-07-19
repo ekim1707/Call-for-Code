@@ -7,7 +7,9 @@ const FirstPage = () => {
 	return (
 		<div className="firstPageContainer" >
 			<div className="headerContainer">
-				<h1 className="title topMarginContainers leftMargin" style={{ 'fontFamily': 'Kaushan Script', 'fontSize': '8vh' }}>{content.TITLE}</h1>
+				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize" > {
+					content.TITLE
+				} </ h1>
 				<ul className="navLinkContainer topMarginContainers">
 					{content.NAV_ARRAY.map((index, i) => {
 						return <Link to={index.url.toLowerCase()} className="navLinks" style={
