@@ -48,7 +48,14 @@ class SignUpComponent extends React.Component {
 
     render() {
         return (
-            <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+            < Grid textAlign = 'center'
+            className = "blueBackgroundColor"
+            style = {
+                {
+                    height: '100vh'
+                }
+            }
+            verticalAlign = 'middle' >
                 <Grid.Column style={{ maxWidth: 450 }}>
                     <Header as='h2' color='blue' textAlign='center'>
                         < Image src={
@@ -93,12 +100,14 @@ class SignUpComponent extends React.Component {
                                     this.handlePasswordChange
                                 }
                             />
-                            <Button color='blue' fluid size='large'>
+                            < Button color = 'blue'
+                            fluid size = 'large'
+                            className = "roundBorderRadious" >
                                 Sign up
                             </Button>
                         </Segment>
                     </Form>
-                    <Message>
+                    < Message className = "boldFontWeight" >
                         Already have an account?  <a href='login'>Log in</a>
                     </Message>
                 </Grid.Column>
