@@ -67,15 +67,6 @@ export default {
                     LINK: "privacy"
                 }
             ]
-        },
-        {
-            TITLE: "Get the App",
-            BUTTON_ARRAY: [
-                {
-                    ICON: "decompress_transparent",
-                    LINK: "appstore"
-                }
-            ]
         }
     ],
     SOCIAL_MEDIA_LINKS_ARRAY: [

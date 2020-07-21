@@ -9,6 +9,9 @@ import {
 import Carousel from "semantic-ui-carousel-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
+import {
+    Image,
+} from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 const SecondPage = () => {
@@ -80,6 +83,12 @@ const SecondPage = () => {
                             )}
                         </div>
                     )}
+                    <div className="footerColumn"> 
+                            < div className = "columnTitle" > Get the app </ div>
+                            < Image src = {
+                                process.env.PUBLIC_URL + '/img/logo.reshape.svg'
+                            } />
+                    </div>
                     <div className="socialMediaLinksRow">
                         <div className="socialMediaLinksContainer">
                             {content.SOCIAL_MEDIA_LINKS_ARRAY.map((LINK, i) => 

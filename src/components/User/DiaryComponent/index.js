@@ -1,10 +1,7 @@
 import React, {useState, useRef} from 'react';
-<<<<<<< HEAD
-=======
-import "./styles.scss";
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644
 import JoditEditor from "jodit-react";
 import {
+    Grid,
     Button,
     Form,
     Dropdown
@@ -13,10 +10,7 @@ import {
 import {
     DateInput,
 } from 'semantic-ui-calendar-react';
-<<<<<<< HEAD
-=======
 import journalService from '../../../services/journalService'
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644
 import SelectBoxInputs from "./content";
 
 let journalText = '';
@@ -34,16 +28,12 @@ const DiaryComponent = () => {
   }
 
   const handleSubmit = (event) => {
-<<<<<<< HEAD
-    console.log(event);
-=======
     event.preventDefault();
     journalService.save();
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644
   }
 
   return ( 
-    < div className = "contentPadding" >
+    <Grid.Column className = "contentPadding" width={14}>
         < Form onSubmit={handleSubmit} >
         <Form.Group widths="equal">
             < Form.Field >
@@ -51,10 +41,6 @@ const DiaryComponent = () => {
                 <Form.Input value={title} onChange={
                     newValue => setTitle(newValue.target.value)
                 } />
-<<<<<<< HEAD
-                {/* <input placeholder = 'Title' value={title} / > */}
-=======
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644
             </ Form.Field>
             < Form.Field >
             < label > Ideas </ label>
@@ -116,7 +102,7 @@ const DiaryComponent = () => {
             </Form.Field>
             <Button type = 'submit' > Submit </ Button>
         </Form>
-    </ div>
+    </Grid.Column>
   );
 };
 

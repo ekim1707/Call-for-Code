@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-export const journalService = () => {
-  return {
-    save: (journal)=> {
-      
-    }
-  }
-}
-=======
 import resources from "../environments/resources"
 
 export const journalService = () => {
@@ -25,4 +16,3 @@ export const journalService = () => {
 }
 
 export default journalService;
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644

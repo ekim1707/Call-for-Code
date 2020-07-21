@@ -4,21 +4,31 @@ import content from "./content";
 import {
 	Button
 } from 'semantic-ui-react';
+import {
+	Image,
+} from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
 const FirstPage = () => {
 	return (
 		<div className="firstPageContainer" >
 			<div className="headerContainer">
-<<<<<<< HEAD
-				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize" > {
-=======
-				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize"
+				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
 				style = {
 						{
 							'color': '#1C2C5B'
-}} > {
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644
+						}
+				} >
+				< Image src = {
+					process.env.PUBLIC_URL + '/img/logo.reshape.svg'
+				}
+				style = {
+					{
+						'height': '1em'
+					}
+				}
+				/>
+		 		{
 					content.TITLE
 				} </ h1>
 				<ul className="navLinkContainer topMarginContainers">

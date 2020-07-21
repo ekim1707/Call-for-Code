@@ -1,7 +1,8 @@
 import React from 'react';
 import { Switch, Router, Route } from "react-router-dom"
 import history from "./history";
-import {Redirect} from 'react-router';
+import { Redirect } from 'react-router';
+import { Grid, Header, Divider } from "semantic-ui-react";
 import LandingPageContainer from "./containers/LandingPageContainer";
 import SignUpContainer from "./containers/SignUpContainer";
 import LoginContainer from "./containers/LogInContainer";
@@ -34,36 +35,51 @@ export default() => {
         <Route path={resources.routes.basePath} component={LandingPageContainer} exact/>
         <Route path={resources.routes.signUpPath} component={SignUpContainer} exact/>
         <Route path={resources.routes.logInPath} component={LoginContainer} exact/>
-        <div className = "displayFlex fullHeight userContentPageColor" >
-          <div><SidebarContainer /></div>
-          <div className = "columnFlexDirection fullWidth startContent" >
-            <Title titleName = "Decompress" />
-            <div className="userComponentsContainer">
-              < PrivateRoute path={resources.routes.userProfilePage} component={UserHomePageContainer}/>
-              <
-                PrivateRoute
-                path={resources.routes.userDestressPage}
-                component={UserDestressContainer}/>
-              <
-                PrivateRoute
-                path = {resources.routes.userJournalPage}
-                component={UserDiaryContainer}/>
-              <
-                PrivateRoute
-                path={resources.routes.userNewsPage}
-                component={UserNewsContainer}/>
-              <
-                PrivateRoute
-                path={resources.routes.userSelfCarePage}
-                component={UserSelfCareContainer}/>
-              <
-                PrivateRoute
-                path={resources.routes.userCoursesPage}
-                component={UserCoursesContainer}/>
-            </div>
-          </div >
-        </div>
+        <Grid style={{ 
+          height: "100vh", 
+          margin: "0",
+          overflow: "hidden" 
+        }}>
+          <Grid.Row style={{ height: "12vh", background: "#93AFD6" }} columns={1}>
+            <Grid.Column>
+              <Title titleName = "Decompress" />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row style={{ 
+            height: "88vh",
+            padding: "0"
+          }}>
+            <Grid.Column style={{ 
+              height: "100%",
+              background: "#93AFD6",
+              color: "#fff"
+            }} width={2}>
+              <SidebarContainer />
+            </Grid.Column>
+            < Route path={resources.routes.userProfilePage} component={UserHomePageContainer}/>
+            <
+              Route
+              path={resources.routes.userDestressPage}
+              component={UserDestressContainer}/>
+            <
+              Route
+              path = {resources.routes.userJournalPage}
+              component={UserDiaryContainer}/>
+            <
+              Route
+              path={resources.routes.userNewsPage}
+              component={UserNewsContainer}/>
+            <
+              Route
+              path={resources.routes.userSelfCarePage}
+              component={UserSelfCareContainer}/>
+            <
+              Route
+              path={resources.routes.userCoursesPage}
+              component={UserCoursesContainer}/>
+          </Grid.Row>
+        </Grid>
       </Switch>
-    </ Router >
+    </Router>
   );
 }

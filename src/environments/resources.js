@@ -9,11 +9,7 @@ export const resources = {
         userDestressPage: "/destress",
         userSelfCarePage: "/selfcare",
         userCoursesPage: "/courses",
-<<<<<<< HEAD
-        userDiaryPage: "/journal",
-=======
         userJournalPage: "/journal",
->>>>>>> b0ed4741be0894d6781fa6a8079d92550586c644
         userNewsPage: "/news",
         userProfilePage: "/profile"
     },
