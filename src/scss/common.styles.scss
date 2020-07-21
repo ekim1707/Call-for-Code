@@ -74,6 +74,13 @@ textarea::placeholder {
     text-align: center;
 }
 
+.grayFontColor {
+    color: $gray-color;
+}
+.grayBackGround {
+    background-color: $gray-color !important;
+}
+
 .buttonContainer {
     width: fit-content;
     height: fit-content;

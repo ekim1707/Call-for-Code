@@ -107,7 +107,7 @@ class SignUpComponent extends React.Component {
                             </Button>
                         </Segment>
                     </Form>
-                    < Message className = "boldFontWeight" >
+                    < Message className = "roundBorderRadious boldFontWeigh grayBackGround" >
                         Already have an account?  <a href='login'>Log in</a>
                     </Message>
                 </Grid.Column>

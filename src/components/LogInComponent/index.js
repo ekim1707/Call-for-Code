@@ -97,21 +97,13 @@ class LoginComponent extends React.Component {
             onChange = {
                 this.handlePasswordChange
             }
-            /> <
-            Button color = 'blue'
-            className = "roundBorderRadious"
-            fluid size = 'large' >
-            Login <
-            /Button> < /
-            Segment > <
-            /Form> <
-            Message style = {
-                {
-                    'backgroundColor': '#F4EFEF'
-                }
-            }
-            className = "roundBorderRadious boldFontWeigh"
-            >
+            />
+                <Button color = 'blue' className = "roundBorderRadious" fluid size = 'large' >
+                Login 
+                </Button> 
+            </Segment >
+            </Form>
+            < Message className = "roundBorderRadious boldFontWeigh grayBackGround" >
             Decompress ? < a href = 'signup' > Sign Up < /a> < /
             Message > <
             /Grid.Column> < /
