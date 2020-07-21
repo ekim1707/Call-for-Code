@@ -92,7 +92,11 @@ textarea::placeholder {
     padding: 1%;
 }
 .sidebarWidth {
-    width: 20vh !important;
+    width: 30vh !important;
+}
+
+.roundBorderRadious {
+    border-radius: 2em !important;
 }
 
 .submitButton {
@@ -111,6 +115,18 @@ textarea::placeholder {
 .submitButton:disabled {
     opacity: 0.55; 
     cursor: not-allowed;
+}
+
+.blueBackgroundColor {
+    background-color: $blue-background;
+}
+
+.boldFontWeight {
+    font-weight: bold !important;
+}
+
+.darkBlueFontColor {
+    color: $title-color;
 }
 
 .hoverable {
