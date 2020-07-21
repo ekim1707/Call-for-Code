@@ -46,7 +46,7 @@ export default() => {
                 component={UserDestressContainer}/>
               <
                 PrivateRoute
-                path={resources.routes.userDiaryPage}
+                path = {resources.routes.userJournalPage}
                 component={UserDiaryContainer}/>
               <
                 PrivateRoute

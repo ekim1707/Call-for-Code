@@ -47,9 +47,9 @@ class LoginComponent extends React.Component {
                     height: '100vh'
                 }
             }
+            className = "blueBackgroundColor"
             verticalAlign = 'middle' >
-            <
-            Grid.Column style = {
+            < Grid.Column style = {
                 {
                     maxWidth: 450
                 }
@@ -64,7 +64,8 @@ class LoginComponent extends React.Component {
             }
             style = {
                 {
-                    width: '10px'
+                    width: '10px',
+                    color: 'white'
                 }
             }
             /> &nbsp; Log in to your account < /
@@ -98,12 +99,19 @@ class LoginComponent extends React.Component {
             }
             /> <
             Button color = 'blue'
+            className = "roundBorderRadious"
             fluid size = 'large' >
             Login <
             /Button> < /
             Segment > <
             /Form> <
-            Message >
+            Message style = {
+                {
+                    'backgroundColor': '#F4EFEF'
+                }
+            }
+            className = "roundBorderRadious boldFontWeigh"
+            >
             Decompress ? < a href = 'signup' > Sign Up < /a> < /
             Message > <
             /Grid.Column> < /

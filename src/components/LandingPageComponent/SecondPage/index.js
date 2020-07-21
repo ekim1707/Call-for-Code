@@ -37,8 +37,12 @@ const SecondPage = () => {
         <div className="secondPageContainer">
             <div className="mainContainer">
                 <div className="headerContainer">
-                    <h3 className="header">{content.HEADER}</h3>
-                    <h2 className="subHeader">{content.SUB_HEADER}</h2>
+                    < h2 className = "header leftMarginSecondPage exploreSizeSecondPage" > {
+                        content.HEADER
+                    } </ h2>
+                    < h1 className = "subHeader leftMarginSecondPage fontSizeSecondPage" > {
+                        content.SUB_HEADER
+                    } </ h1>
                 </div>
                 <Carousel 
                     elements={elements} 
