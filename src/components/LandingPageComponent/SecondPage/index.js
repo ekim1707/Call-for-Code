@@ -9,9 +9,6 @@ import {
 import Carousel from "semantic-ui-carousel-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
-import {
-    Image,
-} from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 const SecondPage = () => {
