@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Router, Route } from "react-router-dom"
 import history from "./history";
 import { Redirect } from 'react-router';
-import { Grid, Header, Divider } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import LandingPageContainer from "./containers/LandingPageContainer";
 import SignUpContainer from "./containers/SignUpContainer";
 import LoginContainer from "./containers/LogInContainer";
@@ -56,25 +56,25 @@ export default() => {
             }} width={2}>
               <SidebarContainer />
             </Grid.Column>
-            < Route path={resources.routes.userProfilePage} component={UserHomePageContainer}/>
+            < PrivateRoute path={resources.routes.userProfilePage} component={UserHomePageContainer}/>
             <
-              Route
+              PrivateRoute
               path={resources.routes.userDestressPage}
               component={UserDestressContainer}/>
             <
-              Route
+              PrivateRoute
               path = {resources.routes.userJournalPage}
               component={UserDiaryContainer}/>
             <
-              Route
+              PrivateRoute
               path={resources.routes.userNewsPage}
               component={UserNewsContainer}/>
             <
-              Route
+              PrivateRoute
               path={resources.routes.userSelfCarePage}
               component={UserSelfCareContainer}/>
             <
-              Route
+              PrivateRoute
               path={resources.routes.userCoursesPage}
               component={UserCoursesContainer}/>
           </Grid.Row>
