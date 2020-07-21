@@ -1,17 +1,14 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
-import { 
-    Grid, 
-    Card, 
-    Image 
-} from "semantic-ui-react";
+import {
+    Grid,
+    Card,
+    Image
+} from 'semantic-ui-react'
 import Carousel from "semantic-ui-carousel-react";
 import Icon from "../../../common/Icon";
 import Button from "../../../common/Button";
-import {
-    Image,
-} from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 const SecondPage = () => {
