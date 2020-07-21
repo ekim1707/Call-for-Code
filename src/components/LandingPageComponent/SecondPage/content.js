@@ -1,29 +1,34 @@
 export default {
     HEADER: "Explore",
     SUB_HEADER: "Features",
-    BODY_DIVS_ARRAYS: [
+    FEATURES_CARD_GROUP_ITEMS_ARRAY: [
         [
             {
-                TITLE: "Articles & Positive News",
-                ICON_NAME: "news"
+                image: "news",
+                header: "Articles & Positive News",
+                description: "Read More >"
             },
             {
-                TITLE: "Journaling",
-                ICON_NAME: "journaling"
+                image: "journaling",
+                header: "Journaling",
+                description: "Read More >"
             },
             {
-                TITLE: "De-stress",
-                ICON_NAME: "destress"
+                image: "destress",
+                header: "De-stress",
+                description: "Read More >"
             }
         ],
         [
             {
-                TITLE: "Self-care",
-                ICON_NAME: "selfcare_icon"
+                image: "selfcare",
+                header: "Self-care",
+                description: "Read More >"
             },
             {
-                TITLE: "Courses",
-                ICON_NAME: "courses"
+                image: "courses",
+                header: "Courses",
+                description: "Read More >"
             }
         ]
     ],

@@ -1,26 +1,10 @@
 @import "../../scss/common.styles.scss";
 
-.userSideBar {
-	display: flex !important;
-	align-content: center;
-	position: relative !important;
-	.logoImageOnUserSideBar {
-		margin-top: 8em;
-		width: 4em;
-	}
-	.linksSideBar {
-		align-self: center;
-		margin-top: 20%;
-		div {
-			margin-top: 4.5vh;
-		}
-		.sidebarNavLinks {
-			color: $main-1;
-			font-size: 1.5em;
-		}
-		.sidebarNavLinks.active {
-			color: $title-color;
-			font-weight: bold;
-		}
-	}
+.sidebarNavLinks {
+	color: $main-1;
+	font-size: 1.5em;
+}
+.sidebarNavLinks.active {
+	color: $title-color;
+	font-weight: bold;
 }

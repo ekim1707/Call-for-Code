@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
-import "./styles.scss";
 import JoditEditor from "jodit-react";
 import {
+    Grid,
     Button,
     Form,
     Dropdown
@@ -33,7 +33,7 @@ const DiaryComponent = () => {
   }
 
   return ( 
-    < div className = "contentPadding" >
+    <Grid.Column className = "contentPadding" width={14}>
         < Form onSubmit={handleSubmit} >
         <Form.Group widths="equal">
             < Form.Field >
@@ -102,7 +102,7 @@ const DiaryComponent = () => {
             </Form.Field>
             <Button type = 'submit' > Submit </ Button>
         </Form>
-    </ div>
+    </Grid.Column>
   );
 };
 
