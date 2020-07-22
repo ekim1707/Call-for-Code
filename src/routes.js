@@ -6,7 +6,7 @@ import { Grid } from "semantic-ui-react";
 import LandingPageContainer from "./containers/LandingPageContainer";
 import SignUpContainer from "./containers/SignUpContainer";
 import LoginContainer from "./containers/LogInContainer";
-import SidebarContainer from "./containers/SidebarContainer";
+import SidebarComponent from "./components/SidebarComponent";
 import Title from "./components/User/Title";
 import UserHomePageContainer from "./containers/UserContainer/HomePageContainer";
 import UserDestressContainer from "./containers/UserContainer/DestressContainer";
@@ -49,32 +49,26 @@ export default() => {
             height: "88vh",
             padding: "0"
           }}>
-            <Grid.Column style={{ 
-              height: "100%",
-              background: "#93AFD6",
-              color: "#fff"
-            }} width={2}>
-              <SidebarContainer />
-            </Grid.Column>
-            < PrivateRoute path={resources.routes.userProfilePage} component={UserHomePageContainer}/>
+            <SidebarComponent />
+            < Route path={resources.routes.userProfilePage} component={UserHomePageContainer}/>
             <
-              PrivateRoute
+              Route
               path={resources.routes.userDestressPage}
               component={UserDestressContainer}/>
             <
-              PrivateRoute
+              Route
               path = {resources.routes.userJournalPage}
               component={UserDiaryContainer}/>
             <
-              PrivateRoute
+              Route
               path={resources.routes.userNewsPage}
               component={UserNewsContainer}/>
             <
-              PrivateRoute
+              Route
               path={resources.routes.userSelfCarePage}
               component={UserSelfCareContainer}/>
             <
-              PrivateRoute
+              Route
               path={resources.routes.userCoursesPage}
               component={UserCoursesContainer}/>
           </Grid.Row>
