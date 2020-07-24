@@ -6,29 +6,34 @@ export default {
             {
                 image: "news",
                 header: "Articles & Positive News",
-                description: "Read More >"
+                button_text: "Read More >",
+                popup_content: "Stay informed about Covid-19 with our updates from trusted sources worldwide. Enjoy our articles on how to improve your overall health and positive news to help boost your mood."
             },
             {
                 image: "journaling",
                 header: "Journaling",
-                description: "Read More >"
+                button_text: "Read More >",
+                popup_content: "A simple and effective tool to boost your mood by clearing negative thoughts and experiences from your mind. Journaling has many proven benefits for your health such as stress reduction, improvement of immune function and strengthen of emotional functions."
             },
             {
                 image: "destress",
                 header: "De-stress",
-                description: "Read More >"
+                button_text: "Read More >",
+                popup_content: "Looking for a quick relief for your mind and body? Destress contains a ready to go library with videos that are perfect for every occasion in your day. Try it out in your morning routines to set you up for a positive mindset, during work breaks or maybe even right before that big meeting with your boss to relieve the tension and give the confidence necessary to succeed."
             }
         ],
         [
             {
                 image: "selfcare",
                 header: "Self-care",
-                description: "Read More >"
+                button_text: "Read More >",
+                popup_content: "A fun tool based on predictive analysis to help you adopt a healthier life style through recommendations, a healthy plan, or by a challenge proposal which you could post online and get a buddy to support accomplishing the goal."
             },
             {
                 image: "courses",
                 header: "Courses",
-                description: "Read More >"
+                button_text: "Read More >",
+                popup_content: "A selection of courses focused on everyday challenges faced by first responders made by experts in the field."
             }
         ]
     ],

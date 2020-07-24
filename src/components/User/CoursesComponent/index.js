@@ -8,7 +8,8 @@ import {
     Image,
     Button,
     Modal,
-    Embed
+    Embed,
+    Popup
 } from 'semantic-ui-react';
 
 const CoursesComponent = () => {

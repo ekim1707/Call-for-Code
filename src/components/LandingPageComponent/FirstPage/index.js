@@ -15,12 +15,12 @@ const FirstPage = () => {
 			<div className="headerContainer">
 				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
 				style = {
-						{
-							'color': '#1C2C5B'
-						}
+					{
+						'color': '#1C2C5B'
+					}
 				} >
 				< Image src = {
-					process.env.PUBLIC_URL + '/img/logo.reshape.svg'
+					process.env.PUBLIC_URL + '/img/favicon.png'
 				}
 				style = {
 					{
@@ -54,7 +54,7 @@ const FirstPage = () => {
 			< div >
 				< Button className = "gettingStartedButton" > Get started </ Button>
 			</div>
-			{/* <div className="footerContainer">				
+			<div className="footerContainer">				
 				<h1 className="footerHeader">
 					<span className="lightYellowBox">{content.SPACEHOLDER}</span>
 					<span className="darkYellowBox">{content.SPACEHOLDER}</span>
@@ -64,7 +64,7 @@ const FirstPage = () => {
 					{content.FOOTER_MESSAGE}
 					<div className="shorterWidthTextUnderline"></div>
 				</div>
-			</div> */}
+			</div>
 		</div>
 	);
 };
