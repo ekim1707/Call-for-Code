@@ -5,6 +5,7 @@ import {
 	Image,
 	Icon,
 	Grid,
+	Button
 } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
@@ -56,14 +57,22 @@ const SidebarComponent = () => {
 												/> &nbsp; &nbsp; <
 												span className = "dynamicPathname" > {
 														name
-													} < / span> <
-													/div>
+													} </span> 
+													</div>
 
-													<
-													/NavLink>
+													</NavLink>
 					</div>
 				</Grid.Row>
 			)}
+			<Grid.Row style={{ 
+				marginTop: "4.5vh"
+			}}>
+				<Button 
+					icon
+				>
+					<Icon name='sign-out' />
+				</Button>
+			</Grid.Row>
 		</Grid.Column>
 	);
 };

@@ -23,7 +23,10 @@ const SecondPage = () => {
                         button_text,
                         popup_content
                     }, i) =>             
-                        <Card key={i}>
+                        <Card style={{ 
+                            padding: "1.5em 1em 0 1em",
+                            borderRadius: "25px"
+                        }} key={i}>
                             <Image src={`${process.env.PUBLIC_URL}/img/${image}.png`} wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>{header}</Card.Header>

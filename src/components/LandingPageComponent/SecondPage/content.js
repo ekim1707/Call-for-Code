@@ -30,7 +30,7 @@ export default {
                 popup_content: "A fun tool based on predictive analysis to help you adopt a healthier life style through recommendations, a healthy plan, or by a challenge proposal which you could post online and get a buddy to support accomplishing the goal."
             },
             {
-                image: "courses",
+                image: "journaling",
                 header: "Courses",
                 button_text: "Read More >",
                 popup_content: "A selection of courses focused on everyday challenges faced by first responders made by experts in the field."

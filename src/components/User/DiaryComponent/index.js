@@ -1,6 +1,9 @@
 import React, {useState, useRef} from 'react';
+import componentContent from "./content";
 import { 
     Grid,
+    Header,
+    Divider,
     Button
 } from 'semantic-ui-react';
 import FormComponent from "./FormComponent";
@@ -10,6 +13,7 @@ import journalService from '../../../services/journalService';
 let journalText = '';
 
 const DiaryComponent = () => {
+    
 
     const [isForm, setIsForm] = useState(true);
     
@@ -17,7 +21,7 @@ const DiaryComponent = () => {
     const [content, setContent] = useState('');
     const [dateValue, setDateValue] = useState('');
     const [selectBoxValue, setSelectBoxValue] = useState('none');
-    const [title, setTitle] = useState('')
+    const [title, setTitle] = useState('');
 
     const config = {
         readonly: false
@@ -29,7 +33,15 @@ const DiaryComponent = () => {
     }
 
   return ( 
-    <Grid.Column className = "contentPadding" width={14}>
+    <Grid.Column style={{ padding: "0 30px" }} width={14}>
+        <Header style={{
+            width: "90%",
+            margin: "2rem 0",
+            color: "#93AFD6",
+            fontSize: "6vh",
+            textAlign: "left"
+        }}>{componentContent.TITLE}</Header>
+        <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
         {isForm && (
             <FormComponent 
                 journalText={journalText}

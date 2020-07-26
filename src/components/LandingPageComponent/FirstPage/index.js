@@ -14,7 +14,8 @@ const FirstPage = () => {
 				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
 				style = {
 					{
-						'color': '#1C2C5B'
+						'color': '#1C2C5B',
+						alignItems: "center"
 					}
 				} >
 				< Image src = {

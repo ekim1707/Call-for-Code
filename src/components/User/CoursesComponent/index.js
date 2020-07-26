@@ -14,7 +14,7 @@ import {
 
 const CoursesComponent = () => {
     return (
-        <Grid.Column style={{ padding: "0 40px" }} width={14}>
+        <Grid.Column style={{ padding: "0 30px" }} width={14}>
             <Header style={{
                 width: "90%",
                 margin: "2rem 0",
@@ -55,7 +55,7 @@ const CoursesComponent = () => {
                             <Divider/>
                             <Popup 
                                 trigger={
-                                    <Card.Description>
+                                    <Card.Description style={{ cursor: "pointer" }}>
                                         {button_text}
                                     </Card.Description>
                                 }
