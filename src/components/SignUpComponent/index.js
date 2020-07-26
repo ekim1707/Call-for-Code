@@ -56,7 +56,7 @@ class SignUpComponent extends React.Component {
                 }
             }
             verticalAlign = 'middle' >
-                <Grid.Column style={{ maxWidth: 450 }}>
+                <Grid.Column style={{ maxWidth: 600 }}>
                     <Header as='h2' color='blue' textAlign='center'>
                         < Image src={
                             process.env.PUBLIC_URL + '/img/tobeusedLogo.png'
@@ -66,7 +66,9 @@ class SignUpComponent extends React.Component {
                                     width: '10px'
                                 }
                             }
-                        /> &nbsp; Bring more possitive to your life
+                        /> &nbsp;
+                        < div className = "blackFont" > Bring more positivity to your life < /div>
+                        
                     </Header>
                     <Form size='large' onSubmit={this.handleSubmit} >
                         <Segment stacked>

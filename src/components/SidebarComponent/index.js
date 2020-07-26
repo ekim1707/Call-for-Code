@@ -31,15 +31,37 @@ const SidebarComponent = () => {
 			{content.SIDEBAR_NAV_ARRAY.map(({
 				name,
 				icon,
-				url
+				url,
+				iconUrl
 			}, i) => 
 				<Grid.Row style={{ 
 					marginTop: "4.5vh"
 				}}>
-					<NavLink to={url} className="sidebarNavLinks">
-						<Icon disabled name={icon} />
-						<span className="dynamicPathname">{name}</span>
-					</NavLink>
+					<div className="sideLinks" >
+												< NavLink to = {
+													url
+												}
+												className = "sidebarNavLinks" >
+													<
+													div className = "cellSideBar" >
+													<
+													Image src = {
+														process.env.PUBLIC_URL + "img/" + iconUrl
+													}
+												style = {
+													{
+														width: "1em"
+													}
+												}
+												/> &nbsp; &nbsp; <
+												span className = "dynamicPathname" > {
+														name
+													} < / span> <
+													/div>
+
+													<
+													/NavLink>
+					</div>
 				</Grid.Row>
 			)}
 		</Grid.Column>
