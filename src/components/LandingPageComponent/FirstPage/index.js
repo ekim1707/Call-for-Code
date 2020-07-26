@@ -2,9 +2,7 @@ import React from 'react';
 import "./styles.scss";
 import content from "./content";
 import {
-	Button
-} from 'semantic-ui-react';
-import {
+	Button,
 	Image,
 } from 'semantic-ui-react'
 import { Link } from "react-router-dom";

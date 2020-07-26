@@ -1,20 +1,18 @@
 import React from 'react';
 import content from "./content";
 import {
-    Grid,
     Header,
     Divider,
     Card,
     Image,
     Button,
     Modal,
-    Embed,
-    Popup
+    Embed
 } from 'semantic-ui-react';
 
-const CoursesComponent = () => {
+const EmbedSelectPage = () => {
     return (
-        <Grid.Column style={{ padding: "0 40px" }} width={14}>
+        <React.Fragment>
             <Header style={{
                 width: "90%",
                 margin: "2rem 0",
@@ -23,13 +21,14 @@ const CoursesComponent = () => {
                 textAlign: "left"
             }}>{content.TITLE}</Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
-            <Card.Group itemsPerRow={3}>
-                {content.COURSES_CARD_GROUP_ITEMS_ARRAY.map(({
-                    image,
-                    header,
-                    embed,
-                    button_text,
-                    popup_content
+            <Card.Group centered itemsPerRow={3} style={{ 
+                height: "70vh", 
+                paddingBottom: "20px",
+                overflowY: "scroll" 
+            }}>
+                {content.CARD_ARRAY.map(({
+                    TITLE,
+                    EMBED
                 }, i) => 
                     <Card key={i}>
                         <Modal trigger={
@@ -38,37 +37,26 @@ const CoursesComponent = () => {
                                 padding: 0,
                                 background: "transparent"
                             }} >
-                                <Image src={image} />
+                                <Image src={`${process.env.PUBLIC_URL}/img/play_video.png`} />
                             </Button>
                         }>
                             <Embed 
-                                id={embed}
-                                placeholder={image}
+                                id={EMBED}
+                                placeholder=""
                                 source="youtube"
                             />
-                            <Header as="h1">{header}</Header>
+                            <Header as="h1">{TITLE}</Header>
                         </Modal>
                         <Card.Content>
                             <Card.Header>
-                                {header}
+                                {TITLE}
                             </Card.Header>
-                            <Divider/>
-                            <Popup 
-                                trigger={
-                                    <Card.Description>
-                                        {button_text}
-                                    </Card.Description>
-                                }
-                                content={popup_content}
-                                position="bottom left"
-                                basic
-                            />
                         </Card.Content>
                     </Card>
                 )}
             </Card.Group>
-        </Grid.Column>
+        </React.Fragment>
     )
-};
+}
 
-export default CoursesComponent;
+export default EmbedSelectPage;
