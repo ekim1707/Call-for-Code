@@ -28,7 +28,7 @@ const SecondPage = () => {
                             borderRadius: "25px"
                         }} key={i}>
                             <Image src={`${process.env.PUBLIC_URL}/img/${image}.png`} wrapped ui={false} />
-                            <Card.Content>
+                            <Card.Content style={{ padding: "1em 0" }}>
                                 <Card.Header>{header}</Card.Header>
                                 <Divider />
                                 <Popup 
