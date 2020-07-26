@@ -2,13 +2,14 @@ import React from 'react';
 import "./styles.scss";
 import content from "./content";
 import {
-    Grid,
     Card,
-    Image
+    Image,
+    Popup,
+    Divider
 } from 'semantic-ui-react'
 import Carousel from "semantic-ui-carousel-react";
 import Icon from "../../../common/Icon";
-import Button from "../../../common/Button";
+import CustomButton from "../../../common/Button";
 import { NavLink } from "react-router-dom";
 
 const SecondPage = () => {
@@ -19,13 +20,24 @@ const SecondPage = () => {
                     SUB_ARRAY.map(({
                         image,
                         header,
-                        description
+                        button_text,
+                        popup_content
                     }, i) =>             
                         <Card key={i}>
                             <Image src={`${process.env.PUBLIC_URL}/img/${image}.png`} wrapped ui={false} />
                             <Card.Content>
                                 <Card.Header>{header}</Card.Header>
-                                <Card.Description>{description}</Card.Description>
+                                <Divider />
+                                <Popup 
+                                    trigger={
+                                        <Card.Description>
+                                            {button_text}
+                                        </Card.Description>
+                                    }
+                                    content={popup_content}
+                                    position="bottom left"
+                                    basic
+                                />
                             </Card.Content>
                         </Card>
                     )
@@ -69,7 +81,7 @@ const SecondPage = () => {
                                     {TEXT}
                                 </NavLink> :
                                 <div className="buttonContainer" key={i}>
-                                    <Button 
+                                    <CustomButton 
                                         className="columnButton"
                                         iconName={ICON}
                                         isIcon
