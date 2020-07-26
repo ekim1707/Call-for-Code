@@ -1,4 +1,6 @@
 import resources from '../environments/resources';
+import decoder from "jwt-decode";
+
 export const authenticationService = {
     properties: null,
     logIn: async (resourceUrl, body) => {
@@ -40,6 +42,10 @@ export const authenticationService = {
     },
     redirectToLoginPage: () => {
         window.location.replace(window.location.origin + resources.routes.logInPath);
+    },
+
+    getDecodedJwt: () => {
+        return decoder(sessionStorage.getItem("sessionToken"));
     }
 }
 

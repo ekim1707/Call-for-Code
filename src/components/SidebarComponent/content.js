@@ -4,32 +4,38 @@ export default {
         {
             name: "Profile",
             icon: "user outline",
-            url: "/profile"
+            url: "/profile",
+            iconUrl: "/account_circle.png"
         },
         {
             name: "News",
             icon: "edit outline",
-            url: "/news"
+            url: "/news",
+            iconUrl: "/news_sidebar.png"
         },
         {
             name: "Journal",
             icon: "book",
-            url: "/journal"
+            url: "/journal",
+            iconUrl: "/Diary.png"
         },
         {
             name: "De-stress",
             icon: "hand peace outline",
-            url: "/destress"
+            url: "/destress",
+            iconUrl: "/destress_icon.png"
         },
         {
             name: "Self-care",
             icon: "plus",
-            url: "/selfcare"
+            url: "/selfcare",
+            iconUrl: "/selfcare_icon.png"
         },
         {
             name: "Courses",
             icon: "object ungroup outline",
-            url: "/courses"
+            url: "/courses",
+            iconUrl: "/Courses.png"
         }
     ]
 };

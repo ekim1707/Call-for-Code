@@ -19,6 +19,9 @@ export const resources = {
     },
     journalResources: {
         url: "/journal"
+    },
+    userService: {
+        url: "/users"
     }
 }
 

@@ -51,7 +51,7 @@ class LoginComponent extends React.Component {
             verticalAlign = 'middle' >
             < Grid.Column style = {
                 {
-                    maxWidth: 450
+                    maxWidth: 600,
                 }
             } >
             <
@@ -60,15 +60,16 @@ class LoginComponent extends React.Component {
             textAlign = 'center' >
             <
             Image src = {
-                process.env.PUBLIC_URL + '/img/tobeusedLogo.png'
+                process.env.PUBLIC_URL + '/img/favicon.png'
             }
             style = {
                 {
-                    width: '10px',
+                    width: '1px',
                     color: 'white'
                 }
             }
-            /> &nbsp; Log in to your account < /
+            /> &nbsp; 
+            <div className = "blackFont"> Log in to your account < /div> < /
             Header > <
             Form size = 'large'
             onSubmit = {
@@ -112,7 +113,7 @@ class LoginComponent extends React.Component {
             }
             className = "roundBorderRadious boldFontWeigh"
             >
-            Decompress ? < a href = 'signup' > Sign Up < /a> < /
+            New to Decompress ? < a href = 'signup' > Sign Up < /a> < /
             Message > <
             /Grid.Column> < /
             Grid >

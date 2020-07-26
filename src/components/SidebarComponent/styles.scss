@@ -3,8 +3,16 @@
 .sidebarNavLinks {
 	color: $main-1;
 	font-size: 1.25em;
+	
 }
 .sidebarNavLinks.active {
-	color: $title-color;
+	color: #F6C469;
 	font-weight: bold;
+}
+.cellSideBar {
+	display: flex;
+	flex-direction: row;
+}
+.sideLinks {
+	margin-top: 3.5vh;
 }
