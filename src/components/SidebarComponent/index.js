@@ -3,9 +3,7 @@ import "./styles.scss";
 import content from "./content";
 import {
 	Image,
-	Icon,
-	Grid,
-	Button
+	Grid
 } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 

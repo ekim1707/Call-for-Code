@@ -10,14 +10,13 @@ import {
     Icon
 } from 'semantic-ui-react';
 import FormComponent from "./FormComponent";
-import HistoryLogComponent from "./HistoryLogComponent";
+import EntryLogComponent from "./EntryLogComponent";
 import journalService from '../../../services/journalService';
 import { DateInput } from "semantic-ui-calendar-react";
 
 let journalText = '';
 
 const DiaryComponent = () => {
-    
 
     const [isForm, setIsForm] = useState(false);
     const [oldDateValue, setOldDateValue] = useState("");
@@ -123,7 +122,7 @@ const DiaryComponent = () => {
             />
         )}
         {!isForm && (
-            <HistoryLogComponent
+            <EntryLogComponent
                 oldDateValue={oldDateValue}
             />
         )}

@@ -3,10 +3,9 @@ import "./styles.scss";
 import content from "./content";
 import { 
   Header,
-  Icon,
   Dropdown
 } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const title= ({titleName}) => 
   <Header 
@@ -39,11 +38,15 @@ const title= ({titleName}) =>
       }}
     >
       <Dropdown.Menu position="left">
-        <Dropdown.Item style={{ textAlign: "center"}}>
-          <NavLink to={content.url}>
-            {content.name}
-          </NavLink>
-        </Dropdown.Item>
+        <Link to={content.url}>
+          <Dropdown.Item 
+            style={{ 
+              fontSize: "1rem",
+              textAlign: "center"
+            }} 
+            text={content.name} 
+          />
+        </Link>
         <Dropdown.Divider style={{ margin: 0 }} />
         <Dropdown.Item icon='sign-out' text={content.logout} />
       </Dropdown.Menu>
