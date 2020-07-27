@@ -7,7 +7,8 @@ import {
     Header,
     Divider,
     Button,
-    Icon
+    Icon,
+    Segment
 } from 'semantic-ui-react';
 import EmbedCardGroup from "./EmbedCardGroup";
 
@@ -50,12 +51,20 @@ const DestressComponent = () => {
             )}
             {isSelected > 0 && (
                 <React.Fragment>
-                    <Button 
-                        onClick={() => setIsSelected(0)}
-                        icon
-                    >
-                        <Icon name='arrow left' />
-                    </Button>
+                    <Segment style={{
+                        display: "flex",
+                        alignItems: "center"
+                    }}>
+                        <Button 
+                            onClick={() => setIsSelected(0)}
+                            icon
+                        >
+                            <Icon name='arrow left' />
+                        </Button>
+                        <Header style={{ margin: "0 0 0 .25em" }}>
+                            {content.CARD_ARRAY[isSelected - 1].TITLE}
+                        </Header>
+                    </Segment>
                     <EmbedCardGroup 
                         isSelected={isSelected} 
                         setIsSelected={setIsSelected}

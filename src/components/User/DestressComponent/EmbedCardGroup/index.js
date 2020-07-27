@@ -14,7 +14,7 @@ const EmbedSelectPage = ({
 }) => {
     return (
         <Card.Group centered itemsPerRow={3} style={{ 
-            height: "60vh", 
+            height: "55vh", 
             marginTop: "1em",
             paddingBottom: "1em",
             overflowY: "scroll" 

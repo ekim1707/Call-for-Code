@@ -24,14 +24,12 @@ const JournalComponent = () => {
             }} 
             width={14}
         >
-            <Container style={{
+            <div style={{
                 display: "flex",
-                alignItems: "center",
-                width: "100%",
-                margin: "2em 0"
+                alignItems: "center"
             }}>
                 <Header style={{
-                    margin: "0",
+                    margin: "2rem 0",
                     color: "#93AFD6",
                     fontSize: "6vh",
                     textAlign: "left"
@@ -80,8 +78,11 @@ const JournalComponent = () => {
                         }}
                     />
                 )}
-            </Container>
-            <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
+            </div>
+            <Divider style={{ 
+                marginTop: 0,
+                borderTop: "3px solid rgba(34,36,38,.15)" 
+            }} />
             {isForm && (
                 <FormComponent />
             )}
