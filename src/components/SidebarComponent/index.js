@@ -35,32 +35,26 @@ const SidebarComponent = () => {
 				iconUrl
 			}, i) => 
 				<Grid.Row style={{ 
-					marginTop: "4.5vh"
+					marginTop: "2.5vh"
 				}}>
 					<div className="sideLinks" >
 												< NavLink to = {
 													url
 												}
 												className = "sidebarNavLinks" >
-													<
-													div className = "cellSideBar" >
-													<
-													Image src = {
+													<div className = "cellSideBar" >
+														<Image src = {
 														process.env.PUBLIC_URL + "img/" + iconUrl
-													}
-												style = {
-													{
-														width: "1em"
-													}
-												}
-												/> &nbsp; &nbsp; <
-												span className = "dynamicPathname" > {
-														name
-													} < / span> <
-													/div>
-
-													<
-													/NavLink>
+														}
+														style = {
+															{
+																width: "1em"
+															}
+														}
+														/> &nbsp; &nbsp; 
+														<span className = "dynamicPathname" >{name} </ span> 
+													</ div>
+													</ NavLink>
 					</div>
 				</Grid.Row>
 			)}

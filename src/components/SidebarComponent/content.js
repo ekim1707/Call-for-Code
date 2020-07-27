@@ -36,6 +36,12 @@ export default {
             icon: "object ungroup outline",
             url: "/courses",
             iconUrl: "/Courses.png"
+        },
+        {
+            name: "LogOut",
+            icon: "object ungroup outline",
+            url: "/",
+            iconUrl: "/logout.png"
         }
     ]
 };

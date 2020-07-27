@@ -69,26 +69,21 @@ class LoginComponent extends React.Component {
                 }
             }
             /> &nbsp; 
-            <div className = "blackFont"> Log in to your account < /div> < /
-            Header > <
-            Form size = 'large'
-            onSubmit = {
-                this.handleSubmit
-            } >
-            <
-            Segment stacked >
-            <
-            Form.Input fluid icon = 'user'
-            iconPosition = 'left'
-            placeholder = 'email address'
-            value = {
-                this.state.email
-            }
-            onChange = {
-                this.handleEmailChange
-            }
-            /> <
-            Form.Input fluid icon = 'lock'
+            <div className = "blackFont"> Log in to your account < /div>
+                </ Header >
+                    <Form size = 'large' onSubmit = {this.handleSubmit} >
+                        <Segment stacked >
+                            <Form.Input fluid icon = 'user'
+                            iconPosition = 'left'
+                            placeholder = 'email address'
+                            value = {
+                                this.state.email
+                            }
+                            onChange = {
+                                this.handleEmailChange
+                            }
+                            /> 
+                        <Form.Input fluid icon = 'lock'
             iconPosition = 'left'
             placeholder = 'Password'
             type = 'password'
