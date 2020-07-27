@@ -35,9 +35,7 @@ const SidebarComponent = () => {
 				url,
 				iconUrl
 			}, i) => 
-				<Grid.Row style={{ 
-					marginTop: "4.5vh"
-				}}>
+				<Grid.Row>
 					<div className="sideLinks" >
 												< NavLink to = {
 													url
@@ -64,15 +62,6 @@ const SidebarComponent = () => {
 					</div>
 				</Grid.Row>
 			)}
-			<Grid.Row style={{ 
-				marginTop: "4.5vh"
-			}}>
-				<Button 
-					icon
-				>
-					<Icon name='sign-out' />
-				</Button>
-			</Grid.Row>
 		</Grid.Column>
 	);
 };

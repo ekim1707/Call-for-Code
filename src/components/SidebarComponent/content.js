@@ -2,12 +2,6 @@ export default {
     EXPLORE: "Explore",
     SIDEBAR_NAV_ARRAY: [
         {
-            name: "Profile",
-            icon: "user outline",
-            url: "/profile",
-            iconUrl: "/account_circle.png"
-        },
-        {
             name: "News",
             icon: "edit outline",
             url: "/news",
