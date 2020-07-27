@@ -3,3 +3,7 @@
 .mainHeaderContainer .ui.floating.dropdown>.menu {
     margin-top: .3em !important;
 }
+
+.mainHeaderContainer .ui.icon.button>.icon, .ui.icon.buttons .button>.icon {
+    color: $main-1;
+}
