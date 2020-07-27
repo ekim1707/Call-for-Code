@@ -39,6 +39,12 @@ const CoursesComponent = () => {
                                 background: "transparent"
                             }} >
                                 <Image src={image} />
+                                <Card.Content style={{ padding: "1em 1em 0 1em" }}>
+                                    <Card.Header style={{ textAlign: "left" }}>
+                                        {header}
+                                    </Card.Header>
+                                    <Divider/>
+                                </Card.Content>
                             </Button>
                         }>
                             <Embed 
@@ -48,11 +54,10 @@ const CoursesComponent = () => {
                             />
                             <Header as="h1">{header}</Header>
                         </Modal>
-                        <Card.Content>
-                            <Card.Header>
-                                {header}
-                            </Card.Header>
-                            <Divider/>
+                        <Card.Content style={{ 
+                            padding: "0 1em 1em 1em",
+                            borderTop: "none" 
+                        }}>
                             <Popup 
                                 trigger={
                                     <Card.Description style={{ cursor: "pointer" }}>
