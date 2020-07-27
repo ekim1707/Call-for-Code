@@ -1,5 +1,4 @@
 import React, {useState, useRef} from 'react';
-import "./styles.scss"
 import componentContent from "./content";
 import { 
     Grid,
@@ -18,7 +17,7 @@ let journalText = '';
 
 const DiaryComponent = () => {
 
-    const [isForm, setIsForm] = useState(false);
+    const [isForm, setIsForm] = useState(true);
     const [oldDateValue, setOldDateValue] = useState("");
     
     const editor = useRef(null)
