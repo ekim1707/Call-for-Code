@@ -21,8 +21,8 @@ const SidebarComponent = () => {
 			}} 
 			width={2}
 		>
-			< Image 
-				src={process.env.PUBLIC_URL + '/img/logo.reshape.svg'} 
+			<Image 
+				src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} 
 				style={{
 					marginTop: "2em",
 					width: "4em"

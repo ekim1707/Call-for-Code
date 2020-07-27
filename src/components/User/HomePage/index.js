@@ -12,9 +12,9 @@ import {
 } from "semantic-ui-react";
 
 const UserHomePage = () => {
-	// console.log(authenticationService.getDecodedJwt().jti)
-	// userService.getUserById(authenticationService.getDecodedJwt().jti)
-	// 	.then(response => console.log(response))
+	// console.log(authenticationService.getDecodedJwt().jti);
+	userService.getUserById(authenticationService.getDecodedJwt().jti)
+		.then(response => console.log(response));
 	const [formData, setFormData] = useReducer(
         (state, newState) => ({ ...state, ...newState }),
         {

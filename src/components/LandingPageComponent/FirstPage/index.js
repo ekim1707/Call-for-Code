@@ -19,7 +19,7 @@ const FirstPage = () => {
 					}} 
 				>
 				<Image 
-					src={process.env.PUBLIC_URL + '/img/favicon.png'}
+					src={`${process.env.PUBLIC_URL}/img/favicon.png`}
 					style={{ height: '1em' }}
 				/>
 		 			{content.TITLE} 

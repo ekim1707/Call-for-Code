@@ -1,4 +1,5 @@
 import React from 'react';
+import content from "./content";
 import {
     Button,
     Form,
@@ -48,70 +49,63 @@ class SignUpComponent extends React.Component {
 
     render() {
         return (
-            < Grid textAlign = 'center'
-            className = "blueBackgroundColor"
-            style = {
-                {
-                    height: '100vh'
-                }
-            }
-            verticalAlign = 'middle' >
+            <Grid 
+                textAlign='center'
+                className="blueBackgroundColor"
+                style={{ height: '100vh' }}
+                verticalAlign='middle' 
+            >
                 <Grid.Column style={{ maxWidth: 600 }}>
                     <Header as='h2' color='blue' textAlign='center'>
-                        < Image src={
-                            process.env.PUBLIC_URL + '/img/tobeusedLogo.png'
-                        }
-                            style={
-                                {
-                                    width: '10px'
-                                }
-                            }
-                        /> &nbsp;
-                        < div className = "blackFont" > Bring more positivity to your life < /div>
-                        
+                        <Image 
+                            src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`}
+                            style={{ width: '10px' }}
+                        /> 
+                        &nbsp;
+                        <div className = "blackFont">{content.HEADER}</div>
                     </Header>
-                    <Form size='large' onSubmit={this.handleSubmit} >
+                    <Form size='large' onSubmit={this.handleSubmit}>
                         <Segment stacked>
-                            < Form.Input fluid icon='user' iconPosition='left' placeholder='email address' 
-							value = {
-                                this.state.email
-                            }
-                            onChange = {
-                                this.handleEmailChange
-                            } />
+                            <Form.Input 
+                                onChange={this.handleEmailChange} 
+                                fluid 
+                                icon='user' 
+                                iconPosition='left' 
+                                placeholder='email address' 
+                                value={this.state.email}
+                            />
                             < Form.Input fluid icon='user'
+                                onChange={this.handleNameChange}
                                 iconPosition='left'
                                 placeholder='Name'
-								value = {
-                                    this.state.name
-                                }
-                                onChange = {
-                                    this.handleNameChange
-                                }
+								value={this.state.name}
 							 />
                             <Form.Input
+                                onChange={this.handlePasswordChange}
                                 fluid
                                 icon='lock'
                                 iconPosition='left'
                                 placeholder='Password'
                                 type='password'
-                                value = {
-                                    this.state.password
-                                }
-                                onChange = {
-                                    this.handlePasswordChange
-                                }
+                                value={this.state.password}
                             />
-                            < Button color = 'blue'
-                            fluid size = 'large'
-                            className = "roundBorderRadious" >
-                                Sign up
+                            <Button 
+                                className="roundBorderRadious" 
+                                color='blue'
+                                fluid 
+                                size='large'
+                            >
+                                {content.SIGN_UP}
                             </Button>
                         </Segment>
                     </Form>
-                    < Message className = "boldFontWeight" >
-                        Already have an account?  <a href='login'>Log in</a>
-                    </Message>
+                    <Grid.Row style={{ marginTop: "1em" }}>
+                        <a href='login'>
+                            <Message className="boldFontWeight">
+                                {content.LOGIN}
+                            </Message>
+                        </a>
+                    </Grid.Row>
                 </Grid.Column>
             </Grid>
         )

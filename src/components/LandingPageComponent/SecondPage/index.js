@@ -97,7 +97,7 @@ const SecondPage = () => {
                     )}
                     <div className="footerColumn"> 
                         <div className="columnTitle">{content.GET_THE_APP}</div>
-                        <Image src={process.env.PUBLIC_URL + '/img/logo.reshape.svg'} />
+                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} />
                     </div>
                     <div className="socialMediaLinksRow">
                         <div className="socialMediaLinksContainer">

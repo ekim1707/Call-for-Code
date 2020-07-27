@@ -9,6 +9,7 @@ import {
 import { DateInput } from 'semantic-ui-calendar-react';
 import journalService from '../../../../services/journalService';
 
+// eslint-disable-next-line no-unused-vars
 let journalText = '';
 
 const FormComponent = () => {
@@ -26,8 +27,6 @@ const FormComponent = () => {
         event.preventDefault();
         journalService.save();
     }
-
-    console.log(componentContent.inputs);
 
     return (
         <Form onSubmit={(e) => handleSubmit(e)}>
