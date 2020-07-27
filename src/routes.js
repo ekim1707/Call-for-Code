@@ -10,7 +10,7 @@ import SidebarComponent from "./components/SidebarComponent";
 import Title from "./components/User/Title";
 import UserHomePageComponent from "./components/User/HomePage";
 import UserDestressComponent from "./components/User/DestressComponent";
-import UserDiaryComponent from "./components/User/DiaryComponent";
+import UserJournalComponent from "./components/User/JournalComponent";
 import UserNewsComponent from "./components/User/NewsComponent";
 import UserSelfCareComponent from "./components/User/SelfCareComponent";
 import UserCoursesComponent from "./components/User/CoursesComponent"
@@ -59,7 +59,7 @@ export default() => {
               <
                 Route
                 path = {resources.routes.userJournalPage}
-                component={UserDiaryComponent}/>
+                component={UserJournalComponent}/>
               <
                 Route
                 path={resources.routes.userNewsPage}

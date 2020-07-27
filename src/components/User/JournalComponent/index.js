@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import "./styles.scss"
 import componentContent from "./content";
 import { 
     Grid,
@@ -10,29 +11,11 @@ import {
 } from 'semantic-ui-react';
 import FormComponent from "./FormComponent";
 import EntryLogComponent from "./EntryLogComponent";
-import journalService from '../../../services/journalService';
 import { DateInput } from "semantic-ui-calendar-react";
 
-let journalText = '';
-
-const DiaryComponent = () => {
+const JournalComponent = () => {
     const [isForm, setIsForm] = useState(true);
     const [oldDateValue, setOldDateValue] = useState("");
-    
-    const editor = useRef(null)
-    const [content, setContent] = useState('');
-    const [dateValue, setDateValue] = useState('');
-    const [selectBoxValue, setSelectBoxValue] = useState('none');
-    const [title, setTitle] = useState('');
-
-    const config = {
-        readonly: false
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        journalService.save();
-    }
 
     return ( 
         <Grid.Column 
@@ -100,20 +83,7 @@ const DiaryComponent = () => {
             </Container>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
             {isForm && (
-                <FormComponent 
-                    journalText={journalText}
-                    editor={editor}
-                    content={content}
-                    setContent={setContent}
-                    dateValue={dateValue}
-                    setDateValue={setDateValue}
-                    selectBoxValue={selectBoxValue}
-                    setSelectBoxValue={setSelectBoxValue}
-                    title={title}
-                    setTitle={setTitle}
-                    config={config}
-                    handleSubmit={handleSubmit}
-                />
+                <FormComponent />
             )}
             {!isForm && (
                 <EntryLogComponent
@@ -124,4 +94,4 @@ const DiaryComponent = () => {
     );
 };
 
-export default DiaryComponent;
+export default JournalComponent;

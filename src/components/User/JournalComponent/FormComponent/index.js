@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import componentContent from "./content";
 import JoditEditor from "jodit-react";
 import {
@@ -7,23 +7,30 @@ import {
     Button
 } from "semantic-ui-react";
 import { DateInput } from 'semantic-ui-calendar-react';
+import journalService from '../../../../services/journalService';
 
-const FormComponent = ({
-    journalText,
-    editor,
-    content,
-    setContent,
-    dateValue,
-    setDateValue,
-    selectBoxValue,
-    setSelectBoxValue,
-    title,
-    setTitle,
-    config,
-    handleSubmit
-}) => {
+let journalText = '';
+
+const FormComponent = () => {
+    const editor = useRef(null)
+    const [content, setContent] = useState('');
+    const [dateValue, setDateValue] = useState('');
+    const [selectBoxValue, setSelectBoxValue] = useState('none');
+    const [title, setTitle] = useState('');
+
+    const config = {
+        readonly: false
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        journalService.save();
+    }
+
+    console.log(componentContent.inputs);
+
     return (
-        < Form onSubmit={() => handleSubmit} >
+        <Form onSubmit={(e) => handleSubmit(e)}>
             <Form.Group widths="equal">
                 <Form.Field>
                     <label>{componentContent.title}</label>
@@ -35,18 +42,18 @@ const FormComponent = ({
                 <Form.Field>
                     <label>{componentContent.ideas}</label>
                     <Dropdown 
+                        onChange={(e, { value }) => {setSelectBoxValue(value); setTitle(value + title)}}
                         placeholder={selectBoxValue}
                         fluid 
                         selection 
                         options={componentContent.inputs}
-                        onChange={value => {setSelectBoxValue(value); setTitle(value + title)}}
                     />
                 </Form.Field>
             </Form.Group>
             <Form.Field >
                 <label>{componentContent.date}</label>
                 <DateInput
-                    onChange={value => setDateValue(value)}
+                    onChange={(e, { value }) => setDateValue(value)}
                     name="date"
                     placeholder="Date"
                     value={dateValue}
@@ -56,12 +63,12 @@ const FormComponent = ({
             <Form.Field>
                 <label>{componentContent.diary}</label>
                 <JoditEditor 
-                    ref={editor}
+                    onChange={newContent => {journalText = newContent}}
+                    onBlur={newContent => setContent(newContent)}
                     value={content}
                     config={config}
+                    ref={editor}
                     tabIndex={1}
-                    onBlur={newContent => setContent(newContent)}
-                    onChange={newContent => {journalText = newContent;}}
                 />
             </Form.Field>
             <Button type='submit'>{componentContent.submit}</Button>

@@ -25,7 +25,7 @@ const SecondPage = () => {
                     }, i) =>             
                         <Card style={{ 
                             width: "25%",
-                            padding: "1.5em 1em 0 1em",
+                            padding: "2em 2em",
                             borderRadius: "25px"
                         }} key={i}>
                             <Image 
@@ -34,7 +34,7 @@ const SecondPage = () => {
                                 wrapped 
                                 ui={false} 
                             />
-                            <Card.Content style={{ padding: "1em 0" }}>
+                            <Card.Content style={{ padding: "1em 0 0 0" }}>
                                 <Card.Header>{header}</Card.Header>
                                 <Divider />
                                 <Popup 
