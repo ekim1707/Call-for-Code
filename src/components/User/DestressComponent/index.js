@@ -13,6 +13,7 @@ import EmbedCardGroup from "./EmbedCardGroup";
 
 const DestressComponent = () => {
     const [isSelected, setIsSelected] = useState(0);
+
     return (
         <Grid.Column style={{ padding: "0 30px" }} width={14}>
             <Header style={{
@@ -21,7 +22,9 @@ const DestressComponent = () => {
                 color: "#93AFD6",
                 fontSize: "6vh",
                 textAlign: "left"
-            }}>{content.TITLE}</Header>
+            }}>
+                {content.TITLE}
+            </Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
             {isSelected === 0 && (
                 <Card.Group style={{ justifyContent: "space-evenly" }}>{                

@@ -74,6 +74,7 @@ export default {
             ]
         }
     ],
+    GET_THE_APP: "Get the App",
     SOCIAL_MEDIA_LINKS_ARRAY: [
         "facebook",
         "twitter",

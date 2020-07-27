@@ -35,44 +35,46 @@ export default() => {
         <Route path={resources.routes.basePath} component={LandingPageComponent} exact/>
         <Route path={resources.routes.signUpPath} component={SignUpComponent} exact/>
         <Route path={resources.routes.logInPath} component={LoginComponent} exact/>
-        <Grid style={{ 
-          height: "100vh", 
-          margin: "0",
-          overflow: "hidden" 
-        }}>
-          <Grid.Row style={{ height: "12vh", background: "#93AFD6" }} columns={1}>
-            <Grid.Column>
-              <Title titleName = "Decompress" />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row style={{ 
-            height: "88vh",
-            padding: "0"
+        <React.Fragment>
+          <Grid style={{ 
+            height: "100vh", 
+            margin: "0",
+            overflow: "hidden" 
           }}>
-            <SidebarComponent />
-            < Route path={resources.routes.userProfilePage} component={UserHomePageComponent}/>
-            <
-              Route
-              path={resources.routes.userDestressPage}
-              component={UserDestressComponent}/>
-            <
-              Route
-              path = {resources.routes.userJournalPage}
-              component={UserDiaryComponent}/>
-            <
-              Route
-              path={resources.routes.userNewsPage}
-              component={UserNewsComponent}/>
-            <
-              Route
-              path={resources.routes.userSelfCarePage}
-              component={UserSelfCareComponent}/>
-            <
-              Route
-              path={resources.routes.userCoursesPage}
-              component={UserCoursesComponent}/>
-          </Grid.Row>
-        </Grid>
+            <Grid.Row style={{ height: "12vh", background: "#93AFD6" }} columns={1}>
+              <Grid.Column>
+                <Title titleName = "Decompress" />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row style={{ 
+              height: "88vh",
+              padding: "0"
+            }}>
+              <SidebarComponent />
+              < Route path={resources.routes.userProfilePage} component={UserHomePageComponent}/>
+              <
+                Route
+                path={resources.routes.userDestressPage}
+                component={UserDestressComponent}/>
+              <
+                Route
+                path = {resources.routes.userJournalPage}
+                component={UserDiaryComponent}/>
+              <
+                Route
+                path={resources.routes.userNewsPage}
+                component={UserNewsComponent}/>
+              <
+                Route
+                path={resources.routes.userSelfCarePage}
+                component={UserSelfCareComponent}/>
+              <
+                Route
+                path={resources.routes.userCoursesPage}
+                component={UserCoursesComponent}/>
+            </Grid.Row>
+          </Grid>
+        </React.Fragment>
       </Switch>
     </Router>
   );

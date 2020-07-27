@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectBoxInputs from "./content";
+import componentContent from "./content";
 import JoditEditor from "jodit-react";
 import {
     Form,
@@ -25,71 +25,46 @@ const FormComponent = ({
     return (
         < Form onSubmit={() => handleSubmit} >
             <Form.Group widths="equal">
-                < Form.Field >
-                    <label > Title </ label>
-                    <Form.Input value={title} onChange={
-                        newValue => setTitle(newValue.target.value)
-                    } />
-                </ Form.Field>
-                < Form.Field >
-                < label > Ideas </ label>
-                < Dropdown placeholder = {
-                    selectBoxValue
-                }
-                fluid selection options = {
-                    SelectBoxInputs.inputs
-                }
-                onChange={
-                    (event, {name,value}) =>
-                    {
-                        setSelectBoxValue(value);
-                        setTitle(value + title);
-                    }
-                }
-                />
+                <Form.Field>
+                    <label>{componentContent.title}</label>
+                    <Form.Input 
+                        onChange={newValue => setTitle(newValue.target.value)} 
+                        value={title} 
+                    />
                 </Form.Field>
-            </ Form.Group>
+                <Form.Field>
+                    <label>{componentContent.ideas}</label>
+                    <Dropdown 
+                        placeholder={selectBoxValue}
+                        fluid 
+                        selection 
+                        options={componentContent.inputs}
+                        onChange={value => {setSelectBoxValue(value); setTitle(value + title)}}
+                    />
+                </Form.Field>
+            </Form.Group>
             <Form.Field >
-                < label > Date </ label>
-                < DateInput
-                    name = "date"
-                    placeholder = "Date"
-                    value = {
-                        dateValue
-                    }
-                    iconPosition = "left"
-                    onChange = {
-                        (event, { name, value }) => {
-                            setDateValue(value);
-                        }
-                    }
+                <label>{componentContent.date}</label>
+                <DateInput
+                    onChange={value => setDateValue(value)}
+                    name="date"
+                    placeholder="Date"
+                    value={dateValue}
+                    iconPosition="left"
                 />
             </Form.Field>
             <Form.Field>
-                  < label > Diary </ label>
-                  < JoditEditor ref={
-                      editor
-                  }
-                      value={
-                          content
-                      }
-                      config={
-                          config
-                      }
-                      tabIndex={
-                          1
-                      }
-                      onBlur={
-                          newContent => setContent(newContent)
-                      }
-                      onChange={
-                          newContent => {
-                              journalText = newContent;
-                          }
-                      }
-                  />
+                <label>{componentContent.diary}</label>
+                <JoditEditor 
+                    ref={editor}
+                    value={content}
+                    config={config}
+                    tabIndex={1}
+                    onBlur={newContent => setContent(newContent)}
+                    onChange={newContent => {journalText = newContent;}}
+                />
             </Form.Field>
-            <Button type = 'submit' > Submit </ Button>
+            <Button type='submit'>{componentContent.submit}</Button>
         </Form>
     )
 }

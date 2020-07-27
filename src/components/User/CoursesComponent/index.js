@@ -21,7 +21,9 @@ const CoursesComponent = () => {
                 color: "#93AFD6",
                 fontSize: "6vh",
                 textAlign: "left"
-            }}>{content.TITLE}</Header>
+            }}>
+                {content.TITLE}
+            </Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
             <Card.Group itemsPerRow={3}>
                 {content.COURSES_CARD_GROUP_ITEMS_ARRAY.map(({

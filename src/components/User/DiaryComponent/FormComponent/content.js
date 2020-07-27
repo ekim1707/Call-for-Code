@@ -1,4 +1,6 @@
 export default {
+    title: "Title",
+    ideas: "Ideas",
     inputs : [
         {
             key: 'Top priorities of the day',
@@ -41,5 +43,8 @@ export default {
             text: 'Using 10 words, describe yourself',
             value: 'Using 10 words, describe yourself '
         }
-        ]
+    ],
+    date: "Date",
+    diary: "Diary",
+    submit: "Submit"
 };

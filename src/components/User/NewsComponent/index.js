@@ -19,7 +19,9 @@ const NewsComponent = () => {
                 color: "#93AFD6",
                 fontSize: "6vh",
                 textAlign: "left"
-            }}>{content.TITLE}</Header>
+            }}>
+                {content.TITLE}
+            </Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
             <Card.Group centered itemsPerRow={3} style={{ 
                 height: "70vh", 
@@ -32,7 +34,7 @@ const NewsComponent = () => {
                     LINK
                 }, i) => 
                     <Card key={i}>
-                        <a href={LINK} target="_blank">
+                        <a href={LINK} target="_blank" rel="noopener noreferrer">
                             <Image src={IMAGE} />
                             <Modal trigger={
                                 <Button style={{ 

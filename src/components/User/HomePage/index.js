@@ -8,8 +8,7 @@ import {
 	Header,
 	Divider,
 	Form,
-	Segment,
-	Button
+	Segment
 } from "semantic-ui-react";
 
 const UserHomePage = () => {
@@ -57,35 +56,39 @@ const UserHomePage = () => {
                 color: "#93AFD6",
                 fontSize: "6vh",
                 textAlign: "left"
-            }}>{content.TITLE}</Header>
+            }}>
+				{content.TITLE}
+			</Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
 			<Form size='large'>
 				<Segment stacked>
 					<Header>{content.HEADER1}</Header>
-					< Form.Input fluid icon='user' iconPosition='left' placeholder='email address' 
-					value = {
-						email
-					}
-					onChange={(e) => handleInputChange(e)} disabled/>
-					< Form.Input fluid icon='user'
+					<Form.Input 
+						onChange={(e) => handleInputChange(e)} 
+						fluid 
+						icon='user' 
+						iconPosition='left' 
+						placeholder='email address' 
+						value={email}
+						disabled
+					/>
+					<Form.Input 
+						onChange={(e) => handleInputChange(e)}
+						fluid 
+						icon='user'
 						iconPosition='left'
 						placeholder='Name'
-						value = {
-							name
-						}
-						onChange={(e) => handleInputChange(e)}
+						value={name}
 						disabled
 					/>
 					<Form.Input
+						onChange={(e) => handleInputChange(e)}
 						fluid
 						icon='lock'
 						iconPosition='left'
 						placeholder='Password'
 						type='password'
-						value = {
-							password
-						}
-						onChange={(e) => handleInputChange(e)}
+						value={password}
 						disabled
 					/>
 					<Header style={{ margin: "1rem 0" }}>{content.HEADER2}</Header>
@@ -96,13 +99,13 @@ const UserHomePage = () => {
 						opacity: newsletterIsOn ? 1 : .45,
 						transition: "1s"
 					}}>
-							{content.COMMUNICATIONS1}
-							<div 
-								onClick={(e) => {setNewsletterIsOn(!newsletterIsOn); handleInputClick(0)}}
-								className="toggleButton"
-							>
-								<div className={newsletterIsOn ? "toggleCircleLeft" : "toggleCircleRight"}></div>
-							</div>
+						{content.COMMUNICATIONS1}
+						<div 
+							onClick={(e) => {setNewsletterIsOn(!newsletterIsOn); handleInputClick(0)}}
+							className="toggleButton"
+						>
+							<div className={newsletterIsOn ? "toggleCircleLeft" : "toggleCircleRight"}></div>
+						</div>
 					</Segment>
 					<Segment style={{ 
 						display: "flex",
@@ -111,13 +114,13 @@ const UserHomePage = () => {
 						opacity: surveysIsOn ? 1 : .45,
 						transition: "1s"
 					}}>
-							{content.COMMUNICATIONS2}
-							<div 
-								onClick={(e) => {setSurveysIsOn(!surveysIsOn); handleInputClick(1)}}
-								className="toggleButton"
-							>
-								<div className={surveysIsOn ? "toggleCircleLeft" : "toggleCircleRight"}></div>
-							</div>
+						{content.COMMUNICATIONS2}
+						<div 
+							onClick={(e) => {setSurveysIsOn(!surveysIsOn); handleInputClick(1)}}
+							className="toggleButton"
+						>
+							<div className={surveysIsOn ? "toggleCircleLeft" : "toggleCircleRight"}></div>
+						</div>
 					</Segment>
 				</Segment>
 			</Form>

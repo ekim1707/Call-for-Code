@@ -4,32 +4,27 @@ export default {
         {
             name: "News",
             icon: "edit outline",
-            url: "/news",
-            iconUrl: "/news_sidebar.png"
+            url: "news"
         },
         {
             name: "Journal",
             icon: "book",
-            url: "/journal",
-            iconUrl: "/Diary.png"
+            url: "journal"
         },
         {
             name: "De-stress",
             icon: "hand peace outline",
-            url: "/destress",
-            iconUrl: "/destress_icon.png"
+            url: "destress"
         },
         {
             name: "Self-care",
             icon: "plus",
-            url: "/selfcare",
-            iconUrl: "/selfcare_icon.png"
+            url: "selfcare"
         },
         {
             name: "Courses",
             icon: "object ungroup outline",
-            url: "/courses",
-            iconUrl: "/Courses.png"
+            url: "courses"
         }
     ]
 };

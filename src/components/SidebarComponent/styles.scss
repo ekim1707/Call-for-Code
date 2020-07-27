@@ -1,18 +1,13 @@
 @import "../../scss/common.styles.scss";
 
-.sidebarNavLinks {
-	color: $main-1;
-	font-size: 1.25em;
-	
-}
-.sidebarNavLinks.active {
-	color: #F6C469;
-	font-weight: bold;
-}
-.cellSideBar {
-	display: flex;
-	flex-direction: row;
-}
 .sideLinks {
 	margin-top: 3.5vh;
+	.sidebarNavLinks {
+		color: $main-1;
+		font-size: 1.25em;
+	}
+	.sidebarNavLinks.active {
+		color: #F6C469;
+		font-weight: bold;
+	}
 }

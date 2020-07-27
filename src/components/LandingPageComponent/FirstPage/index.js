@@ -11,47 +11,58 @@ const FirstPage = () => {
 	return (
 		<div className="firstPageContainer" >
 			<div className="headerContainer">
-				< h1 className = "title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
-				style = {
-					{
-						'color': '#1C2C5B',
+				<h1 
+					className="title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
+					style={{
+						color: '#1C2C5B',
 						alignItems: "center"
-					}
-				} >
-				< Image src = {
-					process.env.PUBLIC_URL + '/img/favicon.png'
-				}
-				style = {
-					{
-						'height': '1em'
-					}
-				}
+					}} 
+				>
+				<Image 
+					src={process.env.PUBLIC_URL + '/img/favicon.png'}
+					style={{ height: '1em' }}
 				/>
-		 		{
-					content.TITLE
-				} </ h1>
+		 			{content.TITLE} 
+				</h1>
 				<ul className="navLinkContainer topMarginContainers">
-					{content.NAV_ARRAY.map((index, i) => {
-						return <Link to = {
-							index.url.toLowerCase()
-						}
-						className = "navLinks buttonHeight"
-						style = {
-							i + 1 === content.NAV_ARRAY.length ? { border: "2px solid white", borderRadius: "20px", paddingRight:'1.5em', paddingLeft: '1.5em' } : {}
-						} key={i}>{index.name}</Link>;
-					})}
+					{content.NAV_ARRAY.map((index, i) => 
+						<Link 
+							to={index.url.toLowerCase()}
+							className="navLinks buttonHeight"
+							style={i + 1 === content.NAV_ARRAY.length ? { 
+								border: "2px solid white", 
+								borderRadius: "20px", 
+								paddingRight:'1.5em', 
+								paddingLeft: '1.5em' 
+							} : {}} 
+							key={i}
+						>
+							{index.name}
+						</Link>
+					)}
 				</ul>
 			</div>
-			<h1 className="bodyContainer leftMargin" style={{ 'fontFamily': 'Fredoka One', 'fontSize': '7vh' }}>
-				{content.BODY}
-			</h1>
-			< h2 className = "messageContainer"
-			style = {
-					{
-						'marginTop': '0',
-						'color': '#F2F0D8'}} >{content.MESSAGE}</h2>
-			< div >
-				< Button className = "gettingStartedButton" > Get started </ Button>
+			<div style={{ paddingLeft: "4em" }}>
+				<h1 
+					className="bodyContainer leftMargin" 
+					style={{ 
+						marginLeft: 0,
+						fontFamily: 'Fredoka One', 
+						fontSize: '7vh' 
+					}}
+				>
+					{content.BODY}
+				</h1>
+				<h2 
+					className = "messageContainer"
+					style = {{
+						marginLeft: 0,
+						marginTop: 0,
+						color: '#F2F0D8'
+					}}>
+						{content.MESSAGE}
+				</h2>
+				<Button className="gettingStartedButton">{content.GET_STARTED}</Button>
 			</div>
 			<div className="footerContainer">				
 				<h1 className="footerHeader">
@@ -61,7 +72,7 @@ const FirstPage = () => {
 				</ h1>
 				<div className="footerMessage">
 					{content.FOOTER_MESSAGE}
-					<div className="shorterWidthTextUnderline"></div>
+					{/* <div className="shorterWidthTextUnderline"></div> */}
 				</div>
 			</div>
 		</div>

@@ -4,20 +4,19 @@
     position: relative;
     height: 100vh;
     background: linear-gradient($strong-blue 50vh, $main-1 80vh);
-
     .headerContainer {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
-        .topMarginContainers {
-           margin-top: 4vh;
-        }
-
         .leftMargin {
             margin-left: 1em;
         }
-
+        .topMarginContainers {
+           margin-top: 4vh;
+           .buttonHeight {
+                font-size: 18px !important;
+            }
+        }
         ul {
             align-self: center;
             list-style: none;
@@ -32,18 +31,22 @@
             }
         }
     }
-
     .bodyContainer {
         color: $main-1;
         margin-left: 1em;
         margin-top: 10%;
     }
-
     .messageContainer {
         color: $main-1;
         margin-left: 2em;
     }
-
+    .gettingStartedButton {
+        background-color: #F4EFEF !important;
+        color:  #1F305D !important;
+        border-radius: 80px !important;
+        font-size: 2em !important;
+        font-weight: bold !important;
+    }
     .footerContainer {
         position: absolute;
         width: 100%;
@@ -77,17 +80,4 @@
             }
         }
     }
-}
-
-.gettingStartedButton {
-    margin-left: 7vh !important;
-    background-color: #F4EFEF !important;
-    color:  #1F305D !important;
-    border-radius: 80px !important;
-    font-size: 2em !important;
-    font-weight: bold !important;
-}
-
-.buttonHeight {
-    font-size: 18px !important;
 }
