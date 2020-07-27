@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import "./styles.scss"
 import componentContent from "./content";
 import { 
     Grid,
@@ -11,13 +12,15 @@ import {
 import FormComponent from "./FormComponent";
 import HistoryLogComponent from "./HistoryLogComponent";
 import journalService from '../../../services/journalService';
+import { DateInput } from "semantic-ui-calendar-react";
 
 let journalText = '';
 
 const DiaryComponent = () => {
     
 
-    const [isForm, setIsForm] = useState(true);
+    const [isForm, setIsForm] = useState(false);
+    const [oldDateValue, setOldDateValue] = useState("");
     
     const editor = useRef(null)
     const [content, setContent] = useState('');
@@ -35,11 +38,15 @@ const DiaryComponent = () => {
     }
 
   return ( 
-    <Grid.Column style={{ 
-        padding: "0 30px" 
-    }} width={14}>
+    <Grid.Column 
+        style={{ 
+            padding: "0 30px" 
+        }} 
+        width={14}
+    >
         <Container style={{
             display: "flex",
+            alignItems: "center",
             width: "100%",
             margin: "2em 0"
         }}>
@@ -51,15 +58,13 @@ const DiaryComponent = () => {
             }}>{componentContent.TITLE}</Header>
             <Button 
                 onClick={() => setIsForm(true)}
-                style={
-                    isForm ? { 
-                        margin: "1em .5em 1em 1em",
-                        background: "#F6C469" 
-                    } : { 
-                        margin: "1em .5em 1em 1em",
-                        background: "rgb(147, 175, 214)" 
-                    }
-                } 
+                style={isForm ? { 
+                    margin: "1em .5em 1em 1em",
+                    background: "#F6C469" 
+                } : { 
+                    margin: "1em .5em 1em 1em",
+                    background: "rgb(147, 175, 214)" 
+                }} 
                 size="big"
                 icon
             >
@@ -67,20 +72,38 @@ const DiaryComponent = () => {
             </Button>
             <Button 
                 onClick={() => setIsForm(false)}
-                style={
-                    isForm ? { 
-                        margin: "1em 1em 1em .5em",
-                        background: "rgb(147, 175, 214)" 
-                    } : { 
-                        margin: "1em 1em 1em .5em",
-                        background: "#F6C469" 
-                    }
-                } 
+                style={isForm ? { 
+                    margin: "1em 1em 1em .5em",
+                    background: "rgb(147, 175, 214)" 
+                } : { 
+                    margin: "1em 1em 1em .5em",
+                    background: "#F6C469" 
+                }} 
                 size="big"
                 icon
             >
                 <Icon name="file alternate outline" />
             </Button>
+            {!isForm && (
+                < DateInput
+                    className="oldDateInputContainer"
+                    name = "old date"
+                    placeholder = "Date"
+                    value = {
+                        oldDateValue
+                    }
+                    iconPosition = "left"
+                    onChange = {
+                        (event, { name, value }) => {
+                            setOldDateValue(value);
+                        }
+                    }
+                    style={{
+                        border: "3px solid #F6C469",
+                        borderRadius: ".28571429rem"
+                    }}
+                />
+            )}
         </Container>
         <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
         {isForm && (
@@ -100,7 +123,9 @@ const DiaryComponent = () => {
             />
         )}
         {!isForm && (
-            <HistoryLogComponent />
+            <HistoryLogComponent
+                oldDateValue={oldDateValue}
+            />
         )}
     </Grid.Column>
   );
