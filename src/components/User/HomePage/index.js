@@ -13,8 +13,8 @@ import {
 
 const UserHomePage = () => {
 	// console.log(authenticationService.getDecodedJwt().jti);
-	userService.getUserById(authenticationService.getDecodedJwt().jti)
-		.then(response => console.log(response));
+	// userService.getUserById(authenticationService.getDecodedJwt().jti)
+	// 	.then(response => console.log(response));
 	const [formData, setFormData] = useReducer(
         (state, newState) => ({ ...state, ...newState }),
         {

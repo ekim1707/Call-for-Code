@@ -14,7 +14,9 @@ import { DateInput } from "semantic-ui-calendar-react";
 
 const JournalComponent = () => {
     const [isForm, setIsForm] = useState(true);
-    const [oldDateValue, setOldDateValue] = useState("");
+    const [dateValue, setDateValue] = useState("");
+
+    console.log(dateValue);
 
     return ( 
         <Grid.Column 
@@ -44,10 +46,10 @@ const JournalComponent = () => {
                         margin: "1em .5em 1em 1em",
                         background: "rgb(147, 175, 214)" 
                     }} 
-                    size="big"
+                    size="massive"
                     icon
                 >
-                    <Icon name="pencil" />
+                    <Icon name="pencil" style={{ color: "#fff" }} size="large" />
                 </Button>
                 <Button 
                     onClick={() => setIsForm(false)}
@@ -58,19 +60,19 @@ const JournalComponent = () => {
                         margin: "1em 1em 1em .5em",
                         background: "#F6C469" 
                     }} 
-                    size="big"
+                    size="massive"
                     icon
                 >
-                    <Icon name="file alternate outline" />
+                    <Icon name="file alternate outline" style={{ color: "#fff" }} size="large" />
                 </Button>
                 {!isForm && (
-                    < DateInput
+                    <DateInput
                         className="oldDateInputContainer"
                         name="old date"
                         placeholder="Date"
-                        value={oldDateValue}
+                        value={dateValue}
                         iconPosition = "left"
-                        onChange = {(value) => setOldDateValue(value)}
+                        onChange = {(e, {value}) => setDateValue(value)}
                         style={{
                             border: "3px solid #F6C469",
                             borderRadius: ".28571429rem"
@@ -87,7 +89,7 @@ const JournalComponent = () => {
             )}
             {!isForm && (
                 <EntryLogComponent
-                    oldDateValue={oldDateValue}
+                    dateValue={dateValue}
                 />
             )}
         </Grid.Column>

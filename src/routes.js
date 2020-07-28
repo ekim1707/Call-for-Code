@@ -49,12 +49,12 @@ export default() => {
               padding: "0"
             }}>
               <SidebarComponent />
-              <PrivateRoute path={resources.routes.userProfilePage} component={UserHomePageComponent} />
-              <PrivateRoute path={resources.routes.userDestressPage} component={UserDestressComponent} />
-              <PrivateRoute path={resources.routes.userJournalPage} component={UserJournalComponent} />
-              <PrivateRoute path={resources.routes.userNewsPage} component={UserNewsComponent} />
-              <PrivateRoute path={resources.routes.userSelfCarePage} component={UserSelfCareComponent}  />
-              <PrivateRoute path={resources.routes.userCoursesPage} component={UserCoursesComponent} />
+              <Route path={resources.routes.userProfilePage} component={UserHomePageComponent} />
+              <Route path={resources.routes.userDestressPage} component={UserDestressComponent} />
+              <Route path={resources.routes.userJournalPage} component={UserJournalComponent} />
+              <Route path={resources.routes.userNewsPage} component={UserNewsComponent} />
+              <Route path={resources.routes.userSelfCarePage} component={UserSelfCareComponent}  />
+              <Route path={resources.routes.userCoursesPage} component={UserCoursesComponent} />
             </Grid.Row>
           </Grid>
         </React.Fragment>

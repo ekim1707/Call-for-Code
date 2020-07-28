@@ -7,7 +7,7 @@ import {
 } from "semantic-ui-react";
 
 const EntryLogComponent = ({
-    oldDateValue
+    dateValue
 }) => {
     const filteredTitlesArray = content.FAKE_DATA_ARRAY.map(({ TITLE }) => TITLE);
     const filteredEntriesArray = content.FAKE_DATA_ARRAY.map(({ ENTRY }, i) => `${i+1} ${ENTRY}`);
