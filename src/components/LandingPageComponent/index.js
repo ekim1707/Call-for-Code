@@ -69,11 +69,8 @@ const LandingPageComponent = () => {
                     &nbsp;
                     <Label 
                         as="a"
-                        color="red"
+                        color="yellow"
                         tag
-                        style={{
-                            opacity: .8
-                        }}
                     >
                         {clickCount === 0 ? content.SEE_MORE_LABEL : content.SIGN_UP_NOW}
                     </Label>
