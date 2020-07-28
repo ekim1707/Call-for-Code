@@ -36,7 +36,7 @@ const LandingPageComponent = () => {
                 <Grid.Column width={3} style={{
                     position: "absolute",
                     right: 0,
-                    bottom: "8em"
+                    bottom: "9em"
                 }}>
                     {clickCount === 0 &&
                         <Button 

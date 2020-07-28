@@ -55,13 +55,7 @@ class LoginComponent extends React.Component {
                         color='blue'
                         textAlign='center'
                     >
-                        <Image 
-                            src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`}
-                            style={{ 
-                                width: '10px', 
-                                color: 'white' 
-                            }}
-                        />
+                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} />
                         &nbsp; 
                         <div className = "blackFont">{content.LOGIN_TEXT}</div> 
                     </Header> 

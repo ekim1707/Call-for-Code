@@ -57,10 +57,7 @@ class SignUpComponent extends React.Component {
             >
                 <Grid.Column style={{ maxWidth: 600 }}>
                     <Header as='h2' color='blue' textAlign='center'>
-                        <Image 
-                            src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`}
-                            style={{ width: '10px' }}
-                        /> 
+                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} /> 
                         &nbsp;
                         <div className = "blackFont">{content.HEADER}</div>
                     </Header>

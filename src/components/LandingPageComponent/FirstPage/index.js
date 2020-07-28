@@ -69,11 +69,8 @@ const FirstPage = () => {
 					<span className="lightYellowBox">{content.SPACEHOLDER}</span>
 					<span className="darkYellowBox">{content.SPACEHOLDER}</span>
 					{content.FOOTER_HEADER}
-				</ h1>
-				<div className="footerMessage">
-					{content.FOOTER_MESSAGE}
-					{/* <div className="shorterWidthTextUnderline"></div> */}
-				</div>
+				</h1>
+				<div className="footerMessage">{content.FOOTER_MESSAGE}</div>
 			</div>
 		</div>
 	);

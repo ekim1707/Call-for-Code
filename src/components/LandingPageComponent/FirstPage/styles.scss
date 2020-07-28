@@ -57,6 +57,7 @@
         .footerHeader {
             color: $almost-black;
             font-family: Helvetica, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 3em;
             .lightYellowBox {
                 color: transparent;
                 background: $light-yellow;
@@ -68,16 +69,12 @@
             }
         }
         .footerMessage {
-            width: 50%;
+            width: 40%;
             margin: auto;
             color: $dark-gray;
-            font-family: Helvetica 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.5em;
             font-style: italic;
-            .shorterWidthTextUnderline {
-                width: 10%;
-                margin: 5px auto 0 auto;
-                border: 1px solid $darker-gray;
-            }
+            line-height: 110%;
         }
     }
 }
