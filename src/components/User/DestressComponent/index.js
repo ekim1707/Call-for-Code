@@ -42,7 +42,7 @@ const DestressComponent = () => {
                             key={i}
                         >
                             <Image src={IMAGE} wrapped ui={false} />
-                            <Card.Content style={{ background: "#ebf5f9" }}>
+                            <Card.Content style={{ background: "#ecf1ff" }}>
                                 <Card.Header style={{ textAlign: "center" }}>{TITLE}</Card.Header>
                             </Card.Content>
                         </Card>

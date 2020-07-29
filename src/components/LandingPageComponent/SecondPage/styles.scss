@@ -2,19 +2,21 @@
 
 .secondPageContainer {
     height: 100vh;
-    background: linear-gradient($light-blue 50vh, $main-1 70vh);
+    background: linear-gradient($light-blue 55vh, $main-1 75vh);
     .mainContainer {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
         height: 70vh;
         .headerContainer {
-            margin: .5em 3em;
+            margin: 1em 3em;
             .header {
+                margin: 0;
                 color: $darkest-gray;
                 font-size: 2.5em;
             }
             .subHeader {
+                margin: 0;
                 color: $basically-black;
                 font-size: 3em;
             }

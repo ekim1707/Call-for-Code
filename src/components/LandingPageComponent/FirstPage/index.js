@@ -14,6 +14,7 @@ const FirstPage = () => {
 				<h1 
 					className="title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
 					style={{
+						marginLeft: ".5em",
 						color: '#1C2C5B',
 						alignItems: "center"
 					}} 
