@@ -97,16 +97,16 @@ const SecondPage = () => {
                     )}
                     <div className="footerColumn"> 
                         <div className="columnTitle">{content.GET_THE_APP}</div>
-                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} />
+                        <Image 
+                            src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`} 
+                            style={{ maxHeight: "70%", maxWidth: "initial" }}
+                        />
                     </div>
                     <div className="socialMediaLinksRow">
                         <div className="socialMediaLinksContainer">
                             {content.SOCIAL_MEDIA_LINKS_ARRAY.map((LINK, i) => 
                                 <div className="linkContainer" key={i}>
-                                    <Icon 
-                                        className="socialMediaIcon"
-                                        iconName={LINK}
-                                    />
+                                    <Icon className="socialMediaIcon" iconName={LINK} />
                                 </div>
                             )}
                         </div>

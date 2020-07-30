@@ -22,10 +22,10 @@ const SidebarComponent = () => {
 			width={2}
 		>
 			<Image 
-				src={`${process.env.PUBLIC_URL}/img/favicon.png`} 
+				src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`} 
 				style={{
 					margin: "2em auto 0 auto",
-					width: "4em"
+					width: "2em"
 				}}
 			/>
 			{content.SIDEBAR_NAV_ARRAY.map(({
