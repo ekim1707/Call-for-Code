@@ -26,7 +26,7 @@ const PrivateRoute = ({
     render={(props) => (authenticationService.isTokenValid()
     ? <Component {...props}/>
     : <Redirect to='/login'/>)}/>
-)
+);
 
 export default() => {
   return (
@@ -42,36 +42,19 @@ export default() => {
             overflow: "hidden" 
           }}>
             <Grid.Row style={{ height: "12vh", background: "#93AFD6" }} columns={1}>
-              <Grid.Column>
-                <Title titleName = "Decompress" />
-              </Grid.Column>
+              <Grid.Column><Title titleName = "Decompress" /></Grid.Column>
             </Grid.Row>
             <Grid.Row style={{ 
               height: "88vh",
               padding: "0"
             }}>
               <SidebarComponent />
-              < Route path={resources.routes.userProfilePage} component={UserHomePageComponent}/>
-              <
-                Route
-                path={resources.routes.userDestressPage}
-                component={UserDestressComponent}/>
-              <
-                Route
-                path = {resources.routes.userJournalPage}
-                component={UserJournalComponent}/>
-              <
-                Route
-                path={resources.routes.userNewsPage}
-                component={UserNewsComponent}/>
-              <
-                Route
-                path={resources.routes.userSelfCarePage}
-                component={UserSelfCareComponent}/>
-              <
-                Route
-                path={resources.routes.userCoursesPage}
-                component={UserCoursesComponent}/>
+              <Route path={resources.routes.userProfilePage} component={UserHomePageComponent} />
+              <Route path={resources.routes.userDestressPage} component={UserDestressComponent} />
+              <Route path={resources.routes.userJournalPage} component={UserJournalComponent} />
+              <Route path={resources.routes.userNewsPage} component={UserNewsComponent} />
+              <Route path={resources.routes.userSelfCarePage} component={UserSelfCareComponent}  />
+              <Route path={resources.routes.userCoursesPage} component={UserCoursesComponent} />
             </Grid.Row>
           </Grid>
         </React.Fragment>

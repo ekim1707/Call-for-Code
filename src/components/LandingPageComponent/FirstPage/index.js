@@ -15,12 +15,13 @@ const FirstPage = () => {
 				<h1 
 					className="title topMarginContainers leftMargin appNameFontFamily appNameFontSize displayFlex"
 					style={{
+						marginLeft: ".5em",
 						color: '#1C2C5B',
 						alignItems: "center"
 					}} 
 				>
 				<Image 
-					src={process.env.PUBLIC_URL + '/img/favicon.png'}
+					src={`${process.env.PUBLIC_URL}/img/favicon.png`}
 					style={{ height: '1em' }}
 				/>
 		 			{content.TITLE} 
@@ -66,17 +67,15 @@ const FirstPage = () => {
 				< Button className = "gettingStartedButton"
 				onClick = {authenticationService.redirectToSignUpPage} > {
 					content.GET_STARTED
-				} < /Button>
+				} </ Button>
 			</div>
 			<div className="footerContainer">				
 				<h1 className="footerHeader">
 					<span className="lightYellowBox">{content.SPACEHOLDER}</span>
 					<span className="darkYellowBox">{content.SPACEHOLDER}</span>
 					{content.FOOTER_HEADER}
-				</ h1>
-				<div className="footerMessage">
-					{content.FOOTER_MESSAGE}
-				</div>
+				</h1>
+				<div className="footerMessage">{content.FOOTER_MESSAGE}</div>
 			</div>
 		</div>
 	);

@@ -1,4 +1,5 @@
 import React from 'react';
+import content from "./content";
 import authenticationService from '../../services/authenticationService';
 import resources from '../../environments/resources';
 import {
@@ -10,6 +11,7 @@ import {
     Message,
     Segment
 } from 'semantic-ui-react';
+
 class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -60,8 +62,9 @@ class LoginComponent extends React.Component {
             textAlign = 'center' >
             <
             Image src = {
-                process.env.PUBLIC_URL + '/img/favicon.png'
+                `${process.env.PUBLIC_URL}/img/logo.reshape.svg`
             }
+            
             style = {
                 {
                     width: '2em',

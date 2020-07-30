@@ -5,7 +5,6 @@ import {
     Grid,
     Header,
     Divider,
-    Container,
     Button,
     Icon
 } from 'semantic-ui-react';
@@ -15,7 +14,9 @@ import { DateInput } from "semantic-ui-calendar-react";
 
 const JournalComponent = () => {
     const [isForm, setIsForm] = useState(true);
-    const [oldDateValue, setOldDateValue] = useState("");
+    const [dateValue, setDateValue] = useState("");
+
+    console.log(dateValue);
 
     return ( 
         <Grid.Column 
@@ -24,14 +25,12 @@ const JournalComponent = () => {
             }} 
             width={14}
         >
-            <Container style={{
+            <div style={{
                 display: "flex",
-                alignItems: "center",
-                width: "100%",
-                margin: "2em 0"
+                alignItems: "center"
             }}>
                 <Header style={{
-                    margin: "0",
+                    margin: "2rem 0",
                     color: "#93AFD6",
                     fontSize: "6vh",
                     textAlign: "left"
@@ -47,10 +46,10 @@ const JournalComponent = () => {
                         margin: "1em .5em 1em 1em",
                         background: "rgb(147, 175, 214)" 
                     }} 
-                    size="big"
+                    size="massive"
                     icon
                 >
-                    <Icon name="pencil" />
+                    <Icon name="pencil" style={{ color: "#fff" }} size="large" />
                 </Button>
                 <Button 
                     onClick={() => setIsForm(false)}
@@ -61,33 +60,36 @@ const JournalComponent = () => {
                         margin: "1em 1em 1em .5em",
                         background: "#F6C469" 
                     }} 
-                    size="big"
+                    size="massive"
                     icon
                 >
-                    <Icon name="file alternate outline" />
+                    <Icon name="file alternate outline" style={{ color: "#fff" }} size="large" />
                 </Button>
                 {!isForm && (
-                    < DateInput
+                    <DateInput
                         className="oldDateInputContainer"
                         name="old date"
                         placeholder="Date"
-                        value={oldDateValue}
+                        value={dateValue}
                         iconPosition = "left"
-                        onChange = {(value) => setOldDateValue(value)}
+                        onChange = {(e, {value}) => setDateValue(value)}
                         style={{
                             border: "3px solid #F6C469",
                             borderRadius: ".28571429rem"
                         }}
                     />
                 )}
-            </Container>
-            <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
+            </div>
+            <Divider style={{ 
+                marginTop: 0,
+                borderTop: "3px solid rgba(34,36,38,.15)" 
+            }} />
             {isForm && (
                 <FormComponent />
             )}
             {!isForm && (
                 <EntryLogComponent
-                    oldDateValue={oldDateValue}
+                    dateValue={dateValue}
                 />
             )}
         </Grid.Column>

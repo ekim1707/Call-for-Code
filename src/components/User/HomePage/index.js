@@ -13,30 +13,16 @@ import {
 
 const UserHomePage = () => {
 
-	userService.getUserById(authenticationService.getDecodedJwt().jti)
-		.then(response => console.log(response))
-	// return (
-	// <div className = "userBodyContainer" >
-	// 	<div class="ui message">
-	// 		<div class="content">
-	// 			<div class="header">Changes in Service</div>
-	// 				<p>
-	// 					We updated our privacy policy here to better service our customers. We recommend reviewing the
-	// 					changes.
-	// 				</p>
-	// 		</div>
-	// 	</div>
-	// </ div>
-
-	// console.log(authenticationService.getDecodedJwt().jti)
-	// userService.getUserById(authenticationService.getDecodedJwt().jti)
-	// 	.then(response => console.log(response))
+	function getUserData() {
+		return userService.getUserById(authenticationService.getDecodedJwt().jti)
+				.then(response => console.log(response))
+	}
+	console.log(getUserData())
 	const [formData, setFormData] = useReducer(
         (state, newState) => ({ ...state, ...newState }),
         {
-            email: "User@gmail.com",
-            name: "User",
-						password: "password",
+            email: 'credentials.email',
+            name: "credentials.name",
 						newsletter: true,
 						surveys: true
         }

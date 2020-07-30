@@ -1,4 +1,5 @@
 import React from 'react';
+import content from "./content";
 import {
     Button,
     Form,
@@ -48,66 +49,48 @@ class SignUpComponent extends React.Component {
 
     render() {
         return (
-            < Grid textAlign = 'center'
-            className = "blueBackgroundColor"
-            style = {
-                {
-                    height: '100vh'
-                }
-            }
-            verticalAlign = 'middle' >
+            <Grid 
+                textAlign='center'
+                className="blueBackgroundColor"
+                style={{ height: '100vh' }}
+                verticalAlign='middle' 
+            >
                 <Grid.Column style={{ maxWidth: 600 }}>
-                    <Header as='h2'
-                    color='blue'
-                    textAlign='center'
-                    className= "displayFlex centeredJustifiedContent"
-                    >
-                        < Image src={
-                            process.env.PUBLIC_URL + '/img/favicon.png'
-                        }
-                            style={
-                                {
-                                    width: '2em'
-                                }
-                            }
-                        /> &nbsp;
-                        < div className = "blackFont" style={{marginTop: "1%"}}> Bring more positivity to your life </ div>
-                    </ Header>
-                    <Form size='large' onSubmit={this.handleSubmit} >
+                    <Header as='h2' color='blue' textAlign='center'>
+                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} /> 
+                        &nbsp;
+                        <div className = "blackFont">{content.HEADER}</div>
+                    </Header>
+                    <Form size='large' onSubmit={this.handleSubmit}>
                         <Segment stacked>
-                            < Form.Input fluid icon='mail' iconPosition='left' label="Email" placeholder='email address' 
-							value = {
-                                this.state.email
-                            }
-                            onChange = {
-                                this.handleEmailChange
-                            } />
+                            <Form.Input 
+                                onChange={this.handleEmailChange} 
+                                fluid 
+                                icon='user'
+                                label='Email'
+                                iconPosition='left' 
+                                placeholder='email address' 
+                                value={this.state.email}
+                            />
                             < Form.Input fluid icon='user'
+                                onChange={this.handleNameChange}
                                 iconPosition='left'
                                 placeholder='Name'
                                 label="Name"
 								value = {
                                     this.state.name
                                 }
-                                onChange = {
-                                    this.handleNameChange
-                                }
 							 />
                             <Form.Input
+                                onChange={this.handlePasswordChange}
                                 fluid
                                 icon='lock'
                                 label="Password"
                                 iconPosition='left'
                                 placeholder='Password'
                                 type='password'
-                                value = {
-                                    this.state.password
-                                }
-                                onChange = {
-                                    this.handlePasswordChange
-                                }
+                                value={this.state.password}
                             />
-
                             {
                                 (() => {
                                     if (this.state.email.length === 0 || this.state.name === 0 || this.state.password === 0) {
@@ -125,8 +108,6 @@ class SignUpComponent extends React.Component {
                                     }
                                 })()
                             }
-
-
                         </Segment>
                     </Form>
                     < Message className = "boldFontWeight roundBorderRadious" style={{
