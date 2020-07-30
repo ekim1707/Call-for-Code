@@ -54,9 +54,9 @@ class LoginComponent extends React.Component {
                     maxWidth: 600,
                 }
             } >
-            <
-            Header as = 'h2'
+            <Header as = 'h2'
             color = 'blue'
+            className = "displayFlex centeredJustifiedContent"
             textAlign = 'center' >
             <
             Image src = {
@@ -64,17 +64,20 @@ class LoginComponent extends React.Component {
             }
             style = {
                 {
-                    width: '1px',
+                    width: '2em',
                     color: 'white'
                 }
             }
             /> &nbsp; 
-            <div className = "blackFont"> Log in to your account < /div>
+            <div className = "blackFont" style={{marginTop: "1%"}} > 
+            
+             < h1 > Log in to your account </ h1> </ div >
                 </ Header >
                     <Form size = 'large' onSubmit = {this.handleSubmit} >
                         <Segment stacked >
-                            <Form.Input fluid icon = 'user'
+                            <Form.Input fluid icon = 'mail'
                             iconPosition = 'left'
+                            label="email"
                             placeholder = 'email address'
                             value = {
                                 this.state.email
@@ -84,34 +87,58 @@ class LoginComponent extends React.Component {
                             }
                             /> 
                         <Form.Input fluid icon = 'lock'
-            iconPosition = 'left'
-            placeholder = 'Password'
-            type = 'password'
-            value = {
-                this.state.password
-            }
-            onChange = {
-                this.handlePasswordChange
-            }
-            /> <
-            Button color = 'blue'
-            className = "roundBorderRadious"
-            fluid size = 'large' >
-            Login <
-            /Button> < /
-            Segment > <
-            /Form> <
-            Message style = {
+                            iconPosition = 'left'
+                            placeholder = 'Password'
+                            label="password"
+                            type = 'password'
+                            value = {
+                                this.state.password
+                            }
+                            onChange = {
+                                this.handlePasswordChange
+                            }
+                        />
+
+                              {
+                                  (() => {
+                                      if (this.state.email.length === 0 || this.state.password.length === 0) {
+                                         return (< Button color = 'blue'
+                                                              className = "roundBorderRadious"
+                                                              disabled = "false"
+                                                              fluid size = 'large' >
+                                                                Login </Button>)
+                                      }
+                                      else {
+                                            return ( <
+                                                    Button color = 'blue'
+                                                    className = "roundBorderRadious"
+                                                    fluid size = 'large' >
+                                                    Login </Button> )
+                                      }
+                                  })()
+                              }
+            </ Segment >
+            </ Form>
+            < Message 
+            className = "roundBorderRadious boldFontWeigh"
+            style = {
                 {
-                    'backgroundColor': '#F4EFEF'
+                    fontSize: "1.3em",
+                    fontWeight: "bold",
+                    color: "#5C5F64",
+                    backgroundColor: '#ECF1FF'
                 }
             }
-            className = "roundBorderRadious boldFontWeigh"
             >
-            New to Decompress ? < a href = 'signup' > Sign Up < /a> < /
-            Message > <
-            /Grid.Column> < /
-            Grid >
+            New to Decompress ? < a href = 'signup'
+            style = {
+                {
+                    textDecoration: 'underline',
+                    color: '#2b7fed'
+                }
+            } > Sign Up </ a> 
+            </Message > </Grid.Column>
+            </ Grid >
         );
     }
 }

@@ -43,6 +43,9 @@ export const authenticationService = {
     redirectToLoginPage: () => {
         window.location.replace(window.location.origin + resources.routes.logInPath);
     },
+    redirectToSignUpPage: () => {
+        window.location.replace(window.location.origin + resources.routes.signUpPath);
+    },
 
     getDecodedJwt: () => {
         return decoder(sessionStorage.getItem("sessionToken"));

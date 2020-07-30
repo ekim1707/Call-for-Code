@@ -2,4 +2,8 @@
 applications:
   - name: decompress
     memory: 128M
-    buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+    buildpack: https://github.com/Diego123123123/buildpack.git
+    instances: 1
+    path: build/
+nginx:
+  version: 1.19.1

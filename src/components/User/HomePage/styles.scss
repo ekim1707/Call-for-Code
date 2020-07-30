@@ -1,8 +1,30 @@
 @import "../../../scss/common.styles.scss";
 
-.userBodyContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+.homePageContainer {
+    .toggleButton {
+        position: relative;
+        width: 60px;
+        height: 30px;
+        margin: 0 23px;
+        background: #272d33;
+        border-radius: 50px;
+        .toggleCircleLeft {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left: 3px;
+            top: 3px;
+            background: $main-1;
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            transition: 1s;
+        }
+        .toggleCircleRight {
+            @extend .toggleCircleLeft;
+            left: 33px;
+        }
+    }
+    .toggleButton:hover {
+        cursor: pointer;
+    }
 }

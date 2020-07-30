@@ -2,46 +2,34 @@ export default {
     EXPLORE: "Explore",
     SIDEBAR_NAV_ARRAY: [
         {
-            name: "Profile",
-            icon: "user outline",
-            url: "/profile",
-            iconUrl: "/account_circle.png"
-        },
-        {
             name: "News",
             icon: "edit outline",
-            url: "/news",
-            iconUrl: "/news_sidebar.png"
+            url: "news",
+            iconUrl: "/Courses.png"
         },
         {
             name: "Journal",
             icon: "book",
-            url: "/journal",
-            iconUrl: "/Diary.png"
+            url: "journal",
+            iconUrl: "/journal_icon.png"
         },
         {
             name: "De-stress",
             icon: "hand peace outline",
-            url: "/destress",
-            iconUrl: "/destress_icon.png"
+            iconUrl: "/destress_icon.png",
+            url: "destress"
         },
         {
             name: "Self-care",
             icon: "plus",
-            url: "/selfcare",
-            iconUrl: "/selfcare_icon.png"
+            iconUrl: "/selfcare_icon.png",
+            url: "selfcare"
         },
         {
             name: "Courses",
             icon: "object ungroup outline",
-            url: "/courses",
+            url: "courses",
             iconUrl: "/Courses.png"
-        },
-        {
-            name: "LogOut",
-            icon: "object ungroup outline",
-            url: "/",
-            iconUrl: "/logout.png"
         }
     ]
 };

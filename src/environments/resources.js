@@ -1,5 +1,5 @@
 export const resources = {
-    microserviceUrl: "http://localhost:8080",
+    microserviceUrl: "https://callforcodebackend.herokuapp.com",
     routes: {
         basePath: "/",
         homePath: "/home",

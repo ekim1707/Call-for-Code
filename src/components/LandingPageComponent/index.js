@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./styles.scss";
+import content from "./content";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
 import Button from "../../common/Button";
-import content from "./content";
 
-const LandingPageComponent = ({
-    clickCount,
-    handlePageUpDownClick
-}) => {
+const LandingPageComponent = () => {
+    const [clickCount, setClickCount] = useState(0);
+    const handlePageUpDownClick = (direction) => {
+        direction === "down" ? setClickCount(clickCount + 1) : setClickCount(clickCount - 1);
+    } 
+
     return (
         <div className="landingPageContainer">
             <div className="landingPageContentContainer" style={{ transform: `translateY(calc(-100vh * ${clickCount}))` }}>

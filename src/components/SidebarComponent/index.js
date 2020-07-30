@@ -4,7 +4,7 @@ import content from "./content";
 import {
 	Image,
 	Icon,
-	Grid,
+	Grid
 } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
@@ -21,43 +21,45 @@ const SidebarComponent = () => {
 			}} 
 			width={2}
 		>
-			< Image src={
-				process.env.PUBLIC_URL + '/img/logo.reshape.svg'
-			} style={{
-				marginTop: "2em",
-				width: "4em"
-			}}
+			< Image 
+				src={process.env.PUBLIC_URL + '/img/logo.reshape.svg'} 
+				style={{
+					marginTop: "2em",
+					width: "4em"
+				}}
 			/>
+			<div className="contentOfSideBar" > 
 			{content.SIDEBAR_NAV_ARRAY.map(({
 				name,
-				icon,
 				url,
+				icon,
 				iconUrl
 			}, i) => 
 				<Grid.Row style={{ 
 					marginTop: "2.5vh"
 				}}>
 					<div className="sideLinks" >
-												< NavLink to = {
-													url
-												}
-												className = "sidebarNavLinks" >
-													<div className = "cellSideBar" >
-														<Image src = {
-														process.env.PUBLIC_URL + "img/" + iconUrl
-														}
-														style = {
-															{
-																width: "1em"
-															}
-														}
-														/> &nbsp; &nbsp; 
-														<span className = "dynamicPathname" >{name} </ span> 
-													</ div>
-													</ NavLink>
+					< NavLink to = {
+						url
+					}
+					className = "k" >
+						<div className = "cellSideBar" >
+							<Image src = {
+							process.env.PUBLIC_URL + "img/" + iconUrl
+							}
+							style = {
+								{
+									width: "1em"
+								}
+							}
+							/> &nbsp; &nbsp; 
+							<span className = "dynamicPathname" >{name} </ span> 
+						</ div>
+						</ NavLink>
 					</div>
 				</Grid.Row>
 			)}
+			</ div>
 		</Grid.Column>
 	);
 };

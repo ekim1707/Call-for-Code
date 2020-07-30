@@ -8,8 +8,8 @@ import {
     Message,
     Segment
 } from 'semantic-ui-react';
-import authenticationService from '../../services/authenticationService';
 import resources from '../../environments/resources';
+import authenticationService from '../../services/authenticationService';
 
 class SignUpComponent extends React.Component {
     constructor(props) {
@@ -57,22 +57,25 @@ class SignUpComponent extends React.Component {
             }
             verticalAlign = 'middle' >
                 <Grid.Column style={{ maxWidth: 600 }}>
-                    <Header as='h2' color='blue' textAlign='center'>
+                    <Header as='h2'
+                    color='blue'
+                    textAlign='center'
+                    className= "displayFlex centeredJustifiedContent"
+                    >
                         < Image src={
-                            process.env.PUBLIC_URL + '/img/tobeusedLogo.png'
+                            process.env.PUBLIC_URL + '/img/favicon.png'
                         }
                             style={
                                 {
-                                    width: '10px'
+                                    width: '2em'
                                 }
                             }
                         /> &nbsp;
-                        < div className = "blackFont" > Bring more positivity to your life < /div>
-                        
-                    </Header>
+                        < div className = "blackFont" style={{marginTop: "1%"}}> Bring more positivity to your life </ div>
+                    </ Header>
                     <Form size='large' onSubmit={this.handleSubmit} >
                         <Segment stacked>
-                            < Form.Input fluid icon='user' iconPosition='left' placeholder='email address' 
+                            < Form.Input fluid icon='mail' iconPosition='left' label="Email" placeholder='email address' 
 							value = {
                                 this.state.email
                             }
@@ -82,6 +85,7 @@ class SignUpComponent extends React.Component {
                             < Form.Input fluid icon='user'
                                 iconPosition='left'
                                 placeholder='Name'
+                                label="Name"
 								value = {
                                     this.state.name
                                 }
@@ -92,6 +96,7 @@ class SignUpComponent extends React.Component {
                             <Form.Input
                                 fluid
                                 icon='lock'
+                                label="Password"
                                 iconPosition='left'
                                 placeholder='Password'
                                 type='password'
@@ -102,15 +107,42 @@ class SignUpComponent extends React.Component {
                                     this.handlePasswordChange
                                 }
                             />
-                            < Button color = 'blue'
-                            fluid size = 'large'
-                            className = "roundBorderRadious" >
-                                Sign up
-                            </Button>
+
+                            {
+                                (() => {
+                                    if (this.state.email.length === 0 || this.state.name === 0 || this.state.password === 0) {
+                                        return ( < Button color = 'blue'
+                                                fluid size = 'large'
+                                                disabled
+                                                className = "roundBorderRadious" >
+                                                Sign up </ Button>) 
+                                    }
+                                    else {
+                                        return ( < Button color = 'blue'
+                                                fluid size = 'large'
+                                                className = "roundBorderRadious" >
+                                                Sign up </ Button>)
+                                    }
+                                })()
+                            }
+
+
                         </Segment>
                     </Form>
-                    < Message className = "boldFontWeight" >
-                        Already have an account?  <a href='login'>Log in</a>
+                    < Message className = "boldFontWeight roundBorderRadious" style={{
+                        fontSize: "1.3em",
+                        fontWeight: "bold",
+                        color: "#5C5F64",
+                        backgroundColor: '#ECF1FF'
+                    }} >
+                        Already have an account?  <a href='login' 
+                        style = {
+                            {
+                                textDecoration: 'underline',
+                                color: '#2b7fed'
+                            }
+                        }
+                        >Log in</a>
                     </Message>
                 </Grid.Column>
             </Grid>

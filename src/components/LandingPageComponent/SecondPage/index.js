@@ -23,9 +23,18 @@ const SecondPage = () => {
                         button_text,
                         popup_content
                     }, i) =>             
-                        <Card key={i}>
-                            <Image src={`${process.env.PUBLIC_URL}/img/${image}.png`} wrapped ui={false} />
-                            <Card.Content>
+                        <Card style={{ 
+                            width: "25%",
+                            padding: "2em 2em",
+                            borderRadius: "25px"
+                        }} key={i}>
+                            <Image 
+                                src={`${process.env.PUBLIC_URL}/img/${image}.png`} 
+                                size="big" 
+                                wrapped 
+                                ui={false} 
+                            />
+                            <Card.Content style={{ padding: "1em 0 0 0" }}>
                                 <Card.Header>{header}</Card.Header>
                                 <Divider />
                                 <Popup 
@@ -49,12 +58,8 @@ const SecondPage = () => {
         <div className="secondPageContainer">
             <div className="mainContainer">
                 <div className="headerContainer">
-                    < h2 className = "header leftMarginSecondPage exploreSizeSecondPage" > {
-                        content.HEADER
-                    } </ h2>
-                    < h1 className = "subHeader leftMarginSecondPage fontSizeSecondPage" > {
-                        content.SUB_HEADER
-                    } </ h1>
+                    <h2 className="header">{content.HEADER}</h2>
+                    <h1 className="subHeader">{content.SUB_HEADER}</h1>
                 </div>
                 <Carousel 
                     elements={elements} 
@@ -77,9 +82,7 @@ const SecondPage = () => {
                                 LINK
                             }, i) => 
                                 TEXT ? 
-                                <NavLink to={LINK} className="columnLink" key={i}>
-                                    {TEXT}
-                                </NavLink> :
+                                <NavLink to={LINK} className="columnLink" key={i}>{TEXT}</NavLink> :
                                 <div className="buttonContainer" key={i}>
                                     <CustomButton 
                                         className="columnButton"
@@ -93,20 +96,18 @@ const SecondPage = () => {
                         </div>
                     )}
                     <div className="footerColumn"> 
-                            < div className = "columnTitle" > Get the app </ div>
-                            < Image src = {
-                                process.env.PUBLIC_URL + '/img/logo.reshape.svg'
-                            } />
+                        <div className="columnTitle">{content.GET_THE_APP}</div>
+                        <Image src={process.env.PUBLIC_URL + '/img/logo.reshape.svg'} />
                     </div>
                     <div className="socialMediaLinksRow">
                         <div className="socialMediaLinksContainer">
                             {content.SOCIAL_MEDIA_LINKS_ARRAY.map((LINK, i) => 
-                                <a className="linkContainer" key={i}>
+                                <div className="linkContainer" key={i}>
                                     <Icon 
                                         className="socialMediaIcon"
                                         iconName={LINK}
                                     />
-                                </a>
+                                </div>
                             )}
                         </div>
                     </div>

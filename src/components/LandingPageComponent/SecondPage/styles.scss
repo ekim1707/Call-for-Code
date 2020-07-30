@@ -4,16 +4,19 @@
     height: 100vh;
     background: linear-gradient($light-blue 50vh, $main-1 70vh);
     .mainContainer {
-        height: 60vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        height: 70vh;
         .headerContainer {
-            padding: 40px 0 0 30px;
+            margin: .5em 3em;
             .header {
-                margin-bottom: 0;
                 color: $darkest-gray;
+                font-size: 2.5em;
             }
             .subHeader {
-                margin-top: 5px;
                 color: $basically-black;
+                font-size: 3em;
             }
         }
         .carousel-container {
@@ -47,20 +50,20 @@
             }
             .prev {
                 position: absolute;
-                left: 45%;
-                bottom: 5px;
+                left: 3em;
+                bottom: 10px;
                 margin: 0;
                 box-shadow: $shadow-light;
             }
             .next {
                 @extend .prev;
                 left: initial;
-                right: 45%;
+                right: 3em;
             }
         }
     }
     .footerContainer {
-        height: 40vh;
+        height: 30vh;
         .footerColumnsContainer {
             position: relative;
             display: flex;
@@ -73,16 +76,18 @@
                 flex-flow: column nowrap;
                 justify-content: space-between;
                 align-items: center;
-                width: 115px;
-                height: 40%;
+                width: 130px;
+                height: 50%;
+                margin-bottom: 2em;
                 cursor: not-allowed;
                 .columnTitle {
                     color: $almost-black;
                     font-family: Helvetica 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                    font-size: $font-size-medium;
+                    font-size: $font-size-l;
                 }
                 .columnLink {
                     color: $gray;
+                    font-size: 16px;
                     opacity: 0.55; 
                     pointer-events: none;
                 }
@@ -134,15 +139,4 @@
             font-family: Arial, Helvetica, sans-serif;
         }
     }
-}
-
-.leftMarginSecondPage {
-    margin-left: 8vh;
-}
-
-.fontSizeSecondPage{
-    font-size: 3em;
-}
-.exploreSizeSecondPage {
-    font-size: 2.5em;
 }
