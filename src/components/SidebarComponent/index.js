@@ -17,7 +17,8 @@ const SidebarComponent = () => {
 				height: "100%",
 				padding: "0 1.5rem",
 				background: "#93AFD6",
-				color: "#fff"
+				color: "#fff",
+				zIndex: "2000"
 			}} 
 			width={2}
 		>
