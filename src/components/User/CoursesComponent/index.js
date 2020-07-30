@@ -25,7 +25,7 @@ const CoursesComponent = () => {
                 {content.TITLE}
             </Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
-            <Card.Group style={{ margin: "10vh 0", overflowY: "scroll" }} itemsPerRow={3}>
+            <Card.Group style={{ overflowY: "scroll" }} itemsPerRow={3}>
                 {content.COURSES_CARD_GROUP_ITEMS_ARRAY.map(({
                     image,
                     header,
