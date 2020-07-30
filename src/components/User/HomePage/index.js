@@ -15,7 +15,6 @@ class UserHomePage extends Component {
 	state = {
 		email: "",
 		name: "",
-		password: "",
 		newsletter: true,
 		survey: true
 	};
@@ -23,16 +22,13 @@ class UserHomePage extends Component {
 	componentDidMount() {
 		userService.getUserById(authenticationService.getDecodedJwt().jti)
 			.then(response => {
-				console.log(response.data);
 				const {
 					email,
-					name,
-					password
+					name
 				} = response.data
 				this.setState({
 					email: email,
-					name: name,
-					password: password
+					name: name
 				})
 			})
 	}
@@ -45,11 +41,6 @@ class UserHomePage extends Component {
 	handleNameChange = (e) => {
 		this.setState({
 			name: e.target.value
-		})
-	}
-	handlePasswordChange = (e) => {
-		this.setState({
-			password: e.target.value
 		})
 	}
 	handleNewsletterClick = (boolean) => {
@@ -101,15 +92,6 @@ class UserHomePage extends Component {
 							iconPosition='left'
 							placeholder='Name'
 							value={name}
-						/>
-						<Form.Input
-							onChange={(e) => this.handlePasswordChange(e)}
-							fluid
-							icon='lock'
-							iconPosition='left'
-							placeholder='Password'
-							type='password'
-							value={password}
 						/>
 						<Header style={{ margin: "1rem 0" }}>{content.HEADER2}</Header>
 						<Segment style={{ 
