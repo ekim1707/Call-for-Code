@@ -11,7 +11,7 @@ Front End and Back End Choices:
  https://github.com/Diego123123123/callforcode_backend_healthcare.git
 
 # Advantages of spring boot
-    - Spring is a powerful framework, which address many common problems in Java EE. It includes support for managing business objects and exposing their services to presentation tier component.
+    * Spring is a powerful framework, which address many common problems in Java EE. It includes support for managing business objects and exposing their services to presentation tier component.
 
     - It facilitates good programming practice such as programming using interfaces instead of classes. Spring enables developers to develop enterprise applications using POJO and POJI model programming.
 
