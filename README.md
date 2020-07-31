@@ -11,25 +11,25 @@ Front End and Back End Choices:
  https://github.com/Diego123123123/callforcode_backend_healthcare.git
 
 # Advantages of spring boot
-    Spring is a powerful framework, which address many common problems in Java EE. It includes support for managing business objects and exposing their services to presentation tier component.
+    - Spring is a powerful framework, which address many common problems in Java EE. It includes support for managing business objects and exposing their services to presentation tier component.
 
-    It facilitates good programming practice such as programming using interfaces instead of classes. Spring enables developers to develop enterprise applications using POJO and POJI model programming.
+    - It facilitates good programming practice such as programming using interfaces instead of classes. Spring enables developers to develop enterprise applications using POJO and POJI model programming.
 
-    It is modular, allowing you to use only those parts that you need. It allows us to just choose any part of it in isolation.
+    - It is modular, allowing you to use only those parts that you need. It allows us to just choose any part of it in isolation.
 
-    It supports both XML- and annotation-based configuration.
+    - It supports both XML- and annotation-based configuration.
 
-    Spring provides a lightweight container that can be activated without using web server or application server software.
+    - Spring provides a lightweight container that can be activated without using web server or application server software.
 
-    It gives good support for IoC and Dependency Injection results in loose coupling.
+    - It gives good support for IoC and Dependency Injection results in loose coupling.
 
-    The Spring Framework supports JDBC framework that improves productivity and reduces the error.
+    - The Spring Framework supports JDBC framework that improves productivity and reduces the error.
 
-    It provides abstraction on ORM software to develop the ORM persistence logic.
+    - It provides abstraction on ORM software to develop the ORM persistence logic.
 
-    The Spring Web MVC framework provides powerful and a flexible Web framework as an alternative to Struts and other framework.
+    - The Spring Web MVC framework provides powerful and a flexible Web framework as an alternative to Struts and other framework.
 
-    The Spring Test module provides support for an easy-to-test code.
+    - The Spring Test module provides support for an easy-to-test code.
 
 
 # The Team:
