@@ -8,16 +8,24 @@ Front End: The main benefit for using Create-React-App for the front-end is that
 
 The Team:
 
+
+
 Diego Mejia: Frontend and Backend developer. 
 Eugene Kim: Frontend developer.
 Glei Dantas: Design, ideation, research and project management.
 
+
 How we worked:
+
+
 
 Sharing the tasks, getting it done and offering to all the members a chance to review and give their personal inputs to improve the quality of the work and supply our own deficiencies.  This was the way chosen to coordinate the project. Everyone has a voice, a piece on it and high motivation to help those who need.
 
 
 Next Steps & Future:
+
+
+
 
 Get early feedback on the prototype with the first responders interviewed.
 
