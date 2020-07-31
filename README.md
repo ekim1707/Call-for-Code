@@ -45,3 +45,5 @@ Make a landing page.
 
 Work on a mobile version and integrate w/ wearables to detect stress levels.
 
+Final Goal is written on the Project roadmap.
+
