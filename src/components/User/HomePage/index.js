@@ -21,16 +21,16 @@ class UserHomePage extends Component {
 
 	componentDidMount() {
 		userService.getUserById(authenticationService.getDecodedJwt().jti)
-			.then(response => {
-				const {
-					email,
-					name
-				} = response.data
-				this.setState({
-					email: email,
-					name: name
-				})
+		.then(response => {
+			const {
+				email,
+				name
+			} = response.data
+			this.setState({
+				email: email,
+				name: name
 			})
+		});
 	}
 
 	handleEmailChange = (e) => {
@@ -58,7 +58,6 @@ class UserHomePage extends Component {
 		const {
 			email,
 			name,
-			password,
 			newsletter,
 			survey,
 		} = this.state;

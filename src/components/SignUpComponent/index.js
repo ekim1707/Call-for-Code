@@ -40,8 +40,8 @@ class SignUpComponent extends React.Component {
 
     async handleSubmit(event) {
         event.preventDefault();
-		const signUpResponse = await authenticationService.signUp(resources.authenticationResources.registerResource, this.state);
-		const loginResponse = await authenticationService.logIn(resources.authenticationResources.authenticateResource, {
+		const signUpResponse=await authenticationService.signUp(resources.authenticationResources.registerResource, this.state);
+		const loginResponse=await authenticationService.logIn(resources.authenticationResources.authenticateResource, {
 			email: this.state.email,
 			password: this.state.password
 		})
@@ -50,23 +50,31 @@ class SignUpComponent extends React.Component {
     render() {
         return (
             <Grid 
-                textAlign='center'
                 className="blueBackgroundColor"
-                style={{ height: '100vh' }}
                 verticalAlign='middle' 
+                textAlign='center'
+                style={{ height: '100vh' }}
             >
                 <Grid.Column style={{ maxWidth: 600 }}>
-                    <Header as='h2' color='blue'
-                    className="displayFlex centeredJustifiedContent"
-                    textAlign='center'>
-                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`}
+                    <Header 
+                        as='h2' 
+                        color='blue' 
+                        className = "displayFlex centeredJustifiedContent" 
+                        textAlign='center'
                         style={{
-                            width: '2em',
-                            color: 'white'
+                            alignItems: "center"
                         }}
-                        /> 
+                    >
+                        <Image 
+                            src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`}
+                            style={{
+                                width: 'initial',
+                                height: "2em",
+                                marginRight: "1em"
+                            }}
+                        />
                         &nbsp;
-                        <div className = "blackFont" style={{marginTop: "1%"}}>{content.HEADER}</div>
+                        <div className="blackFont">{content.HEADER}</div>
                     </Header>
                     <Form size='large' onSubmit={this.handleSubmit}>
                         <Segment stacked>
@@ -79,15 +87,15 @@ class SignUpComponent extends React.Component {
                                 placeholder='email address' 
                                 value={this.state.email}
                             />
-                            < Form.Input fluid icon='user'
+                            <Form.Input 
+                                fluid
+                                icon='user'
                                 onChange={this.handleNameChange}
                                 iconPosition='left'
                                 placeholder='Name'
                                 label="Name"
-								value = {
-                                    this.state.name
-                                }
-							 />
+								value={this.state.name}
+							/>
                             <Form.Input
                                 onChange={this.handlePasswordChange}
                                 fluid
@@ -98,39 +106,51 @@ class SignUpComponent extends React.Component {
                                 type='password'
                                 value={this.state.password}
                             />
-                            {
-                                (() => {
-                                    if (this.state.email.length === 0 || this.state.name === 0 || this.state.password === 0) {
-                                        return ( < Button color = 'blue'
-                                                fluid size = 'large'
-                                                disabled
-                                                className = "roundBorderRadious" >
-                                                Sign up </ Button>) 
-                                    }
-                                    else {
-                                        return ( < Button color = 'blue'
-                                                fluid size = 'large'
-                                                className = "roundBorderRadious" >
-                                                Sign up </ Button>)
-                                    }
-                                })()
-                            }
+                            {(() => {
+                                if (this.state.email.length === 0 || this.state.name === 0 || this.state.password === 0) {
+                                    return (
+                                        <Button 
+                                            className="roundBorderRadious" 
+                                            color='blue'
+                                            fluid 
+                                            size='large'
+                                            disabled
+                                        >
+                                            {content.SIGN_UP}
+                                        </Button>
+                                    ); 
+                                } else {
+                                    return (
+                                        <Button 
+                                            className="roundBorderRadious"
+                                            color='blue'
+                                            fluid 
+                                            size='large'
+                                            >
+                                            {content.SIGN_UP}
+                                        </Button>
+                                    );
+                                }
+                            })()}
                         </Segment>
                     </Form>
-                    < Message className = "boldFontWeight roundBorderRadious" style={{
+                    <Message className="boldFontWeight roundBorderRadious" style={{
                         fontSize: "1.3em",
                         fontWeight: "bold",
                         color: "#5C5F64",
                         backgroundColor: '#ECF1FF'
-                    }} >
-                        Already have an account?  <a href='login' 
-                        style = {
-                            {
+                    }}>
+                        {content.ALREADY}
+                        &nbsp;
+                        <a 
+                            href='login' 
+                            style={{
                                 textDecoration: 'underline',
                                 color: '#2b7fed'
-                            }
-                        }
-                        >Log in</a>
+                            }}
+                        >
+                            {content.LOGIN}
+                        </a>
                     </Message>
                 </Grid.Column>
             </Grid>

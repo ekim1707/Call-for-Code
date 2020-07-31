@@ -5,12 +5,18 @@ import {
     Header,
     Divider,
     Container,
-    List
+    List,
+    Image
 } from "semantic-ui-react";
 
 const SelfCareComponent = () => {
     return (
-        <Grid.Column style={{ padding: "0 30px" }} width={14}>
+        <Grid.Column 
+            style={{ 
+                padding: "0 30px"
+            }} 
+            width={14}
+        >
             <Header style={{
                 width: "90%",
                 margin: "2rem 0",
@@ -21,6 +27,18 @@ const SelfCareComponent = () => {
                 {content.TITLE}
             </Header>
             <Divider style={{ borderTop: "3px solid rgba(34,36,38,.15)" }} />
+            <React.Fragment>
+        <Image 
+            src={`${process.env.PUBLIC_URL}/img/under_construction.gif`} 
+            wrapped 
+            ui={false} 
+            style={{
+                position: "fixed",
+                left: "25%",
+                top: "16%",
+                zIndex: 1000
+            }}
+        />
             <Container style={{ 
                 position: "fixed",
                 display: "flex",
@@ -28,7 +46,9 @@ const SelfCareComponent = () => {
                 alignItems: "center",
                 width: "100%",
                 height: "71vh",
-                left: 0
+                left: 0,
+                opacity: .3,
+                cursor: "not-allowed"
             }}>
                 <Header as="h1" style={{
                     color: "purple",
@@ -60,6 +80,7 @@ const SelfCareComponent = () => {
                     )}
                 </List>
             </Container>
+            </React.Fragment>
         </Grid.Column>
     )
 };

@@ -43,106 +43,108 @@ class LoginComponent extends React.Component {
     }
 
     render() {
-        return ( <
-            Grid textAlign = 'center'
-            style = {
-                {
-                    height: '100vh'
-                }
-            }
-            className = "blueBackgroundColor"
-            verticalAlign = 'middle' >
-            < Grid.Column style = {
-                {
-                    maxWidth: 600,
-                }
-            } >
-            <Header as = 'h2'
-            color = 'blue'
-            className = "displayFlex centeredJustifiedContent"
-            textAlign = 'center' >
-            <
-            Image src = {
-                `${process.env.PUBLIC_URL}/img/logo.reshape.svg`
-            }
-            
-            style = {
-                {
-                    width: '2em',
-                    color: 'white'
-                }
-            }
-            /> &nbsp; 
-            <div className = "blackFont" style={{marginTop: "1%"}} > 
-            
-             < h1 > Log in to your account </ h1> </ div >
-                </ Header >
-                    <Form size = 'large' onSubmit = {this.handleSubmit} >
-                        <Segment stacked >
-                            <Form.Input fluid icon = 'mail'
-                            iconPosition = 'left'
-                            label="Email"
-                            placeholder = 'email address'
-                            value = {
-                                this.state.email
-                            }
-                            onChange = {
-                                this.handleEmailChange
-                            }
-                            /> 
-                        <Form.Input fluid icon = 'lock'
-                            iconPosition = 'left'
-                            placeholder = 'Password'
-                            label='Password'
-                            type ='password'
-                            value = {
-                                this.state.password
-                            }
-                            onChange = {
-                                this.handlePasswordChange
-                            }
-                        />
-
-                              {
-                                  (() => {
-                                      if (this.state.email.length === 0 || this.state.password.length === 0) {
-                                         return (< Button color = 'blue'
-                                                              className = "roundBorderRadious"
-                                                              disabled = "false"
-                                                              fluid size = 'large' >
-                                                                Login </Button>)
-                                      }
-                                      else {
-                                            return ( <
-                                                    Button color = 'blue'
-                                                    className = "roundBorderRadious"
-                                                    fluid size = 'large' >
-                                                    Login </Button> )
-                                      }
-                                  })()
-                              }
-            </ Segment >
-            </ Form>
-            < Message 
-            className = "roundBorderRadious boldFontWeigh"
-            style = {
-                {
-                    fontSize: "1.3em",
-                    fontWeight: "bold",
-                    color: "#5C5F64",
-                    backgroundColor: '#ECF1FF'
-                }
-            }
+        return ( 
+            <Grid 
+                className="blueBackgroundColor"
+                verticalAlign='middle' 
+                textAlign='center'
+                style={{
+                        height: '100vh'
+                }}
             >
-            New to Decompress? < a href = 'signup'
-            style = {
-                {
-                    textDecoration: 'underline',
-                    color: '#2b7fed'
-                }
-            } > Sign Up </ a> 
-            </Message > </Grid.Column>
-            </ Grid >
+                <Grid.Column style={{ maxWidth: 600 }}>
+                    <Header 
+                        as='h2'
+                        color='blue'
+                        className="displayFlex centeredJustifiedContent"
+                        textAlign='center'
+                        style={{
+                            alignItems: "center"
+                        }}
+                    >
+                        <Image 
+                            src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`}                       
+                            style={{
+                                width: 'initial',
+                                height: "2em",
+                                marginRight: "1em"
+                            }}
+                        /> 
+                        &nbsp; 
+                        <div className="blackFont">{content.LOGIN_TEXT}</div>
+                    </Header>
+                    <Form size='large' onSubmit={this.handleSubmit}>
+                        <Segment stacked>
+                            <Form.Input 
+                                fluid 
+                                icon='mail'
+                                iconPosition='left'
+                                label="Email"
+                                placeholder='email address'
+                                value={this.state.email}
+                                onChange={this.handleEmailChange}
+                            /> 
+                            <Form.Input 
+                                fluid 
+                                icon='lock'
+                                iconPosition='left'
+                                placeholder='Password'
+                                label="Password"
+                                type='password'
+                                value={this.state.password}
+                                onChange={this.handlePasswordChange}
+                            />
+                            {(() => {
+                                if (this.state.email.length === 0 || this.state.password.length === 0) {
+                                    return (
+                                        <Button 
+                                            color='blue'
+                                            className="roundBorderRadious"
+                                            disabled="false"
+                                            fluid 
+                                            size='large' 
+                                        >
+                                            {content.LOGIN}
+                                        </Button>
+                                    );
+                                } else {
+                                    return ( 
+                                        <Button 
+                                            color='blue'
+                                            className="roundBorderRadious"
+                                            fluid 
+                                            size='large'
+                                        >
+                                            {content.LOGIN} 
+                                        </Button>
+                                    );
+                                }
+                            })()}
+                        </Segment>
+                    </Form>
+                    <Message 
+                        className="roundBorderRadious boldFontWeigh"
+                        style={{
+                            fontSize: "1.3em",
+                            fontWeight: "bold",
+                            color: "#5C5F64",
+                            backgroundColor: '#ECF1FF'
+                        }}
+                    >
+                        {content.NEW}
+                        &nbsp;
+                        <a 
+                            href='signup'
+                            style={{
+                                textDecoration: 'underline',
+                                color: '#2b7fed'
+                            }}
+                        >
+                            {content.SIGN_UP}
+                        </a> 
+                    </Message> 
+                </Grid.Column>
+            </Grid>
         );
     }
 }

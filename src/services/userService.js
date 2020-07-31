@@ -6,6 +6,6 @@ export const userService =  {
       return basicService
         .getRequestWithAuthorizationHeaders(resources.microserviceUrl + resources.userService.url + "/" + id);
     }
-  }
+}
 
 export default userService;

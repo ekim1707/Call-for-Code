@@ -14,9 +14,10 @@ const SidebarComponent = () => {
 			style={{
 				display: "flex",
 				flexDirection: "column",
+				alignItems: "center",
 				height: "100%",
-				padding: "0 1.5rem",
 				background: "#93AFD6",
+				padding: 0,
 				color: "#fff",
 				zIndex: "2000"
 			}} 
@@ -29,20 +30,19 @@ const SidebarComponent = () => {
 					width: "1.5em"
 				}}
 			/>
-			<div className="contentOfSideBar" > 
-			{content.SIDEBAR_NAV_ARRAY.map(({
-				name,
-				url,
-				icon,
-				iconUrl
-			}, i) => 
-				<Grid.Row className="sideLinks" key={i}>
-					<NavLink to={url} className="sidebarNavLinks">
-						<Icon disabled name={icon} style={{ margin: "0 .25rem 0 0" }} />&nbsp;{name}
-					</NavLink>
-				</Grid.Row>
-			)}
-			</ div>
+			<div className="contentOfSideBar"> 
+				{content.SIDEBAR_NAV_ARRAY.map(({
+					name,
+					url,
+					icon
+				}, i) => 
+					<Grid.Row className="sideLinks" key={i}>
+						<NavLink to={url} className="sidebarNavLinks">
+							<Icon disabled name={icon} style={{ margin: "0 .25rem 0 0" }} />&nbsp;{name}
+						</NavLink>
+					</Grid.Row>
+				)}
+			</div>
 		</Grid.Column>
 	);
 };
