@@ -25,8 +25,8 @@ const SidebarComponent = () => {
 			<Image 
 				src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`} 
 				style={{
-					margin: "2em auto 0 auto",
-					width: "2em"
+					margin: "3em auto 0 auto",
+					width: "1.5em"
 				}}
 			/>
 			<div className="contentOfSideBar" > 

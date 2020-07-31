@@ -1,13 +1,14 @@
 import React from 'react';
 import "./styles.scss";
 import content from "./content";
+import authenticationService from './../../../services/authenticationService';
 import { 
   Header,
   Dropdown
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-const title= ({titleName}) => 
+const title= ({titleName}) =>
   <Header 
     className="mainHeaderContainer"
     style={{
@@ -48,7 +49,11 @@ const title= ({titleName}) =>
           />
         </Link>
         <Dropdown.Divider style={{ margin: 0 }} />
-        <Dropdown.Item icon='sign-out' text={content.logout} />
+        < Dropdown.Item icon = 'sign-out'
+        text = {
+          content.logout
+        }
+        onClick = {authenticationService.logout} />
       </Dropdown.Menu>
     </Dropdown>
   </Header>

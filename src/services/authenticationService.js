@@ -32,7 +32,7 @@ export const authenticationService = {
     },
     logout: () => {
         sessionStorage.removeItem("sessionToken");
-        authenticationService.redirectToLoginPage();
+        authenticationService.redirectToLandingPage();
     },
     isTokenValid: () => {
         if (sessionStorage.getItem("sessionToken") !== null) {
@@ -46,7 +46,9 @@ export const authenticationService = {
     redirectToSignUpPage: () => {
         window.location.replace(window.location.origin + resources.routes.signUpPath);
     },
-
+    redirectToLandingPage: () => {
+        window.location.replace(window.location.origin);
+    },
     getDecodedJwt: () => {
         return decoder(sessionStorage.getItem("sessionToken"));
     }

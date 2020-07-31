@@ -2,6 +2,7 @@ import React from 'react';
 import content from "./content";
 import authenticationService from '../../services/authenticationService';
 import resources from '../../environments/resources';
+import "./styles.scss";
 import {
     Button,
     Form,
@@ -80,7 +81,7 @@ class LoginComponent extends React.Component {
                         <Segment stacked >
                             <Form.Input fluid icon = 'mail'
                             iconPosition = 'left'
-                            label="email"
+                            label="Email"
                             placeholder = 'email address'
                             value = {
                                 this.state.email
@@ -92,8 +93,8 @@ class LoginComponent extends React.Component {
                         <Form.Input fluid icon = 'lock'
                             iconPosition = 'left'
                             placeholder = 'Password'
-                            label="password"
-                            type = 'password'
+                            label='Password'
+                            type ='password'
                             value = {
                                 this.state.password
                             }
@@ -133,7 +134,7 @@ class LoginComponent extends React.Component {
                 }
             }
             >
-            New to Decompress ? < a href = 'signup'
+            New to Decompress? < a href = 'signup'
             style = {
                 {
                     textDecoration: 'underline',

@@ -56,10 +56,17 @@ class SignUpComponent extends React.Component {
                 verticalAlign='middle' 
             >
                 <Grid.Column style={{ maxWidth: 600 }}>
-                    <Header as='h2' color='blue' textAlign='center'>
-                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`} /> 
+                    <Header as='h2' color='blue'
+                    className="displayFlex centeredJustifiedContent"
+                    textAlign='center'>
+                        <Image src={`${process.env.PUBLIC_URL}/img/logo.reshape.svg`}
+                        style={{
+                            width: '2em',
+                            color: 'white'
+                        }}
+                        /> 
                         &nbsp;
-                        <div className = "blackFont">{content.HEADER}</div>
+                        <div className = "blackFont" style={{marginTop: "1%"}}>{content.HEADER}</div>
                     </Header>
                     <Form size='large' onSubmit={this.handleSubmit}>
                         <Segment stacked>

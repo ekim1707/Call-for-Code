@@ -99,7 +99,7 @@ const SecondPage = () => {
                         <div className="columnTitle">{content.GET_THE_APP}</div>
                         <Image 
                             src={`${process.env.PUBLIC_URL}/img/decompress_transparent.png`} 
-                            style={{ maxHeight: "70%", maxWidth: "initial" }}
+                            style={{ maxHeight: "60%", maxWidth: "initial" }}
                         />
                     </div>
                     <div className="socialMediaLinksRow">
