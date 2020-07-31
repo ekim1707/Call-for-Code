@@ -16,8 +16,6 @@ const JournalComponent = () => {
     const [isForm, setIsForm] = useState(true);
     const [dateValue, setDateValue] = useState("");
 
-    console.log(dateValue);
-
     return ( 
         <Grid.Column 
             style={{ 
