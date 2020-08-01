@@ -38,7 +38,7 @@ Front End and Back End Choices:
 
 - Diego Mejia: Frontend and Backend developer. 
 - Eugene Kim: Frontend developer.
-- Glei Dantas: Design, ideation, research and project management.
+- Glei Dantas: Design, ideation, research and product management.
 
 
 # How we worked:
