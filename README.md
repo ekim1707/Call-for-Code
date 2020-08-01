@@ -73,6 +73,8 @@ Work on a mobile version and integrate w/ wearables to detect stress levels.
 
 Final Goal is written on the Project roadmap.
 
+Additional video: 90 seconds video on how Covid-19 is affecting first responders around the Globe: https://youtu.be/ec0eDbprviU.
+
 Screen shots of the survey are provided down below. The whole survey can`t be shared publicly because it contains personal informations such as emails of the participants. 
 <img width="1437" alt="Research_question_1" src="https://user-images.githubusercontent.com/43550481/89087530-9ba8ad00-d362-11ea-83f0-bbc905223365.png">
 <img width="1440" alt="Research_question_2" src="https://user-images.githubusercontent.com/43550481/89087531-9c414380-d362-11ea-97e3-dd0311578700.png">
