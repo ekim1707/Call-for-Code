@@ -1,8 +1,9 @@
-[Walkthrough Video](https://youtu.be/VgJo_Z1ICn0)
-
 # Call-for-Code
 
 This repo is intended to be for the CRA frontend.
+
+[Walkthrough Video](https://youtu.be/VgJo_Z1ICn0)
+
 Front End and Back End Choices:
 
 # Benefits
